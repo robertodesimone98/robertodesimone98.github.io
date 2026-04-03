@@ -1,29 +1,36 @@
-<section id="contact">
+<section id="contact" class="bg-primary" >
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">Let's Get In Touch!</h2>
-                <hr class="primary">
-                <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                <h2 class="section-heading-light">Rimaniamo in contatto</h2>
+                <hr class="light">
+                <p>Pronto a collaborare con me? Ottimo!</p>
+                <p>Contattami o inviami un'e-mail e ti risponderò il più presto possibile</p>
+                <p>robertodesimone1998@gmail.com</p>
             </div>
         <div class="col-lg-2 col-lg-offset-2 text-center">
-            <a href="https://twitter.com/{{ site.twitter_username }}">
-                <i class="fa fa-twitter fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p>{{ site.twitter_username }}</p>
+            <a href="mailto:robertodesimone1998@gmail.com" class="contact-icon wow bounceIn" data-wow-delay="0s">
+                <div class="icon-wrapper">
+                <img src="{{ '/img/contact/mail.png' | relative_url }}" alt="Email">
+                </div>
+                <!--<p>robertodesimone1998@gmail.com</p>-->
             </a>
         </div>
         <div class="col-lg-2 col-lg-offset-1 text-center">
-            <a href="mailto:{{ site.email }}">
-            <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p>{{ site.email }}</p>
+            <a href="https://instagram.com/roberto.koi_" class="contact-icon wow bounceIn" data-wow-delay="0.2s" target="_blank">
+                <div class="icon-wrapper">
+                <img src="{{ '/img/contact/instagram.png' | relative_url }}" alt="Instagram">
+                </div>
+                <!--<p>roberto.koi_</p>-->
             </a>
         </div>
         <div class="col-lg-2 col-lg-offset-1 text-center">
-            <a href="https://github.com/{{ site.github_username }}">
-            <i class="fa fa-github fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p>{{ site.github_username }}</p>
+            <a href="https://linkedin.com/in/roberto-desimone" class="contact-icon wow bounceIn" data-wow-delay="0.4s" target="_blank">
+                <div class="icon-wrapper">
+                <img src="{{ '/img/contact/linkedin.png' | relative_url }}" alt="LinkedIn">
+                </div>
+                <!--<p>roberto-desimone</p>-->
             </a>
         </div>
-
     </div>
 </section>

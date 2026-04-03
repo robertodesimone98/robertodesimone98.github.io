@@ -2,6 +2,7 @@ html,
 body {
     height: 100%;
     width: 100%;
+    background-color: $theme-dark;
 }
 
 body {
@@ -15,7 +16,7 @@ hr {
 }
 
 hr.light {
-    border-color: white;
+    border-color: $theme-primary-dark;
 }
 
 a {
@@ -36,10 +37,15 @@ h6 {
     @include sans-serif-font;
 }
 
+h3 {
+    color: $theme-primary;
+}
+
 p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
+    color: rgba(white, .8);
 }
 
 .bg-primary {
@@ -47,12 +53,12 @@ p {
 }
 
 .bg-dark {
-    background-color: $theme-dark;
+    background-color: $theme-primary-dark;
     color: white;
 }
 
 .text-faded {
-    color: rgba(white, .7);
+    color: rgba(white, .8);
 }
 
 section {
@@ -99,7 +105,7 @@ aside {
             &.active {
                 > a,
                 > a:focus {
-                    color: $theme-primary !important;
+                    color: $theme-primary !important; //!
                     background-color: transparent;
                     &:hover {
                         background-color: transparent;
@@ -110,9 +116,9 @@ aside {
     }
     @media (min-width: 768px) {
         background-color: transparent;
-        border-color: rgba(white, .3);
+        border-color: rgba(white, .3); //!
         .navbar-header .navbar-brand {
-            color: rgba(white, .7);
+            color: rgba(white, .8); //!
             &:hover,
             &:focus {
                 color: white;
@@ -120,16 +126,16 @@ aside {
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: rgba(white, .7);
+            color: rgba(white, .8);  //!
             &:hover {
                 color: white;
             }
         }
         &.affix {
-            background-color: white;
-            border-color: rgba($theme-dark, .5);
+            background-color: white; //!
+            border-color: rgba($theme-dark, .5); //!
             .navbar-header .navbar-brand {
-                color: $theme-primary;
+                color: $theme-primary; //!
                 font-size: 14px;
                 &:hover,
                 &:focus {
@@ -138,9 +144,9 @@ aside {
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: $theme-dark;
+                color: $theme-dark; //!
                 &:hover {
-                    color: $theme-primary;
+                    color: $theme-primary; //!
                 }
             }
         }
@@ -150,9 +156,15 @@ aside {
 // Homepage Header
 
 header {
+    //parallax immagine che si sposta mentre scrollo
+    // background-attachment: scroll;
+    // background-position: center;
+    // background-size: cover;
+    //fine parallax
     position: relative;
     width: 100%;
-    min-height: auto;
+    height: 60vh; /* 60% dell'altezza dello schermo */
+    //min-height: auto;
     @include background-cover;
     background-position: center;
     background-image: url('../img/header.jpg');
@@ -175,14 +187,14 @@ header {
             }
             p {
                 font-weight: 300;
-                color: rgba(white, .7);
+                color: rgba(white, .8);
                 font-size: 16px;
                 margin-bottom: 50px;
             }
         }
     }
     @media (min-width: 768px) {
-        min-height: 100%;
+        //min-height: 100%;
         .header-content {
             position: absolute;
             top: 50%;
@@ -209,6 +221,12 @@ header {
 
 .section-heading {
     margin-top: 0;
+    color: white;
+}
+
+.section-heading-light {
+    margin-top: 0;
+    color: $theme-primary-dark;
 }
 
 .service-box {
@@ -219,6 +237,7 @@ header {
     }
     p {
         margin-bottom: 0;
+        color: rgba(white, .8);
     }
 }
 
@@ -231,7 +250,7 @@ header {
         color: white;
         opacity: 0;
         display: block;
-        background: rgba( $theme-primary, .9 );
+        background: rgba( $theme-primary, .6 );
         position: absolute;
         bottom: 0;
         text-align: center;
@@ -278,6 +297,14 @@ header {
     }
 }
 
+// evitare che ci sia spazio tra i riquadri del portfolio su 2K
+@media (min-width: 1920px) {
+  #portfolio .container-fluid {
+    display: flex;
+    justify-content: center; // centra tutto il contenuto
+  }
+}
+
 .call-to-action {
     h2 {
         margin: 0 auto 20px;
@@ -316,23 +343,38 @@ header {
 }
 
 // Contact
+
+/*
 #contact .fa {
-    color: $theme-dark;
-    font-size: 4em;
+    color: $theme-primary-dark;
+    //font-size: 4em;
+    transition: all 0.3s ease;
 }
+
+// #contact a:hover .fa {
+//     color: white;
+//     transform: scale(1.2);
+// }
+
+
+#contact a:hover .fa {
+    color: white;
+    transform: scale(1.2) translateY(-5px);
+}
+*/
 
 // Extras
 // -- Highlight Color Customization
 ::-moz-selection {
     color: white;
     text-shadow: none;
-    background: $theme-dark;
+    background: $theme-primary-dark;
 }
 
 ::selection {
     color: white;
     text-shadow: none;
-    background: $theme-dark;
+    background: $theme-primary-dark
 }
 
 img::selection {
@@ -349,3 +391,306 @@ body {
     -webkit-tap-highlight-color: $theme-dark;
 }
 
+.portfolio-modal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.portfolio-modal .modal-content h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.portfolio-modal .modal-content img {
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content .item-details {
+    margin: 30px 0;
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 75px;
+    margin-left: 35px;
+    background-color: $theme-dark;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 75px;
+    background-color: $theme-dark;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+// aggiunta mia, boh?
+.modal-content {
+    background-color: $theme-primary-dark;
+    color: $theme-dark;
+}
+
+// Story section
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1.5px;
+    background-color: #f1f1f1;
+}
+
+.timeline>li {
+    position: relative;
+    margin-bottom: 50px;
+    min-height: 50px;
+}
+
+.timeline>li:before,
+.timeline>li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline>li:after {
+    clear: both;
+}
+
+.timeline>li .timeline-panel {
+    float: right;
+    position: relative;
+    width: 100%;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+.timeline>li .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li .timeline-image {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    border: 7px solid #f1f1f1;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: $theme-primary;
+}
+
+.timeline>li .timeline-image h4 {
+    margin-top: 12px;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel {
+    float: right;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline>li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline .timeline-heading h4 {
+    margin-top: 0;
+    color: $theme-primary;
+}
+
+.timeline .timeline-heading h4.subheading {
+    text-transform: none;
+    color: $theme-primary;
+}
+
+.timeline .timeline-body>p,
+.timeline .timeline-body>ul {
+    margin-bottom: 0;
+    color: rgba(white, .8);
+}
+
+@media(min-width:768px) {
+    .timeline:before {
+        left: 50%;
+    }
+
+    .timeline>li {
+        margin-bottom: 100px;
+        min-height: 100px;
+    }
+
+    .timeline>li .timeline-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+    }
+
+    .timeline>li .timeline-image {
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 16px;
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+    }
+}
+
+@media(min-width:992px) {
+    .timeline>li {
+        min-height: 150px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 20px 20px;
+    }
+}
+
+@media(min-width:1200px) {
+    .timeline>li {
+        min-height: 170px;
+    }
+
+    .timeline>li .timeline-panel {
+        padding: 0 20px 20px 100px;
+    }
+
+    .timeline>li .timeline-image {
+        width: 170px;
+        height: 170px;
+        margin-left: -85px;
+    }
+
+    .timeline>li .timeline-image h4 {
+        margin-top: 40px;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 100px 20px 20px;
+    }
+}
+
+// animazione timeline
+.timeline-item {
+  visibility: hidden; // WOW lo gestisce
+}
+
+// icon (services + contact)
+.icon-img {
+    width: 64px;
+    height: 64px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    display: inline-block;
+}
+
+.contact-icon {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+
+  .icon-wrapper {
+    width: 64px;          // dimensione fissa dell'icona
+    height: 64px;
+    margin: 0 auto;
+    //overflow: hidden;     // evita che l'immagine "scappi" fuori
+    transition: transform 0.4s ease; 
+  }
+
+  img {
+    width: 100%;          // riempie il wrapper
+    height: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  &:hover .icon-wrapper img {
+    //transform: scale(1.2) translateY(-5px);
+    transform: translateY(-10px);
+  } 
+}
