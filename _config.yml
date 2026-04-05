@@ -2,7 +2,7 @@
 title: "Roberto De Simone"
 email: "robertodesimone1998@gmail.com"
 description: > # this means to ignore newlines until "baseurl:"
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "https://robertodesimone98.github.io/" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
 ig_username: "roberto.koi_"
@@ -11,5 +11,6 @@ linkedin_username: "roberto-desimone"
 # Build settings
 markdown: kramdown
 
-include:
-  - _pages
+collections:
+  projects:
+    output: true

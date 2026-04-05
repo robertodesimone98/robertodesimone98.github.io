@@ -1,0 +1,34 @@
+<div class="bg-primary" style="padding: 100px 0;">
+    <div class="container">
+        <div class="row video-row">
+
+            {% for block in include.blocks %}
+
+                {% case block.type %}
+
+                    {% when "full-video" %}
+                        {% include block-full-video.html video=block.url %}
+
+                    {% when "video-image" %}
+                        {% include block-video-image.html 
+                            video=block.video 
+                            image=block.image 
+                            link=block.link 
+                        %}
+
+                    {% when "three-vertical" %}
+                        {% include block-three-vertical.html videos=block.videos %}
+
+                    {% when "single-vertical" %}
+                        {% include block-single-vertical.html video=block.video %}
+
+                    {% when "gifs" %}
+                        {% include block-gifs.html images=block.images %}
+
+                {% endcase %}
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div>

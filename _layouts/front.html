@@ -12,30 +12,25 @@
   <!--{% include aside.html %}-->
   {% include story.html %}
   {% include contact.html %}
-  {% include modals.html %}
 
   {% include scripts.html %}
 
-  <!-- Magnific Popup for Portoflio Projects-->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-  <script>
-    $(function() {
-      $('.video').magnificPopup({
-        type: 'iframe'
-      });
-    });
-  </script>
-
   <!-- parallax immagine dell'header che si sposta mentre scrollo -->
-  <!-- <script>
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('header');
-        let offset = window.pageYOffset;
-        header.style.backgroundPositionY = offset * 0.5 + "px";
-    });
-  </script> -->
+  <script>
+    const header = document.querySelector('header');
+
+    function updateParallax() {
+      const offset = window.pageYOffset;
+      // calcolo la posizione verticale del background
+      header.style.backgroundPositionY = offset * 0.4 + "px";
+    }
+
+    // aggiorna subito al caricamento della pagina
+    updateParallax();
+
+    // aggiorna ad ogni scroll
+    window.addEventListener('scroll', updateParallax);
+  </script>
 
   <!-- Icone che fanno la stessa animazione che c'era con le fe icons -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>

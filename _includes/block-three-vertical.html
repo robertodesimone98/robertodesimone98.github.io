@@ -1,0 +1,9 @@
+<div class="three-vertical-block">
+  {% for item in include.videos %}
+    <div class="vertical-item">
+      <a href="{{ item.link }}"  target="_blank">
+        <img src="{{ item.image }}" alt="Video preview">
+      </a>
+    </div>
+  {% endfor %}
+</div>

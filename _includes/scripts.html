@@ -1,13 +1,33 @@
 <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script src="{{ site.baseurl }}/js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
 
 <!-- Plugin JavaScript -->
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.fittext.js"></script>
-<script src="js/wow.min.js"></script>
+<script src="{{ site.baseurl }}/js/jquery.easing.min.js"></script>
+<script src="{{ site.baseurl }}/js/jquery.fittext.js"></script>
+<script src="{{ site.baseurl }}/js/wow.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="js/creative.js"></script>
+<script src="{{ site.baseurl }}/js/creative.js"></script>
+
+<!-- per tornare al portfolio dalla pagina di progetto-->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // se c’è un hash nell’URL
+  if (window.location.hash) {
+    let hash = window.location.hash;
+    // aspetta un momento per permettere al browser di posizionarsi
+    setTimeout(function() {
+      const element = document.querySelector(hash);
+      if (element) {
+        const navbar = document.querySelector('.navbar-fixed-top') || document.querySelector('nav');
+        const offset = navbar ? navbar.offsetHeight : 0;
+        const position = element.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: position, behavior: 'smooth' });
+      }
+    }, 50);
+  }
+});
+</script>

@@ -1,0 +1,15 @@
+<div class="video-image-block full-width">
+    <div class="video-wrapper">
+        <div class="video-responsive">
+            <iframe src="{{ include.video }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="image-wrapper">
+        <a href="{{ include.link }}" target="_blank">
+            <img src="{{ site.baseurl }}{{ include.image }}" alt="Video preview">
+            <span class="overlay"></span>
+            <span class="play-icon">▶</span>
+        </a>
+    </div>
+</div>

@@ -6,30 +6,30 @@
                 <hr class="light">
                 <p>Pronto a collaborare con me? Ottimo!</p>
                 <p>Contattami o inviami un'e-mail e ti risponderò il più presto possibile</p>
-                <p>robertodesimone1998@gmail.com</p>
+                <p>{{ site.email }}</p>
             </div>
         <div class="col-lg-2 col-lg-offset-2 text-center">
-            <a href="mailto:robertodesimone1998@gmail.com" class="contact-icon wow bounceIn" data-wow-delay="0s">
+            <a href="mailto:{{ site.email }}" class="contact-icon wow bounceIn" data-wow-delay="0s">
                 <div class="icon-wrapper">
                 <img src="{{ '/img/contact/mail.png' | relative_url }}" alt="Email">
                 </div>
-                <!--<p>robertodesimone1998@gmail.com</p>-->
+                <!--<p>{{ site.email }}</p>-->
             </a>
         </div>
         <div class="col-lg-2 col-lg-offset-1 text-center">
-            <a href="https://instagram.com/roberto.koi_" class="contact-icon wow bounceIn" data-wow-delay="0.2s" target="_blank">
+            <a href="https://instagram.com/{{ site.ig_username }}" class="contact-icon wow bounceIn" data-wow-delay="0.2s" target="_blank">
                 <div class="icon-wrapper">
                 <img src="{{ '/img/contact/instagram.png' | relative_url }}" alt="Instagram">
                 </div>
-                <!--<p>roberto.koi_</p>-->
+                <!--<p>{{ site.ig_username }}</p>-->
             </a>
         </div>
         <div class="col-lg-2 col-lg-offset-1 text-center">
-            <a href="https://linkedin.com/in/roberto-desimone" class="contact-icon wow bounceIn" data-wow-delay="0.4s" target="_blank">
+            <a href="https://linkedin.com/in/{{ site.linkedin_username }}" class="contact-icon wow bounceIn" data-wow-delay="0.4s" target="_blank">
                 <div class="icon-wrapper">
                 <img src="{{ '/img/contact/linkedin.png' | relative_url }}" alt="LinkedIn">
                 </div>
-                <!--<p>roberto-desimone</p>-->
+                <!--<p>{{ site.linkedin_username }}</p>-->
             </a>
         </div>
     </div>

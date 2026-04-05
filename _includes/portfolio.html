@@ -93,17 +93,19 @@
                 </a>
             </div>
             -->
-            {% for post in site.posts %}
+            {% assign sorted_projects = site.projects | sort: 'order' %}
+
+            {% for project in sorted_projects %}
             <div class="col-lg-4 col-sm-6">
-                <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-box" data-toggle="modal">
-                    <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="">
+                <a href="{{ project.url }}" class="portfolio-box">
+                    <img src="img/portfolio/{{ project.img }}" class="img-responsive">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
-                                {{ post.category }}
+                                {{ project.category }}
                             </div>
                             <div class="project-name">
-                                {{ post.title }}
+                                {{ project.title }}
                             </div>
                         </div>
                     </div>
