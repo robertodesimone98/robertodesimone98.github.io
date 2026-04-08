@@ -2,7 +2,7 @@
 layout: project
 title: "Prattquello"
 permalink: /prattquello/
-img: img/portfolio/pratt.jpg
+img: {{ project.url }}/img/portfolio/pratt.jpg
 img_position: center 30% # ^ all'aumentare del %
 project-date: Aprile 2024
 client: Prattquello
