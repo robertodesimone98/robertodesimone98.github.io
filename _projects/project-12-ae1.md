@@ -2,7 +2,7 @@
 layout: project
 title: "Grafiche & Icone"
 permalink: /grafiche-icone/
-img: /img/gif/ae1-1.gif
+img: img/gif/ae1-1.gif
 img_position: center
 project-date: Aprile 2024
 client: Progetto personale
