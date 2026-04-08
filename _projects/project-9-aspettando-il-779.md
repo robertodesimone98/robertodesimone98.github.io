@@ -2,7 +2,8 @@
 layout: project
 title: "Aspettando il 779"
 permalink: /aspettando-il-779/
-img: 3.jpg
+img: img/portfolio/aspettando_779.jpg
+img_position: center
 project-date: Aprile 2024
 client: Accademia Informatica
 category: Corto

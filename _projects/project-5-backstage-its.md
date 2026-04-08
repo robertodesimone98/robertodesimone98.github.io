@@ -2,7 +2,8 @@
 layout: project
 title: "Backstage ITS Rossellini"
 permalink: /backstage-its-rossellini/
-img: 5.jpg
+img: img/portfolio/its.jpg
+img_position: center
 project-date: Aprile 2024
 client: ITS Rossellini
 category: Backstage

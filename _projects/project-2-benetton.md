@@ -2,7 +2,8 @@
 layout: project
 title: "Alessandro Benetton"
 permalink: /benetton/
-img: 2.jpg
+img: img/portfolio/ale_benetton.jpg
+img_position: center 20% # ^ all'aumentare del %
 project-date: Aprile 2024
 client: Alessandro Benetton
 category: Documentario

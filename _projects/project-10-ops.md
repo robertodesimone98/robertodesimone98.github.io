@@ -2,7 +2,8 @@
 layout: project
 title: "Oops!... I Did It Again"
 permalink: /oops/
-img: 4.jpg
+img: img/portfolio/ops.png
+img_position: center 0% # ^ all'aumentare del %
 project-date: Aprile 2024
 client: Progetto personale
 category: Corto

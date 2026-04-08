@@ -2,7 +2,8 @@
 layout: project
 title: "Video & Spot"
 permalink: /video-e-spot/
-img: 1.jpg
+img: img/gif/ae2-1.gif
+img_position: center 25% # ^ all'aumentare del %
 project-date: Aprile 2024
 client: Progetto personale
 category: Motion Graphic

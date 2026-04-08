@@ -2,7 +2,8 @@
 layout: project
 title: "Festa del Cinema di Roma"
 permalink: /festa-cinema-roma/
-img: 6.jpg
+img: img/portfolio/festa_cinema_roma.jpg
+img_position: center
 project-date: Aprile 2024
 client: ITS Rossellini
 category: Masterclass

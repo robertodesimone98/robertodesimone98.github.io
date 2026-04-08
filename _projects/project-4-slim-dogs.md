@@ -2,7 +2,8 @@
 layout: project
 title: "Slim Dogs"
 permalink: /slim-dogs/
-img: 4.jpg
+img: img/portfolio/slim_dogs1.jpg
+img_position: center 25% # ^ all'aumentare del %
 project-date: Aprile 2024
 client: Slim Dogs
 category: Social

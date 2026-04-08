@@ -2,7 +2,8 @@
 layout: project
 title: "San Carlo"
 permalink: /san-carlo/
-img: 3.jpg
+img: img/portfolio/san_carlo.jpg
+img_position: center 0% # ^ all'aumentare del %
 project-date: Aprile 2024
 client: San Carlo
 category: Social

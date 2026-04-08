@@ -2,7 +2,8 @@
 layout: project
 title: "Cama's Game Slice"
 permalink: /cama/
-img: 5.jpg
+img: img/portfolio/cama.jpg
+img_position: center center
 project-date: Aprile 2024
 client: Cama's Game Slice
 category: Showreel
