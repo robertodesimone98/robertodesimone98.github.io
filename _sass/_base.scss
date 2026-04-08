@@ -308,6 +308,13 @@ header {
   }
 }
 
+.portfolio-img {
+  width: 100%;
+  aspect-ratio: 650 / 350; /* mantiene proporzione */
+  object-fit: cover;       /* taglia senza deformare */
+  object-position: var(--img-pos, center center);
+}
+
 .call-to-action {
     h2 {
         margin: 0 auto 20px;
