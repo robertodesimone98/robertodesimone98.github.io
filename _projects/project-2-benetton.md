@@ -14,7 +14,7 @@ sections:
     description: "Questa è la descrizione iniziale del progetto"
     blocks:
       - type: video-image
-        video: https://www.youtube.com/embed/UIUcb92a1OU
+        video: https://www.youtube.com/embed/Udy9oktka1o
         image: /img/ig_preview/1.png
-        link: https://www.instagram.com/p/DWrDAYvDIBM/
+        link: https://www.instagram.com/p/DLFd-PNtvNt/
 ---

@@ -10,27 +10,27 @@ category: Social
 order: 1
 
 sections:
-  - title: "Format 1"
+  - title: "Storie di Cibo"
     description: "Descrizione descrizione descrizione"
     blocks:
       - type: video-image
-        video: https://www.youtube.com/embed/UIUcb92a1OU
+        video: https://www.youtube.com/embed/kEcgHbfS6eE
         image: /img/ig_preview/1.png
-        link: https://www.instagram.com/p/DWrDAYvDIBM/
+        link: https://www.instagram.com/p/DWl4xivDCCp/
 
-  - title: "Format 2"
+  - title: "Mulino"
     description: "Descrizione descrizione descrizione"
     blocks:
       - type: video-image
-        video: https://www.youtube.com/embed/UIUcb92a1OU
+        video: https://www.youtube.com/embed/mFmYQ63FspQ
         image: /img/ig_preview/1.png
-        link: https://www.instagram.com/p/DWrDAYvDIBM/
+        link: https://www.instagram.com/p/DTfzRgWDAvV/
 
-  - title: "Format 3"
+  - title: "In giro"
     description: "Descrizione descrizione descrizione"
     blocks:
       - type: video-image
-        video: https://www.youtube.com/embed/UIUcb92a1OU
+        video: https://www.youtube.com/embed/HPkNu_TCZQE
         image: /img/ig_preview/1.png
-        link: https://www.instagram.com/p/DWrDAYvDIBM/
+        link: https://www.instagram.com/p/DWZLH9yjBkU/
 ---

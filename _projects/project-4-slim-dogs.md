@@ -15,18 +15,18 @@ sections:
     blocks:
       - type: two-horizontal-videos
         videos:
-          - video: https://www.youtube.com/embed/UIUcb92a1OU
-          - video: https://www.youtube.com/embed/UIUcb92a1OU
+          - video: https://www.youtube.com/embed/vh-y5n-3uJ8
+          - video: https://www.youtube.com/embed/1QhH5Zr5H74
 
   - title: "SLIM DOGS 2"
     description: "Una serie di video verticali"
     blocks:  
       - type: three-vertical
         videos:
-          - link: https://www.instagram.com/p/DWrDAYvDIBM/
+          - link: https://www.instagram.com/p/DRUkSqtDIcz/
             image: /img/ig_preview/1.png
-          - link: https://www.instagram.com/p/DWrDAYvDIBM/
+          - link: https://www.instagram.com/p/DWWY-63DMld/
             image: /img/ig_preview/1.png
-          - link: https://www.instagram.com/p/DWrDAYvDIBM/
+          - link: https://www.instagram.com/slim_dogs/reel/DUD0BT9DKC8/
             image: /img/ig_preview/1.png
 ---
