@@ -303,15 +303,15 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1600px; /* limita la larghezza */
+    max-width: 1600px; // limita la larghezza
     margin: 0 auto;
   }
 }
 
 .portfolio-img {
   width: 100%;
-  aspect-ratio: 650 / 350; /* mantiene proporzione */
-  object-fit: cover;       /* taglia senza deformare */
+  aspect-ratio: 650 / 350; // mantiene proporzione
+  object-fit: cover;       // taglia senza deformare
   object-position: var(--img-pos, center center);
 }
 
@@ -471,7 +471,7 @@ body {
 
 // Project page - blocks
 
-/* BLOCCO 1 VIDEO ORIZZONTALE */
+// BLOCCO 1 VIDEO ORIZZONTALE
 .video-container.center {
     display: flex;
     justify-content: center;
@@ -495,10 +495,10 @@ body {
     flex-wrap: wrap;
 }
 
-/* BLOCCO VIDEO ORIZZONTALE + IMMAGINE/VIDEO */
+// BLOCCO VIDEO ORIZZONTALE + IMMAGINE/VIDEO
 .full-width {
     max-width: 100%;
-    padding: 0 20px; /* margini dai bordi dello schermo */
+    padding: 0 20px;
     box-sizing: border-box;
 }
 
@@ -510,19 +510,19 @@ body {
     flex-wrap: wrap;
 }
 
-/* Video 16:9 */
+// Video 16:9
 .video-wrapper {
     flex: 2;
 }
 
 .video-wrapper iframe {
     width: 100%;
-    aspect-ratio: 16 / 9; /* mantiene 16:9 */
+    aspect-ratio: 16 / 9;
     border: 0;
     display: block;
 }
 
-/* Immagine con overlay e play */
+// Immagine con overlay e play
 .image-wrapper {
     flex: 1;
 }
@@ -541,7 +541,7 @@ body {
     transition: transform 0.3s;
 }
 
-/* overlay semi-trasparente */
+// overlay semi-trasparente
 .image-wrapper .overlay {
     position: absolute;
     top: 0; left: 0;
@@ -552,7 +552,7 @@ body {
     transition: opacity 0.3s;
 }
 
-/* icona play centrata */
+// icona play centrata
 .image-wrapper .play-icon {
     position: absolute;
     top: 50%; left: 50%;
@@ -563,13 +563,13 @@ body {
     transition: opacity 0.3s;
 }
 
-/* mostra overlay e play all’hover */
+// mostra overlay e play all’hover
 .image-wrapper a:hover .overlay,
 .image-wrapper a:hover .play-icon {
     opacity: 1;
 }
 
-/* MOBILE: video sopra, immagine sotto con padding */
+// MOBILE: video sopra, immagine sotto con padding
 @media (max-width: 767px) {
     .video-image-block {
         flex-direction: column;
@@ -588,56 +588,51 @@ body {
     }
 }
 
-/* BLOCCO 1 VIDEO VERTICALE */
+// BLOCCO 1 VIDEO VERTICALE
 
 .video-vertical-wrapper {
     width: 100%;
-    max-width: 300px; /* larghezza tipica reel */
+    max-width: 300px; // larghezza tipica reel
 }
 
 .video-vertical-wrapper video {
     width: 100%;
     height: auto;
-    border-radius: 10px; /* opzionale ma carino */
+    border-radius: 10px;
 }
 
-/* BLOCCO 3 IMG/VIDEO VERTICALI */
+// BLOCCO 3 IMG/VIDEO VERTICALI
 
-    /* Desktop */
+// Desktop
 .three-vertical-block {
   display: flex;
-  justify-content: center;  /* centra le tre immagini */
-  gap: 20px;                /* spazio tra le immagini */
-  flex-wrap: wrap;           /* su mobile vanno una sotto l’altra */
+  justify-content: center;  // centra le tre immagini
+  gap: 20px;                // spazio tra le immagini
+  flex-wrap: wrap;          // su mobile vanno una sotto l’altra
 }
 
 .vertical-item {
-  flex: 0 0 30%;            /* ciascun blocco prende circa un terzo del container */
+  flex: 0 0 30%; //ciascun blocco prende circa un terzo del container
 }
 
 .vertical-item img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;       /* opzionale, arrotonda i bordi */
-  transition: transform 0.3s;
+  //border-radius: 8px;
 }
 
-.vertical-item img:hover {
-  transform: scale(1.05);
-}
-
-    /* Mobile: uno sopra l’altro con padding ai lati */
+// Mobile: uno sopra l’altro con padding ai lati
 @media (max-width: 767px) {
   .vertical-item {
-    flex: 0 0 100%;         /* prende tutta la larghezza */
-    padding: 0 15px;        /* margine dai bordi */
-    box-sizing: border-box; /* importante per includere il padding */
-    margin-bottom: 20px;    /* spazio tra gli elementi verticali */
+    flex: 0 0 100%;         // prende tutta la larghezza
+    padding: 0 15px;        // margine dai bordi
+    box-sizing: border-box; // importante per includere il padding
+    margin-bottom: 20px;    // spazio tra gli elementi verticali
   }
 }
 
-/* BLOCCO GIFS */
+// BLOCCO GIFS
 
 .gif-grid {
     display: flex;
@@ -646,29 +641,29 @@ body {
     justify-content: center;
 }
 
-/* wrapper singolo elemento */
+// wrapper singolo elemento
 .gif-item {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* immagine */
+// immagine
 .gif-item img {
     display: block;
 }
 
-/* hr come separatore */
+// hr
 .gif-item:not(:last-child)::after {
     content: "";
-    width: 50px; /* stesso del tuo hr */
+    width: 50px;
     height: 3px;
-    background-color: $theme-primary-dark; /* come hr.light */
+    background-color: $theme-primary-dark; // come hr.light
     margin-top: 60px;
     margin-bottom: 50px;
 }
 
-/* MOBILE */
+// MOBILE
 @media (max-width: 767px) {
     .gif-grid {
         flex-direction: column;
@@ -680,44 +675,32 @@ body {
     }
 
     .gif-item:not(:last-child)::after {
-        width: 40px; /* un po’ più piccolo su mobile */
+        width: 40px;
     }
 }
 
-/* MASONRY GRID tipo pinterest */
-// .gif-grid {
-//     column-count: 2;       /* 2 colonne desktop */
-//     column-gap: 20px;
-// }
+// BLOCCO 2 VIDEO ORIZZONTALI
+.two-horizontal-videos {
+  display: flex;
+  justify-content: center;
+  gap: 20px; // spazio orizzontale tra i video
+  flex-wrap: wrap;
+}
 
-// /* ogni elemento */
-// .gif-item {
-//     break-inside: avoid;   /* evita che si spezzi tra colonne */
-//     margin-bottom: 20px;
-// }
+.two-horizontal-videos .video-wrapper {
+  flex: 0 0 48%; // due video vicini
+  position: relative;
+}
 
-// /* immagini */
-// .gif-item img {
-//     width: 100%;
-//     height: auto;
-//     display: block;
-// }
-
-// /* Tablet */
-// @media (max-width: 992px) {
-//     .gif-grid {
-//         column-count: 2;
-//     }
-// }
-
-// /* Mobile */
-// @media (max-width: 767px) {
-//     .gif-grid {
-//         column-count: 1;
-//         padding: 0 15px; /* spazio dai bordi */
-//     }
-// }
-
+// MOBILE: una sopra l’altra con gap verticale
+@media (max-width: 767px) {
+  .two-horizontal-videos .video-wrapper {
+    flex: 0 0 100%;         // prende tutta la larghezza
+    padding: 0 15px;        // margine dai bordi
+    box-sizing: border-box; // importante per includere il padding
+    margin-bottom: 20px;    // spazio tra gli elementi verticali
+  }
+}
 
 // Story section
 .timeline {
