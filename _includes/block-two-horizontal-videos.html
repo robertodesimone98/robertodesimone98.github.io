@@ -1,0 +1,9 @@
+<div class="two-horizontal-videos full-width">
+  {% for item in include.videos %}
+    <div class="video-wrapper">
+      <div class="video-responsive">
+        <iframe src="{{ item.video }}" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  {% endfor %}
+</div>

@@ -25,6 +25,9 @@
                     {% when "gifs" %}
                         {% include block-gifs.html images=block.images %}
 
+                    {% when "two-horizontal-videos" %}
+                        {% include block-two-horizontal-videos.html videos=block.videos %}
+                
                 {% endcase %}
 
             {% endfor %}
