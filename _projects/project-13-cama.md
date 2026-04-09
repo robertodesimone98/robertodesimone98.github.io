@@ -15,6 +15,6 @@ sections:
     blocks:
       - type: two-horizontal-videos
         videos:
-          - video: https://www.youtube.com/embed/UIUcb92a1OU
-          - video: https://www.youtube.com/embed/UIUcb92a1OU
+          - video: https://www.youtube.com/embed/CgECediqz7U
+          - video: https://www.youtube.com/embed/-Ze_h8uSDOo
 ---
