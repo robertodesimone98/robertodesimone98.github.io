@@ -1,3 +1,6 @@
+---
+---
+
 html,
 body {
     height: 100%;
@@ -167,7 +170,7 @@ header {
     @include background-cover;
     background-position: center;
     //background-image: url('../img/header.jpg');
-    background-image: url('/assets/img/header3.png');
+    background-image: url('{{ site.baseurl }}/assets/img/header3.png');
     text-align: center;
     color: white;
     .header-content {
