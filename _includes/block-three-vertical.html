@@ -1,9 +1,13 @@
 <div class="three-vertical-block">
   {% for item in include.videos %}
     <div class="vertical-item">
-      <a href="{{ item.link }}"  target="_blank">
-        <img src="{{ item.image }}" alt="Video preview">
-      </a>
+      <div class="image-wrapper">
+        <a href="{{ item.link }}" target="_blank">
+          <img src="{{ item.image }}" alt="Video preview">
+          <span class="overlay"></span>
+          <span class="play-icon">▶</span>
+        </a>
+      </div>
     </div>
   {% endfor %}
 </div>
