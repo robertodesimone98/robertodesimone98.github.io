@@ -15,7 +15,7 @@ sections:
     blocks:
       - type: video-image
         video: https://www.youtube.com/embed/kEcgHbfS6eE
-        image: /img/ig_preview/1.png
+        image: /img/ig_preview/pratt1.jpg
         link: https://www.instagram.com/p/DWl4xivDCCp/
 
   - title: "Mulino"
@@ -23,7 +23,7 @@ sections:
     blocks:
       - type: video-image
         video: https://www.youtube.com/embed/mFmYQ63FspQ
-        image: /img/ig_preview/1.png
+        image: /img/ig_preview/pratt2.jpg
         link: https://www.instagram.com/p/DTfzRgWDAvV/
 
   - title: "In giro"
@@ -31,6 +31,6 @@ sections:
     blocks:
       - type: video-image
         video: https://www.youtube.com/embed/HPkNu_TCZQE
-        image: /img/ig_preview/1.png
+        image: /img/ig_preview/pratt3.jpg
         link: https://www.instagram.com/p/DWZLH9yjBkU/
 ---

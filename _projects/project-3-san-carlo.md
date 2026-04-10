@@ -16,9 +16,9 @@ sections:
       - type: three-vertical
         videos:
           - link: https://www.instagram.com/p/DQZXr1riJFB/
-            image: /img/ig_preview/1.png
+            image: /img/ig_preview/san_carlo1.jpg
           - link: https://www.instagram.com/piugusto_tastehunter/reel/DSKpwoOiNDq/
-            image: /img/ig_preview/1.png
+            image: /img/ig_preview/san_carlo2.jpg
           - link: https://www.instagram.com/piugusto_tastehunter/reel/DTh6ZW9iBuu/
-            image: /img/ig_preview/1.png
+            image: /img/ig_preview/san_carlo3.jpg
 ---

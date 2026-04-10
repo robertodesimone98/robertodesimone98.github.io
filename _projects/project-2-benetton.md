@@ -15,6 +15,6 @@ sections:
     blocks:
       - type: video-image
         video: https://www.youtube.com/embed/Udy9oktka1o
-        image: /img/ig_preview/1.png
+        image: /img/ig_preview/ale_benetton.jpg
         link: https://www.instagram.com/p/DLFd-PNtvNt/
 ---

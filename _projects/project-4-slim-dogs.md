@@ -24,9 +24,9 @@ sections:
       - type: three-vertical
         videos:
           - link: https://www.instagram.com/p/DRUkSqtDIcz/
-            image: /img/ig_preview/1.png
+            image: /img/ig_preview/slim_dogs1.jpg
           - link: https://www.instagram.com/p/DWWY-63DMld/
-            image: /img/ig_preview/1.png
+            image: /img/ig_preview/slim_dogs2.jpg
           - link: https://www.instagram.com/slim_dogs/reel/DUD0BT9DKC8/
-            image: /img/ig_preview/1.png
+            image: /img/ig_preview/slim_dogs3.jpg
 ---
