@@ -37,6 +37,8 @@ h6 {
     @include sans-serif-font;
 }
 
+
+
 h3 {
     color: $theme-primary;
 }
@@ -211,7 +213,7 @@ header {
                 margin-left: auto;
                 margin-right: auto;
                 p {
-                    font-size: 18px;
+                    font-size: 28px;
                     max-width: 80%;
                     margin-left: auto;
                     margin-right: auto;
@@ -226,11 +228,13 @@ header {
 .section-heading {
     margin-top: 0;
     color: white;
+    font-size: 36px;
 }
 
 .section-heading-light {
     margin-top: 0;
     color: $theme-primary-dark;
+    font-size: 36px;
 }
 
 .service-box {
