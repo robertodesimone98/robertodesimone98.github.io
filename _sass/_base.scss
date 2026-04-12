@@ -63,6 +63,13 @@ p {
     color: rgba(white, .8);
 }
 
+.project-header p.text-faded {
+    font-size: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
 section {
     padding: 100px 0;
 }
