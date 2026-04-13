@@ -10,8 +10,8 @@ category: Color Correction
 order: 9
 
 sections:
-  - title: "GIFs dimostrative"
-    description: "Alcune animazioni GIF"
+  - title: "Color Grading"
+    description: "Progetti di <span class=\"portfolio-highlight-text\">Color Grading</span> realizzati autonomamente per esplorare il <span class=\"portfolio-highlight-text\">potenziale narrativo</span> del <span class=\"portfolio-highlight-text\">colore</span> e per sfruttare al meglio l'<span class=\"portfolio-highlight-text\">estetica</span> di ogni clip."
     blocks:
       - type: gifs
         images:

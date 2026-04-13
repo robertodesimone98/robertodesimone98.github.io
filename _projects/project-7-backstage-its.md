@@ -10,9 +10,9 @@ category: Backstage
 order: 7
 
 sections:
-  - title: "BACKSTAGGGIONE"
+  - title: "Backstage Hiver"
     description: "Questa è la descrizione iniziale del progetto"
     blocks:
       - type: full-video
-        url: https://www.youtube.com/embed/UIUcb92a1OU
+        url: https://drive.google.com/file/d/1pa2mvND_4ngHl3_XfLpSijDDoXv2EKl9/preview
 ---

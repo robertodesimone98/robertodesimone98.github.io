@@ -10,8 +10,8 @@ category: Motion Graphic
 order: 14
 
 sections:
-  - title: "GIFs dimostrative"
-    description: "Alcune animazioni GIF"
+  - title: "Animazioni in Motion Graphic: <span class=\"portfolio-highlight-title\">Grafiche & Icone</span>"
+    description: "Questo set di progetti è stato realizzato durante il corso da <span class=\"portfolio-highlight-text\">Videomaker</span> dell'<span class=\"portfolio-highlight-text\">ITS Rossellini</span>, nella parte dedicata ad <span class=\"portfolio-highlight-text\">After Effects</span>. Tutte le animazioni sono create da me, mentre le illustrazioni sono state fornite dal docente."
     blocks:
       - type: gifs
         images:
