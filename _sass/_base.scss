@@ -635,13 +635,15 @@ body {
 
 .video-vertical-wrapper {
     width: 100%;
-    max-width: 300px; // larghezza tipica reel
+    max-width: 360px; /* 🔥 un po’ più realistico di 300 */
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
 }
 
-.video-vertical-wrapper video {
+.video-vertical-wrapper iframe {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 100%;
+    border: 0;
 }
 
 // BLOCCO 3 IMG/VIDEO VERTICALI
