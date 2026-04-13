@@ -4,7 +4,7 @@ title: "Color Grading"
 permalink: /color-grading/
 img: img/portfolio/color.png
 img_position: center 25% # ^ all'aumentare del %
-project-date: Aprile 2024
+project-date: "2024"
 client: Progetto personale
 category: Color Correction
 order: 9

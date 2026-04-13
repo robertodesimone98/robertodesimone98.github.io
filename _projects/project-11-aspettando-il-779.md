@@ -4,9 +4,9 @@ title: "Aspettando il 779"
 permalink: /aspettando-il-779/
 img: img/portfolio/aspettando_779.jpg
 img_position: center
-project-date: Aprile 2024
+project-date: Agosto 2022
 client: Accademia Informatica
-category: Corto
+category: Cortometraggio
 order: 11
 
 sections:

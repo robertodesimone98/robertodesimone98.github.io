@@ -8,14 +8,14 @@ project-date: Marzo 2025 — Aprile 2026
 client: Prattquello
 category: Social
 order: 1
-font_class: font-playwrite
+# font_class: font-playwrite (aggiungila anche nel CSS + lo script del Google Font dentro a head.html!)
 
 sections:
   - title: "Prattquello: <span class=\"portfolio-highlight-title\">Storie di Cibo</span>"
-    description: "<a href=\"https://www.instagram.com/prattquello/\" target=_blank>Prattquello</a> è un content creator italiano che realizza contenuti digitali legati al <span class=\"portfolio-highlight-text\">food</span> e all'<span class=\"portfolio-highlight-text\">intrattenimento</span>. Il suo approccio si riassume nella frase <i><span class=\"portfolio-highlight-text\">mangiare non è solo masticare</span></i>, alla base del suo format principale, in cui il cibo diventa racconto visivo: <i><span class=\"portfolio-highlight-text\">Storie di cibo</span></i>. Come <span class=\"portfolio-highlight-text\">montatore</span>, ho lavorato sull'evoluzione del format, introducendo <span class=\"portfolio-highlight-text\">miglioramenti</span> nella struttura dei video e nel modo in cui i contenuti vengono presentati. Un lavoro di <span class=\"portfolio-highlight-text\">equilibrio</span> tra estetica e narrazione, per far funzionare ogni storia nel modo più <span class=\"portfolio-highlight-text\">diretto</span> possibile."
+    description: "<a href=\"https://www.youtube.com/@Prattquello\" target=_blank>Prattquello</a> è un content creator italiano che realizza contenuti digitali legati al <span class=\"portfolio-highlight-text\">food</span> e all'<span class=\"portfolio-highlight-text\">intrattenimento</span>. Il suo approccio si riassume nella frase <i><span class=\"portfolio-highlight-text\">mangiare non è solo masticare</span></i>, alla base del suo format principale, in cui il cibo diventa racconto visivo: <i><span class=\"portfolio-highlight-text\">Storie di cibo</span></i>. Come <span class=\"portfolio-highlight-text\">montatore</span>, ho lavorato sull'evoluzione del format, introducendo <span class=\"portfolio-highlight-text\">miglioramenti</span> nella struttura dei video e nel modo in cui i contenuti vengono presentati. Un lavoro di <span class=\"portfolio-highlight-text\">equilibrio</span> tra estetica e narrazione, per far funzionare ogni storia nel modo più <span class=\"portfolio-highlight-text\">diretto</span> possibile."
     blocks:
       - type: video-image
-        video: https://www.youtube.com/embed/kEcgHbfS6eE
+        video: https://www.youtube.com/embed/4iNvc4KeZBE
         image: /img/ig_preview/pratt1.jpg
         link: https://www.instagram.com/p/DWl4xivDCCp/
 

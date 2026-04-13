@@ -11,7 +11,7 @@ order: 2
 
 sections:  
   - title: "Alessandro Benetton: <span class=\"portfolio-highlight-title\">Racconti imprenditoriali</span>"
-    description: "Video talk realizzati per <a href=\"https://www.instagram.com/alessandro_benetton/\" target=_blank>Alessandro Benetton</a>, imprenditore e manager, incentrati su <span class=\"portfolio-highlight-text\">esperienze</span> e riflessioni legate al <span class=\"portfolio-highlight-text\">mondo aziendale</span>. Nel <span class=\"portfolio-highlight-text\">montaggio</span> ho lavorato per strutturare il contenuto in modo chiaro e <span class=\"portfolio-highlight-text\">scorrevole</span>, intervenendo su <span class=\"portfolio-highlight-text\">ritmo</span> e organizzazione del discorso per migliorare la fruizione."
+    description: "Video talk realizzati per <a href=\"https://www.youtube.com/@AlessandroBenetton\" target=_blank>Alessandro Benetton</a>, imprenditore e manager, incentrati su <span class=\"portfolio-highlight-text\">esperienze</span> e riflessioni legate al <span class=\"portfolio-highlight-text\">mondo aziendale</span>. Nel <span class=\"portfolio-highlight-text\">montaggio</span> ho lavorato per strutturare il contenuto in modo chiaro e <span class=\"portfolio-highlight-text\">scorrevole</span>, intervenendo su <span class=\"portfolio-highlight-text\">ritmo</span> e organizzazione del discorso per migliorare la fruizione."
     blocks:
       - type: video-image
         video: https://www.youtube.com/embed/Udy9oktka1o

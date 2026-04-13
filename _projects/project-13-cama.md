@@ -4,7 +4,7 @@ title: "Cama's Game Slice"
 permalink: /cama/
 img: img/portfolio/cama2.jpg
 img_position: center 55%
-project-date: Aprile 2024
+project-date: Marzo 2024 — in corso
 client: Cama's Game Slice
 category: Trailer
 order: 13
