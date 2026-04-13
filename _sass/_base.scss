@@ -70,6 +70,15 @@ p {
     hyphens: auto;
 }
 
+.container.project-header .row .col-lg-12 h2.section-heading {
+    font-size: 36px;
+    //color: red;
+}
+
+.font-playwrite h2.section-heading {
+    font-family: 'Playwrite IE', cursive;
+}
+
 section {
     padding: 100px 0;
 }
@@ -988,4 +997,43 @@ body {
     //transform: scale(1.2) translateY(-5px);
     transform: translateY(-10px);
   } 
+}
+
+// parole enfatizzate nel titolo dei progetti
+.portfolio-highlight-title {
+    color: $theme-primary;
+    font-weight: 600;
+    //background: rgba($theme-primary-dark, 0.5);
+    //padding: 2px 6px;
+    //border-radius: 4px;
+}
+
+// parole enfatizzate nel testo dei progetti
+.portfolio-highlight-text {
+    color: $theme-primary;
+    font-weight: 600;
+    //background: rgba($theme-primary, 0.1);
+    //padding: 2px 6px;
+    //border-radius: 4px;
+}
+
+// link nei testi dei progetti
+.container.project-header .row .col-lg-12 a {
+    color: rgba($theme-primary, 0.8);
+    font-weight: 600;
+    background: rgba($theme-primary-dark, 0.6);
+    padding: 2px 6px;
+    border-radius: 4px;
+
+    text-decoration: none;
+    transition: all 0.25s ease;
+    display: inline-block;
+    position: relative;
+}
+
+.container.project-header .row .col-lg-12 a:hover {
+    color: #fff;
+    background: $theme-primary;
+    //transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba($theme-primary-dark, 0.35);
 }
