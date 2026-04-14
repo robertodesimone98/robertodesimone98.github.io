@@ -14,13 +14,13 @@ sections:
     description: "Questo set di progetti è stato realizzato durante il corso da <span class=\"portfolio-highlight-text\">Videomaker</span> dell'<span class=\"portfolio-highlight-text\">ITS Rossellini</span>, nella parte dedicata ad <span class=\"portfolio-highlight-text\">After Effects</span>. Tutte le animazioni sono create da me, mentre le illustrazioni sono state fornite dal docente."
     blocks:
       - type: gifs
-        images:
-          - /img/gif/ae1-1.gif
-          - /img/gif/ae1-2.gif
-          - /img/gif/ae1-3.gif
-          - /img/gif/ae1-4.gif
-          - /img/gif/ae1-5.gif
-          - /img/gif/ae1-6.gif
-          - /img/gif/ae1-7.gif
-          - /img/gif/ae1-8.gif
+        videos:
+          - /img/video_gif/ae1-1.mp4
+          - /img/video_gif/ae1-2.mp4
+          - /img/video_gif/ae1-3.mp4
+          - /img/video_gif/ae1-4.mp4
+          - /img/video_gif/ae1-5.mp4
+          - /img/video_gif/ae1-6.mp4
+          - /img/video_gif/ae1-7.mp4
+          - /img/video_gif/ae1-8.mp4
 ---

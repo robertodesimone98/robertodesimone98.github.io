@@ -14,11 +14,11 @@ sections:
     description: "Progetti di <span class=\"portfolio-highlight-text\">Color Grading</span> realizzati autonomamente per esplorare il <span class=\"portfolio-highlight-text\">potenziale narrativo</span> del <span class=\"portfolio-highlight-text\">colore</span> e per sfruttare al meglio l'<span class=\"portfolio-highlight-text\">estetica</span> di ogni clip."
     blocks:
       - type: gifs
-        images:
-          - /img/gif/cg-1.gif
-          - /img/gif/cg-2.gif
-          - /img/gif/cg-3.gif
-          - /img/gif/cg-4.gif
-          - /img/gif/cg-5.gif
-          - /img/gif/cg-6.gif
+        videos:
+          - /img/video_gif/cg-1.mp4
+          - /img/video_gif/cg-2.mp4
+          - /img/video_gif/cg-3.mp4
+          - /img/video_gif/cg-4.mp4
+          - /img/video_gif/cg-5.mp4
+          - /img/video_gif/cg-6.mp4
 ---
