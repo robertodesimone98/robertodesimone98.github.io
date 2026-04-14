@@ -67,7 +67,7 @@ p {
     font-size: 20px;
     text-align: justify;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: none;
 }
 
 // .about-text p.text-faded {
@@ -263,6 +263,21 @@ header {
                 font-size: 16px;
                 margin-bottom: 50px;
             }
+            // p {
+            //     font-weight: 400;
+            //     color: rgba(255, 255, 255, 0.95);
+            //     font-size: 16px;
+            //     margin-bottom: 50px;
+
+            //     padding: 10px 14px;
+            //     border-radius: 8px;
+
+            //     background: rgba(0, 0, 0, 0.25);
+            //     backdrop-filter: blur(6px);
+            //     -webkit-backdrop-filter: blur(6px);
+
+            //     display: inline-block;
+            // }
         }
     }
     @media (min-width: 768px) {
