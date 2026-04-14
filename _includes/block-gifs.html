@@ -1,7 +1,7 @@
 <div class="gif-grid">
 {% for video in include.videos %}
     <div class="gif-item">
-        <video autoplay muted loop playsinline preload="none">
+        <video autoplay muted loop playsinline preload="metadata">
             <source src="{{ video }}" type="video/mp4">
         </video>
     </div>
