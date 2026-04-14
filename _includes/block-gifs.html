@@ -1,7 +1,9 @@
 <div class="gif-grid">
-    {% for img in include.images %}
-        <div class="gif-item">
-            <img src="{{ img }}">
-        </div>
-    {% endfor %}
+{% for video in include.videos %}
+    <div class="gif-item">
+        <video autoplay muted loop playsinline preload="none">
+            <source src="{{ video }}" type="video/mp4">
+        </video>
+    </div>
+{% endfor %}
 </div>
