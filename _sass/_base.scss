@@ -584,6 +584,18 @@ body {
     flex-wrap: wrap;
 }
 
+@media (max-width: 767px) {
+  .video-container.center {
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  .video-large {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 // BLOCCO VIDEO ORIZZONTALE + IMMAGINE/VIDEO
 .full-width {
     max-width: 100%;
@@ -602,6 +614,7 @@ body {
 // video 16:9
 .video-wrapper {
     flex: 2;
+    min-width: 0;
 }
 
 .video-wrapper iframe {
@@ -622,6 +635,8 @@ body {
     position: relative;
     display: block;
     cursor: pointer;
+    overflow: hidden;
+    border-radius: 4px;
 }
 
 .image-wrapper img {
@@ -688,20 +703,26 @@ body {
 
 // MOBILE: video sopra, immagine sotto con padding
 @media (max-width: 767px) {
+
     .video-image-block {
         flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
     .video-wrapper,
     .image-wrapper {
         flex: 0 0 100%;
-        padding: 0 15px;
+        width: 100%;
+        padding: 0 20px;
         box-sizing: border-box;
     }
 
     .video-wrapper iframe {
         width: 100%;
+        height: auto;
         aspect-ratio: 16 / 9;
+        display: block;
     }
 }
 
@@ -745,7 +766,7 @@ body {
 @media (max-width: 767px) {
   .vertical-item {
     flex: 0 0 100%;         // prende tutta la larghezza
-    padding: 0 15px;        // margine dai bordi
+    padding: 0 20px;        // margine dai bordi
     box-sizing: border-box; // importante per includere il padding
     margin-bottom: 20px;    // spazio tra gli elementi verticali
   }
@@ -791,9 +812,16 @@ body {
     .gif-grid {
         flex-direction: column;
         align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .gif-item {
+        width: 100%;
     }
 
     .gif-item video {
+        width: 100%;
         max-width: 100%;
     }
 
@@ -819,7 +847,7 @@ body {
 @media (max-width: 767px) {
   .two-horizontal-videos .video-wrapper {
     flex: 0 0 100%;         // prende tutta la larghezza
-    padding: 0 15px;        // margine dai bordi
+    padding: 0 20px;        // margine dai bordi
     box-sizing: border-box; // importante per includere il padding
     margin-bottom: 20px;    // spazio tra gli elementi verticali
   }
