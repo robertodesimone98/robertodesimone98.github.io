@@ -304,6 +304,20 @@ header {
     }
 }
 
+// Bottone header
+header a.btn:before {
+    transition: transform 0.4s ease;
+}
+
+header a.btn:hover {
+    color: white;
+    background-color: $theme-primary-dark;
+    //transition: transform 0.4s ease;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    color: $theme-primary;
+}
+
 // Sections
 
 .section-heading {
@@ -664,8 +678,6 @@ body {
 
 // play
 .image-wrapper .play-icon {
-    font-size: 0;
-    color: transparent;
     position: absolute;
     top: 50%;
     left: 50%;
