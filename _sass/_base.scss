@@ -751,7 +751,7 @@ body {
   }
 }
 
-// BLOCCO GIFS
+// BLOCCO GIFS (ora VIDEO)
 
 .gif-grid {
     display: flex;
@@ -767,17 +767,21 @@ body {
     align-items: center;
 }
 
-// immagine
-.gif-item img {
+// video
+.gif-item video {
     display: block;
+    width: 100%;
+    //max-width: 300px;
+    height: auto;
+    //border-radius: 8px;
 }
 
-// hr
+// separatore
 .gif-item:not(:last-child)::after {
     content: "";
     width: 50px;
     height: 3px;
-    background-color: $theme-primary-dark; // come hr.light
+    background-color: $theme-primary-dark;
     margin-top: 60px;
     margin-bottom: 50px;
 }
@@ -789,8 +793,8 @@ body {
         align-items: center;
     }
 
-    .gif-item img {
-        max-width: 400px;
+    .gif-item video {
+        max-width: 100%;
     }
 
     .gif-item:not(:last-child)::after {
