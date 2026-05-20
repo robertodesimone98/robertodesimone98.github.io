@@ -7,7 +7,7 @@ img_position: center
 project-date: "2024"
 client: Progetto personale
 category: Motion Graphic
-order: 14
+order: 15
 
 sections:
   - title: "Animazioni in Motion Graphic: <span class=\"portfolio-highlight-title\">Grafiche & Icone</span>"

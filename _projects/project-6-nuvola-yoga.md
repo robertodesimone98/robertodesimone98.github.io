@@ -7,7 +7,7 @@ img_position: center 25% # ^ all'aumentare del %
 project-date: Maggio 2025 — Gennaio 2026
 client: Nuvola Yoga
 category: Social
-order: 6
+order: 7
 
 sections:
   - title: "Nuvola Yoga"

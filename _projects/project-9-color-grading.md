@@ -7,7 +7,7 @@ img_position: center 25% # ^ all'aumentare del %
 project-date: "2024"
 client: Progetto personale
 category: Color Correction
-order: 9
+order: 10
 
 sections:
   - title: "Color Grading"

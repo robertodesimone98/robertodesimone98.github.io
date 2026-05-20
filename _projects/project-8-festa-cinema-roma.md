@@ -7,7 +7,7 @@ img_position: center
 project-date: Ottobre 2024
 client: ITS Rossellini
 category: Masterclass
-order: 8
+order: 9
 
 sections:
   - title: "Festa del Cinema di Roma: <span class=\"portfolio-highlight-title\">Masterclass fratelli d'Innocenzo</span>"

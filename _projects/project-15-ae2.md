@@ -7,7 +7,7 @@ img_position: center 25% # ^ all'aumentare del %
 project-date: "2024"
 client: Progetto personale
 category: Motion Graphic
-order: 15
+order: 16
 
 sections:
   - title: "Animazioni in Motion Graphic: <span class=\"portfolio-highlight-title\">Video ​​​​​​​& Spot</span>"
