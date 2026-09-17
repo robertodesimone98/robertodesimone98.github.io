@@ -46,3 +46,31 @@
     new WOW().init();
 
 })(jQuery); // End of use strict
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    document.querySelectorAll(".drive-video-trigger").forEach(function (trigger) {
+
+        trigger.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const videoUrl = this.dataset.video + "?autoplay=1";
+
+            const iframe = document.createElement("iframe");
+
+            iframe.src = videoUrl;
+            iframe.frameBorder = "0";
+            iframe.allowFullscreen = true;
+            iframe.allow = "autoplay";
+
+            const wrapper = this.closest(".drive-video-preview");
+
+            wrapper.innerHTML = "";
+            wrapper.appendChild(iframe);
+            wrapper.classList.add("active");
+        });
+
+    });
+
+});

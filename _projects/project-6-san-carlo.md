@@ -7,7 +7,7 @@ img_position: center 0% # ^ all'aumentare del %
 project-date: Luglio 2025 — Marzo 2026
 client: San Carlo
 category: Social
-order: 3
+order: 6
 
 sections:
   - title: "San Carlo <span class=\"portfolio-highlight-title\">Taste Hunter</span>"

@@ -1,0 +1,13 @@
+<div class="three-vertical-block">
+  {% for item in include.videos %}
+    <div class="vertical-item">
+      <div class="image-wrapper drive-video-preview">
+        <a href="#" class="drive-video-trigger" data-video="{{ item.video }}">
+          <img src="{{ site.baseurl }}{{ item.image }}" alt="Video preview">
+          <span class="overlay"></span>
+          <span class="play-icon"></span>
+        </a>
+      </div>
+    </div>
+  {% endfor %}
+</div>

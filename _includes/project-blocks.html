@@ -16,8 +16,18 @@
                             link=block.link 
                         %}
 
+                    {% when "video-image-drive" %}
+                        {% include block-video-image-drive.html 
+                            video=block.video 
+                            vertical_video=block.vertical_video 
+                            image=block.image
+                        %}
+
                     {% when "three-vertical" %}
                         {% include block-three-vertical.html videos=block.videos %}
+
+                    {% when "block-three-vertical-drive" %}
+                        {% include block-three-vertical-drive.html videos=block.videos %}
 
                     {% when "single-vertical" %}
                         {% include block-single-vertical.html video=block.video %}

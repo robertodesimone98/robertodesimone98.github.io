@@ -7,7 +7,7 @@ img_position: center 30% # ^ all'aumentare del %
 project-date: Marzo 2025 — Aprile 2026
 client: Prattquello
 category: Social
-order: 1
+order: 4
 # font_class: font-playwrite (aggiungila anche nel CSS + lo script del Google Font dentro a head.html!)
 
 sections:

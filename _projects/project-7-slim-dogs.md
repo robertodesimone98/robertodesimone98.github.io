@@ -7,7 +7,7 @@ img_position: center 25% # ^ all'aumentare del %
 project-date: Marzo 2025 — Aprile 2026
 client: Slim Dogs
 category: Social
-order: 4
+order: 7
 
 sections:
   - title: "Slim Dogs: <span class=\"portfolio-highlight-title\">YouTube</span>"

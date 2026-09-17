@@ -7,7 +7,7 @@ img_position: center
 project-date: Febbraio 2025 — Maggio 2025
 client: ITS Rossellini
 category: Backstage
-order: 8
+order: 10
 
 sections:
   - title: "Backstage Hiver"

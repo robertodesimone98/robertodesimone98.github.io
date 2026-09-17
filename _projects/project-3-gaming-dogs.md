@@ -7,7 +7,7 @@ img_position: center 30% # ^ all'aumentare del %
 project-date: Gennaio 2026 — Aprile 2026
 client: Slim Dogs
 category: Social
-order: 5
+order: 3
 # font_class: font-playwrite (aggiungila anche nel CSS + lo script del Google Font dentro a head.html!)
 
 sections:

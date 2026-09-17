@@ -627,6 +627,18 @@ body {
     flex-wrap: wrap;
 }
 
+.video-image-block .vertical-video {
+    aspect-ratio: 9 / 16;
+    width: 100%;
+}
+
+.video-image-block .vertical-video iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
 // video 16:9
 .video-wrapper {
     flex: 2;
@@ -770,30 +782,39 @@ body {
 
 // Desktop
 .three-vertical-block {
-  display: flex;
-  justify-content: center;  // centra le tre immagini
-  gap: 20px;                // spazio tra le immagini
-  flex-wrap: wrap;          // su mobile vanno una sotto l’altra
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
 }
 
 .vertical-item {
-  flex: 0 0 30%; //ciascun blocco prende circa un terzo del container
+  width: 100%;
 }
 
 .vertical-item img {
   width: 100%;
   height: auto;
   display: block;
-  //border-radius: 8px;
 }
 
-// Mobile: uno sopra l’altro con padding ai lati
+.vertical-item iframe {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  height: auto;
+  display: block;
+  border: 0;
+}
+
 @media (max-width: 767px) {
+  .three-vertical-block {
+    grid-template-columns: 1fr;
+  }
+
   .vertical-item {
-    flex: 0 0 100%;         // prende tutta la larghezza
-    padding: 0 20px;        // margine dai bordi
-    box-sizing: border-box; // importante per includere il padding
-    margin-bottom: 20px;    // spazio tra gli elementi verticali
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
   }
 }
 
@@ -1158,4 +1179,16 @@ body {
     background: $theme-primary;
     //transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba($theme-primary-dark, 0.35);
+}
+
+.drive-video-preview {
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+}
+
+.drive-video-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
 }

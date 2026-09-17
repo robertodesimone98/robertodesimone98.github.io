@@ -7,7 +7,7 @@ img_position: center 20% # ^ all'aumentare del %
 project-date: Aprile 2025 — Aprile 2026
 client: Alessandro Benetton
 category: Social
-order: 2
+order: 5
 
 sections:  
   - title: "Alessandro Benetton: <span class=\"portfolio-highlight-title\">Racconti imprenditoriali</span>"
