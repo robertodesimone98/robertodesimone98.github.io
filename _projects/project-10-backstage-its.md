@@ -4,14 +4,14 @@ title: "Backstage ITS Rossellini"
 permalink: /backstage-its-rossellini/
 img: img/portfolio/its.jpg
 img_position: center
-project-date: Febbraio 2025 — Maggio 2025
+project-date: February 2025 — May 2025
 client: ITS Rossellini
 category: Backstage
 order: 10
 
 sections:
   - title: "Backstage Hiver"
-    description: "<span class=\"portfolio-highlight-text\">Backstage</span> del cortometraggio <i><span class=\"portfolio-highlight-text\">Hiver</span></i> realizzato come progetto finale per il corso <span class=\"portfolio-highlight-text\">Videomaker</span> dell'<span class=\"portfolio-highlight-text\">ITS Rossellini</span>. Ho lavorato sia come <span class=\"portfolio-highlight-text\">operatore</span> che come <span class=\"portfolio-highlight-text\">montatore</span>, per catturare i momenti più significativi per <span class=\"portfolio-highlight-text\">documentare</span> il set e raccogliendo <span class=\"portfolio-highlight-text\">interviste</span> ad attori e membri della troupe."
+    description: "<span class=\"portfolio-highlight-text\">Behind the scenes</span> of the short film <i><span class=\"portfolio-highlight-text\">Hiver</span></i>, created as the final project for the <span class=\"portfolio-highlight-text\">Videomaker</span> course at <span class=\"portfolio-highlight-text\">ITS Rossellini</span>. I worked both as a <span class=\"portfolio-highlight-text\">camera operator</span> and <span class=\"portfolio-highlight-text\">editor</span>, capturing key moments to <span class=\"portfolio-highlight-text\">document</span> the set and conducting <span class=\"portfolio-highlight-text\">interviews</span> with actors and crew members."
     blocks:
       - type: full-video
         url: https://drive.google.com/file/d/1pa2mvND_4ngHl3_XfLpSijDDoXv2EKl9/preview

@@ -5,13 +5,13 @@ permalink: /grafiche-icone/
 img: img/gif/ae1-1.gif
 img_position: center
 project-date: "2024"
-client: Progetto personale
+client: Personal Project
 category: Motion Graphic
 order: 13
 
 sections:
-  - title: "Animazioni in Motion Graphic: <span class=\"portfolio-highlight-title\">Grafiche & Icone</span>"
-    description: "Questo set di progetti è stato realizzato durante il corso da <span class=\"portfolio-highlight-text\">Videomaker</span> dell'<span class=\"portfolio-highlight-text\">ITS Rossellini</span>, nella parte dedicata ad <span class=\"portfolio-highlight-text\">After Effects</span>. Tutte le animazioni sono create da me, mentre le illustrazioni sono state fornite dal docente."
+  - title: "Motion Graphics Animations: <span class=\"portfolio-highlight-title\">Graphics & Icons</span>"
+    description: "This set of projects was created during the <span class=\"portfolio-highlight-text\">Videomaker</span> course at <span class=\"portfolio-highlight-text\">ITS Rossellini</span>, as part of the section focused on <span class=\"portfolio-highlight-text\">After Effects</span>. All animations were created by me, while the illustrations were provided by the instructor."
     blocks:
       - type: gifs
         videos:

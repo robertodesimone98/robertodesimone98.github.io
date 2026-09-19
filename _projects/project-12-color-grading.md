@@ -5,13 +5,13 @@ permalink: /color-grading/
 img: img/portfolio/color.png
 img_position: center 25% # ^ all'aumentare del %
 project-date: "2024"
-client: Progetto personale
+client: Personal Project
 category: Color Correction
 order: 12
 
 sections:
   - title: "Color Grading"
-    description: "Progetti di <span class=\"portfolio-highlight-text\">Color Grading</span> realizzati autonomamente per esplorare il <span class=\"portfolio-highlight-text\">potenziale narrativo</span> del <span class=\"portfolio-highlight-text\">colore</span> e per sfruttare al meglio l'<span class=\"portfolio-highlight-text\">estetica</span> di ogni clip."
+    description: "<span class=\"portfolio-highlight-text\">Color Grading</span> projects created independently to explore the <span class=\"portfolio-highlight-text\">storytelling potential</span> of <span class=\"portfolio-highlight-text\">color</span> and make the most of the <span class=\"portfolio-highlight-text\">aesthetic</span> of each clip."
     blocks:
       - type: gifs
         videos:

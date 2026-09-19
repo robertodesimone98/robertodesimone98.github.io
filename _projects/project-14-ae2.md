@@ -5,13 +5,13 @@ permalink: /video-e-spot/
 img: img/gif/ae2-1.gif
 img_position: center 25% # ^ all'aumentare del %
 project-date: "2024"
-client: Progetto personale
+client: Personal Project
 category: Motion Graphic
 order: 14
 
 sections:
-  - title: "Animazioni in Motion Graphic: <span class=\"portfolio-highlight-title\">Video ​​​​​​​& Spot</span>"
-    description: "Questo set di progetti è stato realizzato durante il corso da <span class=\"portfolio-highlight-text\">Videomaker</span> dell'<span class=\"portfolio-highlight-text\">ITS Rossellini</span>, nella parte dedicata ad <span class=\"portfolio-highlight-text\">After Effects</span>. Tutte le animazioni sono create da me, mentre le clip e le immagini sono state fornite dal docente."
+  - title: "Motion Graphics Animations: <span class=\"portfolio-highlight-title\">Videos & Commercials</span>"
+    description: "This set of projects was created during the <span class=\"portfolio-highlight-text\">Videomaker</span> course at <span class=\"portfolio-highlight-text\">ITS Rossellini</span>, as part of the section focused on <span class=\"portfolio-highlight-text\">After Effects</span>. All animations were created by me, while the clips and images were provided by the instructor."
     blocks:
       - type: gifs
         videos:

@@ -4,14 +4,14 @@ title: "Prime Video"
 permalink: /prime-video/
 img: img/portfolio/prime.jpg
 img_position: center center
-project-date: Maggio 2025 — Ottobre 2025
+project-date: May 2025 — October 2025
 client: Prime Video
 category: Social
 order: 8
 
 sections:
   - title: "Prime Video"
-    description: "Progetti realizzati in collaborazione con <a href=\"https://www.youtube.com/@PrimeVideoIT\" target=_blank>Amazon Prime Video</a> e <a href=\"https://www.youtube.com/@Slimdogs\" target=_blank>Slim Dogs</a>, con la partecipazione di autori, attori o figure legate alle <span class=\"portfolio-highlight-text\">serie</span> della piattaforma. Mi sono occupato del <span class=\"portfolio-highlight-text\">montaggio</span> dei video per <span class=\"portfolio-highlight-text\">YouTube</span> e dei contenuti <span class=\"portfolio-highlight-text\">social</span> (reel e stories) per il lancio di <a href=\"https://www.primevideo.com/-/it/detail/The-Traitors---Italia/0G5QHZE992QAZ77YW11N5XU2I3\" target=_blank>The Traitors Italia</a>."
+    description: "Projects created in collaboration with <a href=\"https://www.youtube.com/@PrimeVideoIT\" target=_blank>Amazon Prime Video</a> and <a href=\"https://www.youtube.com/@Slimdogs\" target=_blank>Slim Dogs</a>, featuring writers, actors, and other figures connected to the platform's <span class=\"portfolio-highlight-text\">series</span>. I handled the <span class=\"portfolio-highlight-text\">editing</span> of videos for <span class=\"portfolio-highlight-text\">YouTube</span> and <span class=\"portfolio-highlight-text\">social</span> content (reels and stories) for the launch of <a href=\"https://www.primevideo.com/-/it/detail/The-Traitors---Italia/0G5QHZE992QAZ77YW11N5XU2I3\" target=_blank>The Traitors Italia</a>."
     blocks:
       - type: video-image
         video: https://www.youtube.com/embed/HdjnuoTZAnc

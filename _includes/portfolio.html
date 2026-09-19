@@ -3,7 +3,7 @@
         <div class="row no-gutter">
             {% assign sorted_projects = site.projects | sort: 'order' %}
 
-            {% for project in sorted_projects offset: 1 %}
+            {% for project in sorted_projects%}
             <div class="col-lg-4 col-sm-6">
                 <a href="{{ project.url }}" class="portfolio-box">
                     <img 
