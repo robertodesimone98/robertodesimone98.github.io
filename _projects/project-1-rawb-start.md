@@ -28,6 +28,7 @@ sections:
     blocks:
       - type: video-image-drive
         video: https://drive.google.com/file/d/1OdTg7NPlra3F6LjNRNcuBMx3UX-MgQDX/preview
+        video_image: /img/ig_preview/test.jpg
         vertical_video: https://drive.google.com/file/d/1OdTg7NPlra3F6LjNRNcuBMx3UX-MgQDX/preview
         image: /img/ig_preview/slim_dogs1.jpg
 ---

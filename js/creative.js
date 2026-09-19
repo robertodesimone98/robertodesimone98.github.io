@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
             iframe.allowFullscreen = true;
             iframe.allow = "autoplay";
 
-            const wrapper = this.closest(".drive-video-preview");
+            const wrapper = this.closest(".drive-video-preview, .video-wrapper");
 
             wrapper.innerHTML = "";
             wrapper.appendChild(iframe);
