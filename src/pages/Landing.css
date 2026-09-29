@@ -1,0 +1,22 @@
+.landing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+/* Thin divider only, no logo or icon at the center. */
+.landing .zone-panel + .zone-panel {
+  border-left: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+@media (max-width: 768px) {
+  .landing {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .landing .zone-panel + .zone-panel {
+    border-left: none;
+    border-top: 1px solid rgba(128, 128, 128, 0.25);
+  }
+}
