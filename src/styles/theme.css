@@ -30,6 +30,7 @@
 
   --btn-contact-background: rgba(35, 176, 139, 0.12);
   --cta-glow: 0 0 24px rgba(35, 176, 139, 0.35);
+  --nav-glow: 0 0 10px 1px rgba(35, 176, 139, 0.8);
 }
 
 /* Zone wrapper: also carries background/color/font, because body only sees
@@ -66,6 +67,7 @@
 
   --btn-contact-background: rgba(35, 176, 139, 0.12);   /* [DERIVED] same pattern as reference */
   --cta-glow: 0 0 24px rgba(35, 176, 139, 0.35);        /* [DERIVED] glow seen in mockup 2, gaming only */
+  --nav-glow: 0 0 10px 1px rgba(35, 176, 139, 0.8);     /* [DERIVED] glow around the nav dot, gaming only */
 }
 
 .theme-brand {
@@ -92,6 +94,7 @@
 
   --btn-contact-background: rgba(242, 113, 28, 0.12);   /* [DERIVED] */
   --cta-glow: none;                                     /* no glow on brand, as in mockup 2 */
+  --nav-glow: none;                                     /* [DERIVED] no glow on brand */
 }
 
 /* Shared rules, copied from the reference (engine badges removed:

@@ -43,7 +43,6 @@ function Hero({ zone }) {
           onError={() => setVideoFailed(true)}
         />
       )}
-      <div className="hero-scrim" />
 
       <div className="hero-content-wrap">
         <div className="hero-content">

@@ -22,7 +22,6 @@
   pointer-events: none;
 }
 
-.zone-panel-cover,
 .zone-panel-preview {
   position: absolute;
   inset: 0;
@@ -33,11 +32,20 @@
   transition: opacity 0.3s ease;
 }
 
-.zone-panel:hover .zone-panel-cover,
+/* The video must stay almost imperceptible: the text on top is what matters.
+   Values to tune (0 = invisible). Brand is lower on purpose: on the light
+   background the same opacity reads much stronger than on the dark one. */
+.zone-panel.theme-gaming {
+  --preview-opacity: 0.14;
+}
+
+.zone-panel.theme-brand {
+  --preview-opacity: 0.18;
+}
+
 .zone-panel:hover .zone-panel-preview,
-.zone-panel:focus-visible .zone-panel-cover,
 .zone-panel:focus-visible .zone-panel-preview {
-  opacity: 0.35;
+  opacity: var(--preview-opacity);
 }
 
 .zone-panel-text {

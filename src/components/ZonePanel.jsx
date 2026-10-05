@@ -1,24 +1,36 @@
 import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { zoneMedia } from '../data/shared/zoneMedia'
 import './ZonePanel.css'
 
-// zone: 'gaming' | 'brand'
-// cover / preview: optional. Without them the panel is text only.
-function ZonePanel({ zone, to, eyebrow, title, subtitle, cover, preview }) {
+// zone: 'gaming' | 'brand'. The preview video comes from
+// zoneMedia[zone].landing (same pattern as Hero); without it the panel is text only.
+function ZonePanel({ zone, to, eyebrow, title, subtitle }) {
+  const { video: preview, poster } = zoneMedia[zone].landing ?? {}
   const videoRef = useRef(null)
   const [previewLoaded, setPreviewLoaded] = useState(false)
 
-  function handleMouseEnter() {
+  // Preview only where hover exists (not on touch) and when motion is allowed.
+  function canPreview() {
+    return (
+      window.matchMedia('(hover: hover)').matches &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    )
+  }
+
+  function startPreview() {
     const video = videoRef.current
-    if (!video || !preview) return
+    if (!video || !preview || !canPreview()) return
     if (!previewLoaded) {
       video.src = preview
       setPreviewLoaded(true)
     }
+    // React does not reliably reflect the `muted` attribute; autoplay needs it.
+    video.muted = true
     video.play().catch(() => {})
   }
 
-  function handleMouseLeave() {
+  function stopPreview() {
     const video = videoRef.current
     if (!video || !preview) return
     video.pause()
@@ -29,14 +41,16 @@ function ZonePanel({ zone, to, eyebrow, title, subtitle, cover, preview }) {
     <Link
       to={to}
       className={`zone-panel theme-${zone}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={startPreview}
+      onMouseLeave={stopPreview}
+      onFocus={startPreview}
+      onBlur={stopPreview}
     >
-      {cover && <img src={cover} alt="" className="zone-panel-cover" />}
       {preview && (
         <video
           ref={videoRef}
           className="zone-panel-preview"
+          poster={poster}
           muted
           loop
           playsInline

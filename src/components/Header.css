@@ -1,31 +1,37 @@
+/* Same skeleton in both zones; only the look changes per zone.
+   Height AND horizontal padding are identical in both zones on purpose:
+   switching zone must not move the house icon or the right-hand buttons. */
 .header {
-  border-bottom: 0.5px solid var(--border-default);
+  --header-h: 72px;
+  --header-px: 40px;
+  border-bottom: 1px solid var(--border-default);
   position: sticky;
   top: 0;
   z-index: 10;
   background: var(--bg-page);
 }
 
+/* Full width (no 960px cap). Columns: logo | nav centered | actions. */
 .header-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  padding: 20px 28px;
+  height: var(--header-h);
+  padding: 0 var(--header-px);
 }
 
 /* House icon: clickable => primary accent (green on gaming, orange on brand). */
 .logo {
   display: inline-flex;
   align-items: center;
+  justify-self: start;
   color: var(--accent-primary);
   transition: transform 0.2s ease;
 }
 
 .logo svg {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
 }
 
 .logo:focus-visible {
@@ -40,61 +46,140 @@
   }
 }
 
+/* ---------- Nav (centered) ---------- */
+/* position: relative => offsetParent for the sliding dot. */
 .nav {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 24px;
-  font-size: 14px;
+  gap: 44px;
   color: var(--text-secondary);
 }
 
-/* Nav links: underline opens from the left; active state always shown. */
-.nav a:not(.zone-switch) {
+.theme-gaming .nav {
+  font-family: var(--font-display);
+  font-size: 21px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.theme-brand .nav {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.nav a {
   position: relative;
   color: inherit;
   text-decoration: none;
-  padding-bottom: 2px;
+  padding: 6px 0;
   transition: color 0.2s ease;
 }
 
-.nav a:not(.zone-switch)::after {
+.nav a::after {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 2px;
   background: var(--accent-primary);
-  transform: scaleX(0);
-  transform-origin: left;
   transition: transform 0.25s ease;
 }
 
-.nav a:not(.zone-switch):hover {
+.nav a:hover {
   color: var(--text-primary);
 }
 
-.nav a:not(.zone-switch).active::after {
+/* Active link: accent text in both zones. */
+.nav a.active {
+  color: var(--accent-primary);
+}
+
+/* Indicators are swapped between zones on purpose; colors stay per theme.
+   - Gaming: ONE dot (.nav-dot, positioned by Header.jsx) that slides under the
+     hovered link, or the active one when nothing is hovered. Green + glow.
+   - Brand: per-link 2px underline that opens from the left. Orange, no glow. */
+
+/* Gaming: sliding dot */
+.nav-dot {
+  display: none;
+}
+
+.theme-gaming .nav-dot {
+  display: block;
+  position: absolute;
+  left: -3px;
+  bottom: -2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  box-shadow: var(--nav-glow);
+  pointer-events: none;
+}
+
+.theme-gaming .nav-dot.is-ready {
+  transition: transform 0.3s cubic-bezier(0.3, 0.8, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-gaming .nav-dot.is-ready {
+    transition: none;
+  }
+}
+
+.theme-gaming .nav a::after {
+  display: none;
+}
+
+/* Brand: underline, opens from the left; active state always shown. */
+.theme-brand .nav a::after {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.theme-brand .nav a.active::after {
   transform: scaleX(1);
 }
 
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .nav a:not(.zone-switch):hover::after {
+  .theme-brand .nav a:hover::after {
     transform: scaleX(1);
   }
 }
 
-.nav a:not(.zone-switch).active {
-  color: var(--accent-primary);
+/* Brand hover: accent text. */
+@media (hover: hover) {
+  .theme-brand .nav a:hover {
+    color: var(--accent-primary);
+  }
+}
+
+/* ---------- Actions (right) ---------- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 12px;
+}
+
+.header-lang {
+  display: inline-flex;
 }
 
 .mobile-toggle {
   display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   background: none;
   border: none;
   color: var(--text-primary);
   cursor: pointer;
-  padding: 4px;
+  padding: 0;
 }
 
 .mobile-toggle svg {
@@ -102,22 +187,33 @@
   height: 22px;
 }
 
+/* ---------- Mobile menu ---------- */
 .mobile-menu {
   display: none;
   flex-direction: column;
 }
 
-.mobile-menu.open {
-  display: flex;
+.mobile-menu > a {
+  padding: 14px var(--header-px);
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-top: 1px solid var(--border-default);
+  transition: color 0.2s ease;
 }
 
-.mobile-menu > a {
-  padding: 14px 28px;
-  color: var(--text-primary);
-  text-decoration: none;
-  font-size: 15px;
-  border-top: 0.5px solid var(--border-default);
-  transition: color 0.2s ease;
+.theme-gaming .mobile-menu > a {
+  font-family: var(--font-display);
+  font-size: 24px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.theme-brand .mobile-menu > a {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .mobile-menu > a:hover,
@@ -128,16 +224,35 @@
 .mobile-menu-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  border-top: 0.5px solid var(--border-default);
+  padding: 16px var(--header-px);
+  border-top: 1px solid var(--border-default);
 }
 
-@media (max-width: 640px) {
-  .header-inner nav {
+@media (max-width: 960px) {
+  .header {
+    --header-h: 64px;
+    --header-px: 20px;
+  }
+
+  .header-inner {
+    grid-template-columns: 1fr auto;
+    padding: 0 12px 0 var(--header-px);
+  }
+
+  .header-inner .nav,
+  .header-lang {
     display: none;
   }
+
+  .header-actions {
+    gap: 4px;
+  }
+
   .mobile-toggle {
-    display: block;
+    display: inline-flex;
+  }
+
+  .mobile-menu.open {
+    display: flex;
   }
 }

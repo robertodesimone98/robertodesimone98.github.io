@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useLayoutEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { scrollToSection } from '../utils/smoothScroll'
@@ -17,12 +17,49 @@ const NAV_ITEMS = [
 
 // Home-only header. Project pages use their own header (as in the reference),
 // so ZoneSwitch is automatically absent there.
+//
+// Layout: 3 columns (logo | nav centered | actions). Same skeleton in both
+// zones; Header.css changes only the look per zone (.theme-gaming/.theme-brand).
+// Narrow screens (<= 960px, the width below which the centered nav no longer
+// fits next to the buttons): ZoneSwitch stays visible in the bar next to the
+// menu toggle; LangSwitch moves into the open menu.
 function Header({ zone }) {
   const { t } = useTranslation()
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
 
   const isClickScrolling = useRef(false)
+
+  // Brand nav: ONE dot that slides under the hovered link (or the active one
+  // when nothing is hovered). Position is measured, so it is recomputed on
+  // resize and once fonts are loaded (they change the link widths).
+  const navRef = useRef(null)
+  const linkRefs = useRef({})
+  const [hoveredId, setHoveredId] = useState(null)
+  const [dotX, setDotX] = useState(0)
+  const [dotReady, setDotReady] = useState(false)
+  const dotTarget = hoveredId ?? activeSection
+
+  useLayoutEffect(() => {
+    const place = () => {
+      const el = linkRefs.current[dotTarget]
+      if (el) setDotX(el.offsetLeft + el.offsetWidth / 2)
+    }
+    place()
+
+    const nav = navRef.current
+    const observer = nav ? new ResizeObserver(place) : null
+    if (nav) observer.observe(nav)
+    document.fonts?.ready.then(place)
+    return () => observer?.disconnect()
+  }, [dotTarget, zone])
+
+  // Slide transition only after the first placement, so the dot does not
+  // fly in from the left on load.
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => setDotReady(true))
+    return () => cancelAnimationFrame(raf)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,40 +126,55 @@ function Header({ zone }) {
           </svg>
         </Link>
 
-        <nav className="nav">
+        <nav className="nav" ref={navRef} onMouseLeave={() => setHoveredId(null)}>
           {NAV_ITEMS.map(({ id, labelKey }) => (
             <a
               key={id}
+              ref={(el) => {
+                linkRefs.current[id] = el
+              }}
               href={`#${id}`}
               className={linkClass(id)}
               onClick={(e) => handleNavClick(id, e)}
+              onMouseEnter={() => setHoveredId(id)}
+              onFocus={() => setHoveredId(id)}
+              onBlur={() => setHoveredId(null)}
             >
               {t(`header.nav.${labelKey}`)}
             </a>
           ))}
-          <ZoneSwitch zone={zone} />
-          <LangSwitch />
+          <span
+            className={`nav-dot${dotReady ? ' is-ready' : ''}`}
+            style={{ transform: `translateX(${dotX}px)` }}
+            aria-hidden="true"
+          />
         </nav>
 
-        <button
-          className="mobile-toggle"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? t('header.closeMenu') : t('header.openMenu')}
-          aria-expanded={menuOpen}
-        >
-          {menuOpen ? (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="6" y1="6" x2="18" y2="18" />
-              <line x1="6" y1="18" x2="18" y2="6" />
-            </svg>
-          ) : (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="4" y1="7" x2="20" y2="7" />
-              <line x1="4" y1="12" x2="20" y2="12" />
-              <line x1="4" y1="17" x2="20" y2="17" />
-            </svg>
-          )}
-        </button>
+        <div className="header-actions">
+          <ZoneSwitch zone={zone} />
+          <span className="header-lang">
+            <LangSwitch />
+          </span>
+          <button
+            className="mobile-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? t('header.closeMenu') : t('header.openMenu')}
+            aria-expanded={menuOpen}
+          >
+            {menuOpen ? (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="6" y1="6" x2="18" y2="18" />
+                <line x1="6" y1="18" x2="18" y2="6" />
+              </svg>
+            ) : (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="4" y1="7" x2="20" y2="7" />
+                <line x1="4" y1="12" x2="20" y2="12" />
+                <line x1="4" y1="17" x2="20" y2="17" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
@@ -137,7 +189,6 @@ function Header({ zone }) {
           </a>
         ))}
         <div className="mobile-menu-actions">
-          <ZoneSwitch zone={zone} />
           <LangSwitch />
         </div>
       </div>
