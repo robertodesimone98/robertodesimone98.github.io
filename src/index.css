@@ -11,3 +11,7 @@ html {
 body {
   margin: 0;
 }
+
+#hero, #projects, #about, #contact {
+  scroll-margin-top: 65px;
+}

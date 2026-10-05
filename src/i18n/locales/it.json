@@ -5,5 +5,42 @@
     "titleBrand": "Brand",
     "subtitleGaming": "progetti video · Instagram",
     "subtitleBrand": "progetti social e brand"
+  },
+  "header": {
+    "nav": {
+      "home": "Home",
+      "projects": "Progetti",
+      "about": "Chi sono",
+      "contact": "Contatti"
+    },
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "homeLabel": "Torna alla pagina iniziale",
+    "zone": {
+      "gaming": "Gaming",
+      "brand": "Brand"
+    }
+  },
+  "gaming": {
+    "hero": {
+      "eyebrow": "Video Editor",
+      "title": "Montaggio che colpisce",
+      "subtitle": "Highlight, trailer e contenuti per la tua community: ritmo, impatto e ogni momento chiave al posto giusto.",
+      "ctaProjects": "Guarda i progetti"
+    }
+  },
+  "brand": {
+    "hero": {
+      "eyebrow": "Video Editor",
+      "title": "Montaggio per brand e social",
+      "subtitle": "Video curati che raccontano un brand: ritmo pulito, messaggio chiaro e un'identità riconoscibile.",
+      "ctaProjects": "Guarda i progetti"
+    }
+  },
+  "about": {
+    "title": "Chi sono",
+    "role": "Video Editor",
+    "introGaming": "Sono un <hl>video editor</hl> e i videogiochi sono la mia passione: monto highlight, trailer e contenuti per Instagram con un unico obiettivo, tenere incollato chi guarda dal primo secondo. Lavoro sul <hl>ritmo</hl>, sul suono e sui momenti che fanno la differenza, perché una buona clip non si limita a mostrare la partita: la racconta.",
+    "introBrand": "Sono un <hl>video editor</hl> e lavoro con brand e creator per trasformare idee e materiale grezzo in video chiari e curati. Mi occupo di contenuti <hl>social</hl> e video di brand, con attenzione a coerenza visiva, ritmo e messaggio. Il mio obiettivo è che ogni video suoni come il brand che rappresenta."
   }
 }

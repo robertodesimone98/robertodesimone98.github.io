@@ -5,5 +5,42 @@
     "titleBrand": "Brand",
     "subtitleGaming": "video projects · Instagram",
     "subtitleBrand": "social and brand projects"
+  },
+  "header": {
+    "nav": {
+      "home": "Home",
+      "projects": "Projects",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "homeLabel": "Back to start page",
+    "zone": {
+      "gaming": "Gaming",
+      "brand": "Brand"
+    }
+  },
+  "gaming": {
+    "hero": {
+      "eyebrow": "Video Editor",
+      "title": "Editing that hits",
+      "subtitle": "Highlights, trailers and content for your community: pace, impact and every key moment right where it belongs.",
+      "ctaProjects": "View projects"
+    }
+  },
+  "brand": {
+    "hero": {
+      "eyebrow": "Video Editor",
+      "title": "Editing for brands and social",
+      "subtitle": "Polished videos that tell a brand's story: clean pacing, a clear message and a look people recognize.",
+      "ctaProjects": "View projects"
+    }
+  },
+  "about": {
+    "title": "About",
+    "role": "Video Editor",
+    "introGaming": "I'm a <hl>video editor</hl> and gaming is my thing: I cut highlights, trailers and Instagram content with one goal, keeping viewers watching from the first second. I work on <hl>rhythm</hl>, sound and the moments that make the difference, because a good clip doesn't just show the game: it tells it.",
+    "introBrand": "I'm a <hl>video editor</hl> working with brands and creators to turn ideas and raw footage into clear, polished videos. I focus on <hl>social</hl> content and brand videos, with attention to visual consistency, pacing and message. My goal is for every video to sound like the brand behind it."
   }
 }

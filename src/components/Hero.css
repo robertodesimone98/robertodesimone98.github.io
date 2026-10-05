@@ -1,0 +1,109 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: clamp(380px, 65vh, 620px);
+  background: var(--bg-page);
+}
+
+/* Scrim tuned per zone: dark on gaming, light on brand, so the text color of
+   each theme always sits on a background it was designed for.
+   Desktop: strong on the text side (left), lighter on the right so the video
+   shows through. Mobile: uniform. */
+.theme-gaming .hero {
+  --hero-scrim-strong: rgba(13, 18, 16, 0.88);
+  --hero-scrim-soft: rgba(13, 18, 16, 0.35);
+  --hero-scrim-mobile: rgba(13, 18, 16, 0.72);
+}
+
+.theme-brand .hero {
+  --hero-scrim-strong: rgba(250, 247, 242, 0.8);
+  --hero-scrim-soft: rgba(250, 247, 242, 0.3);
+  --hero-scrim-mobile: rgba(250, 247, 242, 0.7);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  margin: 0 auto;
+  max-width: 1600px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  /* Fades the side edges into the page background. */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+}
+
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--hero-scrim-strong) 0%, var(--hero-scrim-strong) 35%, var(--hero-scrim-soft) 100%);
+}
+
+@media (max-width: 640px) {
+  .hero-bg {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .hero-scrim {
+    background: var(--hero-scrim-mobile);
+  }
+}
+
+.hero-content-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  padding: 52px 28px;
+  max-width: 620px;
+}
+
+/* Role label above the title: secondary accent (emphasis, not clickable). */
+.hero-eyebrow {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-secondary);
+  margin: 0 0 12px;
+}
+
+.hero-content h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(34px, 5.5vw, 48px);
+  line-height: 1.12;
+  margin: 0 0 20px;
+  color: var(--text-primary);
+}
+
+/* Bebas Neue: single weight, all caps, condensed => needs a bigger size. */
+.theme-gaming .hero-content h1 {
+  font-weight: 400;
+  font-size: clamp(54px, 9vw, 88px);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0 0 26px;
+  max-width: 480px;
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
