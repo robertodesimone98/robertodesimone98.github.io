@@ -50,7 +50,7 @@ function Hero({ zone }) {
           <h1>{t(`${zone}.hero.title`)}</h1>
           <p>{t(`${zone}.hero.subtitle`)}</p>
           <div className="cta-row">
-            <button className="btn-primary" onClick={() => scrollToSection('projects')}>
+            <button className="btn btn--primary" onClick={() => scrollToSection('projects')}>
               {t(`${zone}.hero.ctaProjects`)}
             </button>
           </div>

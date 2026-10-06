@@ -29,7 +29,7 @@
   --skill-badge-icon: #0d1210;
 
   --btn-contact-background: rgba(35, 176, 139, 0.12);
-  --cta-glow: 0 0 24px rgba(35, 176, 139, 0.35);
+  --btn-shadow: rgba(35, 176, 139, 0.5);
   --nav-glow: 0 0 10px 1px rgba(35, 176, 139, 0.8);
 }
 
@@ -66,7 +66,7 @@
   --skill-badge-icon: #0d1210;        /* [DERIVED] */
 
   --btn-contact-background: rgba(35, 176, 139, 0.12);   /* [DERIVED] same pattern as reference */
-  --cta-glow: 0 0 24px rgba(35, 176, 139, 0.35);        /* [DERIVED] glow seen in mockup 2, gaming only */
+  --btn-shadow: rgba(35, 176, 139, 0.5);                /* [DERIVED] hard offset shadow of gaming buttons, same green */
   --nav-glow: 0 0 10px 1px rgba(35, 176, 139, 0.8);     /* [DERIVED] glow around the nav dot, gaming only */
 }
 
@@ -93,58 +93,144 @@
   --skill-badge-icon: #FAF7F2;        /* [DERIVED] */
 
   --btn-contact-background: rgba(242, 113, 28, 0.12);   /* [DERIVED] */
-  --cta-glow: none;                                     /* no glow on brand, as in mockup 2 */
   --nav-glow: none;                                     /* [DERIVED] no glow on brand */
 }
 
 /* Shared rules, copied from the reference (engine badges removed:
    game-programmer specific). The glow is the only addition. */
-.btn-primary {
-  background: var(--accent-primary);
-  color: var(--accent-primary-on);
-  font-size: 14px;
-  font-weight: 500;
-  padding: 12px 22px;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.btn-secondary {
-  border: 1px solid var(--accent-primary);
-  color: var(--accent-primary);
-  font-size: 14px;
-  padding: 12px 22px;
-  border-radius: 6px;
-  background: none;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.btn-primary,
-.btn-secondary {
+/* Button: one shared class, a different look per zone.
+   Markup: <button class="btn btn--primary"> or <Link class="btn btn--secondary">.
+   Gaming = flat hard offset shadow that "presses" on hover.
+   Brand  = fill sweeps in from the left; the label colour flips along the same
+            edge (two gradients clipped to text + box, moved together), so the
+            text is never unreadable mid-transition. */
+.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 160px;
-  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  gap: 8px;
+  box-sizing: border-box;
+  min-height: 44px;
+  padding: 0 24px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: transparent;   /* kills the native button grey */
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;                /* Manrope 500 is already loaded */
+  letter-spacing: 0.02em;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.btn-primary {
-  box-shadow: var(--cta-glow);
+.btn--sm {
+  min-height: 36px;
+  padding: 0 18px;
+  font-size: 13px;
 }
 
-.btn-primary:hover {
-  background: var(--btn-contact-background);
+.btn:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+}
+
+/* ---- Gaming: offset shadow, same green ---- */
+.theme-gaming .btn {
+  border-width: 1.5px;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 var(--btn-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.theme-gaming .btn--sm {
+  font-size: 15px;
+}
+
+.theme-gaming .btn--primary {
+  background: var(--accent-primary);
+  color: var(--accent-primary-on);
+  border-color: var(--accent-primary);
+}
+
+.theme-gaming .btn--secondary {
+  background: transparent;
   color: var(--accent-primary);
-  border: 1px solid var(--accent-primary);
-  transform: translateY(-2px);
+  border-color: var(--accent-primary);
 }
 
-.btn-secondary:hover {
+.theme-gaming .btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--btn-shadow);
+}
+
+.theme-gaming .btn--secondary:hover {
   background: var(--btn-contact-background);
-  transform: translateY(-2px);
+}
+
+/* Must come after :hover to win on equal specificity. */
+.theme-gaming .btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 transparent;
+}
+
+/* ---- Brand: sweep fill ---- */
+.theme-brand .btn {
+  /* layer 1 = label colour (clipped to text), layer 2 = fill (clipped to box).
+     Both are 200% wide and slide together: right half = rest, left half = hover. */
+  background-image:
+    linear-gradient(90deg, var(--btn-text-hover) 50%, var(--btn-text-rest) 50%),
+    linear-gradient(90deg, var(--btn-fill-hover) 50%, var(--btn-fill-rest) 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  -webkit-background-clip: text, border-box;
+  background-clip: text, border-box;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.35s cubic-bezier(0.7, 0, 0.2, 1), transform 0.2s ease;
+}
+
+.theme-brand .btn:hover {
+  background-position: 0 0;
+}
+
+.theme-brand .btn:active {
+  transform: scale(0.98);
+}
+
+/* Primary: orange, white label -> sweeps to ink with cream label. */
+.theme-brand .btn--primary {
+  --btn-text-rest: var(--accent-primary-on);
+  --btn-text-hover: var(--bg-page);
+  --btn-fill-rest: var(--accent-primary);
+  --btn-fill-hover: var(--text-primary);
+}
+
+/* Secondary: outline, orange label -> sweeps to orange fill with white label. */
+.theme-brand .btn--secondary {
+  --btn-text-rest: var(--accent-primary);
+  --btn-text-hover: var(--accent-primary-on);
+  --btn-fill-rest: transparent;
+  --btn-fill-hover: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-gaming .btn,
+  .theme-brand .btn {
+    transition: none;
+  }
+  .theme-gaming .btn:hover,
+  .theme-gaming .btn:active,
+  .theme-brand .btn:active {
+    transform: none;
+  }
 }
 
 .link-accent {

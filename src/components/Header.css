@@ -194,7 +194,11 @@
 }
 
 .mobile-menu > a {
-  padding: 14px var(--header-px);
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  padding: 0 var(--header-px);
+  line-height: 1;
   color: var(--text-secondary);
   text-decoration: none;
   border-top: 1px solid var(--border-default);
@@ -209,11 +213,11 @@
 }
 
 .theme-brand .mobile-menu > a {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  /* niente padding-top/bottom qui */
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.02em;
+}
 }
 
 .mobile-menu > a:hover,
