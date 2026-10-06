@@ -145,7 +145,8 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   box-shadow: 4px 4px 0 var(--btn-shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .theme-gaming .btn--sm {
@@ -167,6 +168,10 @@
 .theme-gaming .btn:hover {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 0 var(--btn-shadow);
+}
+
+.theme-gaming .btn--primary:hover {
+  color: #FFFFFF;                  /* [DERIVED] white label on hover */
 }
 
 .theme-gaming .btn--secondary:hover {
@@ -204,12 +209,14 @@
   transform: scale(0.98);
 }
 
-/* Primary: orange, white label -> sweeps to ink with cream label. */
+/* Primary: orange, white label -> sweeps to white with orange label.
+   The orange border keeps the white state defined on the cream background. */
 .theme-brand .btn--primary {
   --btn-text-rest: var(--accent-primary-on);
-  --btn-text-hover: var(--bg-page);
+  --btn-text-hover: var(--accent-primary);
   --btn-fill-rest: var(--accent-primary);
-  --btn-fill-hover: var(--text-primary);
+  --btn-fill-hover: #FFFFFF;       /* [DERIVED] */
+  border-color: var(--accent-primary);
 }
 
 /* Secondary: outline, orange label -> sweeps to orange fill with white label. */
