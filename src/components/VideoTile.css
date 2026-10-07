@@ -1,0 +1,124 @@
+/* One video tile. Size/aspect are set by the parent (VideoBlocks / hero). */
+.vtile {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-card-image);
+  color: #fff;
+  font: inherit;
+  text-decoration: none;
+}
+
+.vtile-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.85) saturate(1) contrast(1.1);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.vtile--static .vtile-cover {
+  filter: none;
+}
+
+.vtile--clickable {
+  cursor: pointer;
+}
+
+.vtile--clickable:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .vtile--clickable:hover .vtile-cover {
+    transform: scale(1.06);
+    filter: brightness(1) saturate(1.25) contrast(1);
+  }
+
+  .vtile--clickable:hover .vtile-action {
+    background: rgba(255, 255, 255, 0.24);
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+}
+
+/* Centered circle: play (youtube/drive) or arrow (instagram, opens a new tab). */
+.vtile-action {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  min-width: 34px;
+  max-width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.35));
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.vtile-action svg {
+  width: 50%;
+  height: 50%;
+  fill: #fff;
+  color: #fff;
+}
+
+/* Instagram arrow is a stroke icon: no fill. */
+.vtile-action svg[stroke] {
+  fill: none;
+}
+
+/* Bottom-right: where the video lives. */
+.vtile-badge {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.vtile--playing iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vtile-cover,
+  .vtile-action {
+    transition: none;
+  }
+
+  .vtile--clickable:hover .vtile-cover,
+  .vtile--clickable:hover .vtile-action {
+    transform: none;
+  }
+
+  .vtile--clickable:hover .vtile-action {
+    transform: translate(-50%, -50%);
+  }
+}

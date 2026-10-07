@@ -28,6 +28,10 @@
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 500;
   font-size: 16px;
+  /* Optical centering: "Brand" is mostly x-height letters, so its mass sits below
+     the middle of its ink box even when the box is exactly centered. 2px of bottom
+     padding moves the text up by 1px. */
+  padding-bottom: 2px;
 }
 
 /* Target = gaming (shown on brand): dark pill, green, Bebas Neue, glow. */
@@ -40,6 +44,9 @@
   letter-spacing: 0.12em;
   text-indent: 0.12em;
   box-shadow: 0 0 16px rgba(35, 176, 139, 0.35);
+  /* Optical centering: Bebas Neue is all caps and sits ~1px above the middle of the
+     pill; 2px of top padding moves the text down by 1px. */
+  padding-top: 2px;
 }
 
 .zone-switch:hover,

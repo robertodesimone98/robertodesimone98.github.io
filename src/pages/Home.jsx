@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
+import ProjectsSection from '../components/ProjectsSection'
 import Footer from '../components/Footer'
 
 // TEMPORARY: stands in for ProjectsSection / AboutSection / ContactSection
@@ -33,7 +34,7 @@ function Home() {
       <Header zone={zone} />
       <main>
         <Hero key={zone} zone={zone} />
-        <PlaceholderSection id="projects" label="Projects" />
+        <ProjectsSection key={`projects-${zone}`} zone={zone} />
         <PlaceholderSection id="about" label="About + Experience" />
         <PlaceholderSection id="contact" label="Contact" />
       </main>

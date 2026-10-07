@@ -1,0 +1,142 @@
+.project-nav-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-page);
+  border-top: 1px solid var(--border-default);
+  z-index: 5;
+}
+
+.project-nav-fixed-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 12px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Clickable => primary accent on hover (title underline grows from the left). */
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  max-width: 45%;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.nav-link.next {
+  margin-left: auto;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.nav-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.nav-title {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  width: fit-content;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.2s ease;
+}
+
+.nav-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent-primary);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover .nav-title,
+.nav-link:focus-visible .nav-title {
+  color: var(--accent-primary);
+}
+
+.nav-link:hover .nav-title::after {
+  width: 100%;
+}
+
+/* Brand: highlighter sweep, defined in theme.css (".theme-brand .nav-title").
+   Room around the title for the marker; negative margin keeps the alignment. */
+.theme-brand .nav-title {
+  padding: 2px 6px 3px;
+  margin: 0 -6px;
+  /* The negative margins make the title's own box 12px wider than the space it takes
+     in the layout: without this the max-width: 100% above would clip it with "...". */
+  max-width: calc(100% + 12px);
+}
+
+.theme-brand .nav-title::after {
+  display: none;
+}
+
+/* Gaming: glowing dot under the title (as the navbar) instead of the line,
+   and green at rest -> white on hover (same as the .link-accent links). */
+.theme-gaming .nav-title {
+  padding-bottom: 12px;
+  color: var(--accent-primary);
+}
+
+.theme-gaming .nav-link:focus-visible .nav-title {
+  color: var(--text-primary);
+}
+
+@media (hover: hover) {
+  .theme-gaming .nav-link:hover .nav-title {
+    color: var(--text-primary);
+  }
+}
+
+.theme-gaming .nav-title::after {
+  left: 50%;
+  bottom: 2px;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  border-radius: 50%;
+  box-shadow: var(--nav-glow);
+  transform: scale(0);
+  transition: transform 0.25s ease;
+}
+
+.theme-gaming .nav-link:hover .nav-title::after,
+.theme-gaming .nav-link:focus-visible .nav-title::after {
+  width: 6px;
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-gaming .nav-title::after {
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .project-nav-fixed-inner {
+    padding: 10px 20px;
+  }
+}

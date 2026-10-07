@@ -27,6 +27,93 @@
       "title": "Montaggio che colpisce",
       "subtitle": "Highlight, trailer e contenuti per la tua community: ritmo, impatto e ogni momento chiave al posto giusto.",
       "ctaProjects": "Guarda i progetti"
+    },
+    "projects": {
+      "items": {
+        "gaming-placeholder-1": {
+          "description": "Progetto segnaposto per provare i layout: _due orizzontali_, _una verticale_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "two-h": {
+              "title": "Layout: due orizzontali",
+              "description": "Testo di prova della sezione **due orizzontali**. Titolo e descrizione di ogni sezione sono opzionali."
+            },
+            "single-v": {
+              "title": "Layout: una verticale"
+            }
+          }
+        },
+        "gaming-placeholder-2": {
+          "description": "Progetto segnaposto per provare i layout: _tre verticali_, _griglia di verticali_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "three-v": {
+              "title": "Layout: tre verticali",
+              "description": "Testo di prova della sezione **tre verticali**. Titolo e descrizione di ogni sezione sono opzionali."
+            },
+            "grid-6v": {
+              "title": "Layout: griglia di verticali"
+            }
+          }
+        },
+        "gaming-placeholder-3": {
+          "description": "Progetto segnaposto per provare i layout: _orizzontale e verticale_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "h-v": {
+              "title": "Layout: orizzontale e verticale",
+              "description": "Testo di prova della sezione **orizzontale e verticale**. Titolo e descrizione di ogni sezione sono opzionali."
+            }
+          }
+        },
+        "gaming-placeholder-4": {
+          "description": "Progetto segnaposto per provare i layout: _orizzontale e due verticali_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "h-2v": {
+              "title": "Layout: orizzontale e due verticali",
+              "description": "Testo di prova della sezione **orizzontale e due verticali**. Titolo e descrizione di ogni sezione sono opzionali."
+            }
+          }
+        },
+        "gaming-placeholder-5": {
+          "sections": {
+            "big-2small": {
+              "title": "Layout: grande e due piccoli",
+              "description": "Testo di prova della sezione **grande e due piccoli**. Titolo e descrizione di ogni sezione sono opzionali."
+            }
+          }
+        },
+        "gaming-placeholder-6": {
+          "description": "Progetto segnaposto per provare i layout: _verticali ai lati e colonna al centro_.\nIl testo supporta le **evidenze** e il corsivo."
+        },
+        "gaming-placeholder-7": {
+          "description": "Progetto segnaposto per provare i layout: _griglia 2×2_, _righe di altezza diversa_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "grid-2x2": {
+              "title": "Layout: griglia 2×2",
+              "description": "Testo di prova della sezione **griglia 2×2**. Titolo e descrizione di ogni sezione sono opzionali."
+            },
+            "sizes": {
+              "title": "Layout: righe di altezza diversa"
+            }
+          }
+        },
+        "gaming-placeholder-8": {
+          "description": "Progetto segnaposto per provare i layout: _righe di altezza diversa_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "sizes": {
+              "title": "Layout: righe di altezza diversa",
+              "description": "Testo di prova della sezione **righe di altezza diversa**. Titolo e descrizione di ogni sezione sono opzionali."
+            }
+          }
+        },
+        "gaming-placeholder-9": {
+          "description": "Progetto segnaposto per provare i layout: _una orizzontale grande_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "single-h-lg": {
+              "title": "Layout: una orizzontale grande",
+              "description": "Testo di prova della sezione **una orizzontale grande**. Titolo e descrizione di ogni sezione sono opzionali."
+            }
+          }
+        }
+      }
     }
   },
   "brand": {
@@ -35,6 +122,93 @@
       "title": "Montaggio per brand e social",
       "subtitle": "Video curati che raccontano un brand: ritmo pulito, messaggio chiaro e un'identità riconoscibile.",
       "ctaProjects": "Guarda i progetti"
+    },
+    "projects": {
+      "items": {
+        "brand-placeholder-1": {
+          "description": "Progetto segnaposto per provare i layout: _due orizzontali_, _una verticale_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "two-h": {
+              "title": "Layout: due orizzontali",
+              "description": "Testo di prova della sezione **due orizzontali**. Titolo e descrizione di ogni sezione sono opzionali."
+            },
+            "single-v": {
+              "title": "Layout: una verticale"
+            }
+          }
+        },
+        "brand-placeholder-2": {
+          "description": "Progetto segnaposto per provare i layout: _tre verticali_, _griglia di verticali_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "three-v": {
+              "title": "Layout: tre verticali",
+              "description": "Testo di prova della sezione **tre verticali**. Titolo e descrizione di ogni sezione sono opzionali."
+            },
+            "grid-6v": {
+              "title": "Layout: griglia di verticali"
+            }
+          }
+        },
+        "brand-placeholder-3": {
+          "description": "Progetto segnaposto per provare i layout: _orizzontale e verticale_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "h-v": {
+              "title": "Layout: orizzontale e verticale",
+              "description": "Testo di prova della sezione **orizzontale e verticale**. Titolo e descrizione di ogni sezione sono opzionali."
+            }
+          }
+        },
+        "brand-placeholder-4": {
+          "description": "Progetto segnaposto per provare i layout: _orizzontale e due verticali_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "h-2v": {
+              "title": "Layout: orizzontale e due verticali",
+              "description": "Testo di prova della sezione **orizzontale e due verticali**. Titolo e descrizione di ogni sezione sono opzionali."
+            }
+          }
+        },
+        "brand-placeholder-5": {
+          "sections": {
+            "big-2small": {
+              "title": "Layout: grande e due piccoli",
+              "description": "Testo di prova della sezione **grande e due piccoli**. Titolo e descrizione di ogni sezione sono opzionali."
+            }
+          }
+        },
+        "brand-placeholder-6": {
+          "description": "Progetto segnaposto per provare i layout: _verticali ai lati e colonna al centro_.\nIl testo supporta le **evidenze** e il corsivo."
+        },
+        "brand-placeholder-7": {
+          "description": "Progetto segnaposto per provare i layout: _griglia 2×2_, _righe di altezza diversa_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "grid-2x2": {
+              "title": "Layout: griglia 2×2",
+              "description": "Testo di prova della sezione **griglia 2×2**. Titolo e descrizione di ogni sezione sono opzionali."
+            },
+            "sizes": {
+              "title": "Layout: righe di altezza diversa"
+            }
+          }
+        },
+        "brand-placeholder-8": {
+          "description": "Progetto segnaposto per provare i layout: _righe di altezza diversa_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "sizes": {
+              "title": "Layout: righe di altezza diversa",
+              "description": "Testo di prova della sezione **righe di altezza diversa**. Titolo e descrizione di ogni sezione sono opzionali."
+            }
+          }
+        },
+        "brand-placeholder-9": {
+          "description": "Progetto segnaposto per provare i layout: _una orizzontale grande_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "single-h-lg": {
+              "title": "Layout: una orizzontale grande",
+              "description": "Testo di prova della sezione **una orizzontale grande**. Titolo e descrizione di ogni sezione sono opzionali."
+            }
+          }
+        }
+      }
     }
   },
   "about": {
@@ -42,5 +216,47 @@
     "role": "Video Editor",
     "introGaming": "Sono un <hl>video editor</hl> e i videogiochi sono la mia passione: monto highlight, trailer e contenuti per Instagram con un unico obiettivo, tenere incollato chi guarda dal primo secondo. Lavoro sul <hl>ritmo</hl>, sul suono e sui momenti che fanno la differenza, perché una buona clip non si limita a mostrare la partita: la racconta.",
     "introBrand": "Sono un <hl>video editor</hl> e lavoro con brand e creator per trasformare idee e materiale grezzo in video chiari e curati. Mi occupo di contenuti <hl>social</hl> e video di brand, con attenzione a coerenza visiva, ritmo e messaggio. Il mio obiettivo è che ogni video suoni come il brand che rappresenta."
+  },
+  "projects": {
+    "sectionTitle": "Progetti",
+    "showAll": "Mostra tutti",
+    "showLess": "Mostra meno",
+    "categories": {
+      "social": "Social",
+      "trailer": "Trailer",
+      "events": "Eventi",
+      "motion": "Motion graphics",
+      "color": "Color grading",
+      "short-film": "Cortometraggio"
+    }
+  },
+  "projectDetail": {
+    "labels": {
+      "channels": "PUBBLICATO SU",
+      "period": "PERIODO",
+      "client": "CLIENTE",
+      "course": "CORSO",
+      "personal": "TIPO",
+      "personalValue": "Progetto personale",
+      "present": "in corso",
+      "channel": "CANALE"
+    },
+    "backToProjects": "Tutti i progetti",
+    "notFound": "Progetto non trovato.",
+    "externalLinkLabels": {
+      "youtube": "Guarda su YouTube",
+      "instagram": "Guarda su Instagram",
+      "website": "Vai al sito"
+    },
+    "backToProjectsShort": "Progetti"
+  },
+  "projectNav": {
+    "label": "Altri progetti",
+    "previous": "Precedente",
+    "next": "Successivo"
+  },
+  "video": {
+    "play": "Riproduci su {{platform}}: {{title}}",
+    "openOn": "Apri su {{platform}}: {{title}}"
   }
 }

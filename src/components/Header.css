@@ -26,7 +26,7 @@
   align-items: center;
   justify-self: start;
   color: var(--accent-primary);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .logo svg {
@@ -43,6 +43,19 @@
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .logo:hover {
     transform: scale(1.1);
+  }
+}
+
+/* Hover/focus color, both zones: accent -> text color (gaming green -> white,
+   brand orange -> dark), like the nav links. The same .logo is used by Header and
+   ProjectHeader. */
+.logo:focus-visible {
+  color: var(--text-primary);
+}
+
+@media (hover: hover) {
+  .logo:hover {
+    color: var(--text-primary);
   }
 }
 
@@ -96,7 +109,7 @@
 /* Indicators are swapped between zones on purpose; colors stay per theme.
    - Gaming: ONE dot (.nav-dot, positioned by Header.jsx) that slides under the
      hovered link, or the active one when nothing is hovered. Green + glow.
-   - Brand: per-link 2px underline that opens from the left. Orange, no glow. */
+   - Brand: highlight sweep on hover (theme.css); the active link has a 2px underline. */
 
 /* Gaming: sliding dot */
 .nav-dot {
@@ -130,7 +143,7 @@
   display: none;
 }
 
-/* Brand: underline, opens from the left; active state always shown. */
+/* Brand: the active link keeps a static underline. */
 .theme-brand .nav a::after {
   left: 0;
   bottom: 0;
@@ -144,18 +157,7 @@
   transform: scaleX(1);
 }
 
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .theme-brand .nav a:hover::after {
-    transform: scaleX(1);
-  }
-}
-
-/* Brand hover: accent text. */
-@media (hover: hover) {
-  .theme-brand .nav a:hover {
-    color: var(--accent-primary);
-  }
-}
+/* Brand hover/focus: orange highlight sweep, defined in theme.css (".theme-brand .nav a"). */
 
 /* ---------- Actions (right) ---------- */
 .header-actions {

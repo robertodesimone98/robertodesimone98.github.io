@@ -27,6 +27,93 @@
       "title": "Editing that hits",
       "subtitle": "Highlights, trailers and content for your community: pace, impact and every key moment right where it belongs.",
       "ctaProjects": "View projects"
+    },
+    "projects": {
+      "items": {
+        "gaming-placeholder-1": {
+          "description": "Placeholder project to try the layouts: _two horizontals_, _one vertical_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "two-h": {
+              "title": "Layout: two horizontals",
+              "description": "Sample text for the **two horizontals** section. Title and description of each section are optional."
+            },
+            "single-v": {
+              "title": "Layout: one vertical"
+            }
+          }
+        },
+        "gaming-placeholder-2": {
+          "description": "Placeholder project to try the layouts: _three verticals_, _grid of verticals_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "three-v": {
+              "title": "Layout: three verticals",
+              "description": "Sample text for the **three verticals** section. Title and description of each section are optional."
+            },
+            "grid-6v": {
+              "title": "Layout: grid of verticals"
+            }
+          }
+        },
+        "gaming-placeholder-3": {
+          "description": "Placeholder project to try the layouts: _horizontal and vertical_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "h-v": {
+              "title": "Layout: horizontal and vertical",
+              "description": "Sample text for the **horizontal and vertical** section. Title and description of each section are optional."
+            }
+          }
+        },
+        "gaming-placeholder-4": {
+          "description": "Placeholder project to try the layouts: _horizontal and two verticals_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "h-2v": {
+              "title": "Layout: horizontal and two verticals",
+              "description": "Sample text for the **horizontal and two verticals** section. Title and description of each section are optional."
+            }
+          }
+        },
+        "gaming-placeholder-5": {
+          "sections": {
+            "big-2small": {
+              "title": "Layout: big one and two small ones",
+              "description": "Sample text for the **big one and two small ones** section. Title and description of each section are optional."
+            }
+          }
+        },
+        "gaming-placeholder-6": {
+          "description": "Placeholder project to try the layouts: _verticals on the sides, stack in the middle_.\nThe text supports **highlights** and italics."
+        },
+        "gaming-placeholder-7": {
+          "description": "Placeholder project to try the layouts: _2×2 grid_, _rows of different height_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "grid-2x2": {
+              "title": "Layout: 2×2 grid",
+              "description": "Sample text for the **2×2 grid** section. Title and description of each section are optional."
+            },
+            "sizes": {
+              "title": "Layout: rows of different height"
+            }
+          }
+        },
+        "gaming-placeholder-8": {
+          "description": "Placeholder project to try the layouts: _rows of different height_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "sizes": {
+              "title": "Layout: rows of different height",
+              "description": "Sample text for the **rows of different height** section. Title and description of each section are optional."
+            }
+          }
+        },
+        "gaming-placeholder-9": {
+          "description": "Placeholder project to try the layouts: _one large horizontal_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "single-h-lg": {
+              "title": "Layout: one large horizontal",
+              "description": "Sample text for the **one large horizontal** section. Title and description of each section are optional."
+            }
+          }
+        }
+      }
     }
   },
   "brand": {
@@ -35,6 +122,93 @@
       "title": "Editing for brands and social",
       "subtitle": "Polished videos that tell a brand's story: clean pacing, a clear message and a look people recognize.",
       "ctaProjects": "View projects"
+    },
+    "projects": {
+      "items": {
+        "brand-placeholder-1": {
+          "description": "Placeholder project to try the layouts: _two horizontals_, _one vertical_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "two-h": {
+              "title": "Layout: two horizontals",
+              "description": "Sample text for the **two horizontals** section. Title and description of each section are optional."
+            },
+            "single-v": {
+              "title": "Layout: one vertical"
+            }
+          }
+        },
+        "brand-placeholder-2": {
+          "description": "Placeholder project to try the layouts: _three verticals_, _grid of verticals_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "three-v": {
+              "title": "Layout: three verticals",
+              "description": "Sample text for the **three verticals** section. Title and description of each section are optional."
+            },
+            "grid-6v": {
+              "title": "Layout: grid of verticals"
+            }
+          }
+        },
+        "brand-placeholder-3": {
+          "description": "Placeholder project to try the layouts: _horizontal and vertical_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "h-v": {
+              "title": "Layout: horizontal and vertical",
+              "description": "Sample text for the **horizontal and vertical** section. Title and description of each section are optional."
+            }
+          }
+        },
+        "brand-placeholder-4": {
+          "description": "Placeholder project to try the layouts: _horizontal and two verticals_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "h-2v": {
+              "title": "Layout: horizontal and two verticals",
+              "description": "Sample text for the **horizontal and two verticals** section. Title and description of each section are optional."
+            }
+          }
+        },
+        "brand-placeholder-5": {
+          "sections": {
+            "big-2small": {
+              "title": "Layout: big one and two small ones",
+              "description": "Sample text for the **big one and two small ones** section. Title and description of each section are optional."
+            }
+          }
+        },
+        "brand-placeholder-6": {
+          "description": "Placeholder project to try the layouts: _verticals on the sides, stack in the middle_.\nThe text supports **highlights** and italics."
+        },
+        "brand-placeholder-7": {
+          "description": "Placeholder project to try the layouts: _2×2 grid_, _rows of different height_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "grid-2x2": {
+              "title": "Layout: 2×2 grid",
+              "description": "Sample text for the **2×2 grid** section. Title and description of each section are optional."
+            },
+            "sizes": {
+              "title": "Layout: rows of different height"
+            }
+          }
+        },
+        "brand-placeholder-8": {
+          "description": "Placeholder project to try the layouts: _rows of different height_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "sizes": {
+              "title": "Layout: rows of different height",
+              "description": "Sample text for the **rows of different height** section. Title and description of each section are optional."
+            }
+          }
+        },
+        "brand-placeholder-9": {
+          "description": "Placeholder project to try the layouts: _one large horizontal_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "single-h-lg": {
+              "title": "Layout: one large horizontal",
+              "description": "Sample text for the **one large horizontal** section. Title and description of each section are optional."
+            }
+          }
+        }
+      }
     }
   },
   "about": {
@@ -42,5 +216,47 @@
     "role": "Video Editor",
     "introGaming": "I'm a <hl>video editor</hl> and gaming is my thing: I cut highlights, trailers and Instagram content with one goal, keeping viewers watching from the first second. I work on <hl>rhythm</hl>, sound and the moments that make the difference, because a good clip doesn't just show the game: it tells it.",
     "introBrand": "I'm a <hl>video editor</hl> working with brands and creators to turn ideas and raw footage into clear, polished videos. I focus on <hl>social</hl> content and brand videos, with attention to visual consistency, pacing and message. My goal is for every video to sound like the brand behind it."
+  },
+  "projects": {
+    "sectionTitle": "Projects",
+    "showAll": "Show all",
+    "showLess": "Show less",
+    "categories": {
+      "social": "Social",
+      "trailer": "Trailer",
+      "events": "Events",
+      "motion": "Motion graphics",
+      "color": "Color grading",
+      "short-film": "Short film"
+    }
+  },
+  "projectDetail": {
+    "labels": {
+      "channels": "PUBLISHED ON",
+      "period": "PERIOD",
+      "client": "CLIENT",
+      "course": "COURSE",
+      "personal": "TYPE",
+      "personalValue": "Personal project",
+      "present": "present",
+      "channel": "CHANNEL"
+    },
+    "backToProjects": "All projects",
+    "notFound": "Project not found.",
+    "externalLinkLabels": {
+      "youtube": "Watch on YouTube",
+      "instagram": "Watch on Instagram",
+      "website": "Visit the website"
+    },
+    "backToProjectsShort": "Projects"
+  },
+  "projectNav": {
+    "label": "More projects",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "video": {
+    "play": "Play on {{platform}}: {{title}}",
+    "openOn": "Open on {{platform}}: {{title}}"
   }
 }

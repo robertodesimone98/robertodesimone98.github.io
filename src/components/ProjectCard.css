@@ -1,0 +1,201 @@
+.card {
+  background: var(--bg-card);
+  border: 0.5px solid var(--border-default);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+/* The scroll fade-in (theme.css) animates opacity + transform with a stagger delay.
+   Hover movement uses `translate` and border/shadow have no delay, so hover is instant. */
+.card.fade-in-section {
+  transition:
+    opacity 0.5s ease-out calc(var(--stagger-index, 0) * 80ms),
+    transform 0.5s ease-out calc(var(--stagger-index, 0) * 80ms),
+    translate 0.2s ease 0s,
+    box-shadow 0.2s ease 0s,
+    border-color 0.25s ease 0s;
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .card:hover {
+    translate: 0 -4px;
+    border-color: var(--border-strong);
+  }
+}
+
+/* Same box for every card of a zone; covers of any ratio are cropped to it
+   (per-project crop: coverPosition in the data). */
+.card-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--bg-card-image);
+}
+
+.theme-gaming .card-media {
+  aspect-ratio: 1 / 1;
+}
+
+.theme-brand .card-media {
+  aspect-ratio: 4 / 3;
+}
+
+/* Gaming: same language as .btn (theme.css): primary border, hard offset shadow,
+   the card moves toward its shadow on hover and "presses" on click. */
+.theme-gaming .card {
+  border: 1.5px solid var(--accent-primary);
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 var(--btn-shadow);
+}
+
+.theme-gaming .card-media {
+  border-bottom: 1.5px solid var(--accent-primary);
+}
+
+.theme-gaming .card-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.theme-gaming .card-title-row {
+  margin-bottom: 4px;
+}
+
+@media (hover: hover) {
+  .theme-gaming .card:hover {
+    translate: 2px 2px;
+    border-color: var(--accent-primary);
+    box-shadow: 2px 2px 0 var(--btn-shadow);
+  }
+}
+
+/* After :hover so it wins on equal specificity. */
+.theme-gaming .card:active {
+  translate: 4px 4px;
+  box-shadow: 0 0 0 transparent;
+}
+
+.card-image,
+.card-hover-preview {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s ease, transform 0.4s ease;
+}
+
+.card-hover-preview {
+  opacity: 0;
+}
+
+@media (hover: hover) {
+  .card:hover .card-hover-preview {
+    opacity: 1;
+  }
+
+  .card:hover .card-image {
+    transform: scale(1.04);
+  }
+}
+
+.card-body {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-title-row {
+  margin-bottom: 6px;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  display: inline-block;
+  transition: color 0.25s ease;
+}
+
+.card:hover .card-title {
+  color: var(--accent-primary);
+}
+
+/* Client / school / "personal project": non-clickable emphasis => secondary accent. */
+.card-origin {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  color: var(--accent-secondary);
+  font-size: 13px;
+}
+
+.card-origin svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.card-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 10px;
+  gap: 8px;
+}
+
+.card-channels {
+  color: var(--text-muted);
+  font-size: 13px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* One category per project. Neutral on purpose: it is a label, not a link. */
+.category-badge {
+  flex-shrink: 0;
+  padding: 2px 8px;
+  border: 0.5px solid var(--border-strong);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card.fade-in-section,
+  .card-image {
+    transition: none;
+  }
+
+  .card:hover,
+  .theme-gaming .card:hover,
+  .theme-gaming .card:active {
+    translate: none;
+  }
+
+  .card:hover .card-image {
+    transform: none;
+  }
+}

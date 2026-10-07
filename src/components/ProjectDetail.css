@@ -1,0 +1,118 @@
+.project-detail-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.project-not-found {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  color: var(--text-secondary);
+}
+
+/* Hero: always 16:9 (the tile fills it). */
+.project-hero {
+  aspect-ratio: 16 / 9;
+  margin-top: 28px;
+}
+
+/* Room for the fixed ProjectNav bar. */
+.project-body {
+  padding: 36px 0 110px;
+}
+
+.project-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px 16px;
+  margin-bottom: 14px;
+}
+
+.project-title-row h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.15;
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--text-primary);
+}
+
+.theme-gaming .project-title-row h1 {
+  font-weight: 400;
+  font-size: 48px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.project-title-row .category-badge {
+  margin-top: 8px;
+}
+
+.project-description {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0 0 26px;
+  max-width: 680px;
+}
+
+.metadata-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border-default);
+  border-bottom: 1px solid var(--border-default);
+  margin-bottom: 40px;
+}
+
+@media (max-width: 640px) {
+  .project-detail-wrap {
+    padding: 0 20px;
+  }
+
+  .project-title-row h1 {
+    font-size: 26px;
+  }
+
+  .theme-gaming .project-title-row h1 {
+    font-size: 36px;
+  }
+
+  .metadata-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 16px;
+  }
+}
+
+.metadata-label {
+  color: var(--text-muted);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.metadata-value {
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.channel-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-primary);
+}
+
+.channel-icons svg {
+  width: 18px;
+  height: 18px;
+}
+
+.external-cta {
+  text-decoration: none;
+}

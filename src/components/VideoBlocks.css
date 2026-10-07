@@ -1,0 +1,96 @@
+.vblocks {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  margin-bottom: 36px;
+}
+
+.vsection-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 0 0 10px;
+  color: var(--text-primary);
+}
+
+.theme-gaming .vsection-title {
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.vsection-description {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0 0 18px;
+  max-width: 680px;
+}
+
+.vrows {
+  --vgap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--vgap);
+}
+
+/* Max height of a row. Width cap = sum of aspects x height (+ gaps). */
+.vrow {
+  --row-h: 420px;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--vgap);
+  width: 100%;
+  max-width: calc(var(--sum) * var(--row-h) + (var(--n) - 1) * var(--vgap));
+  margin-inline: auto;
+}
+
+.vrow--sm {
+  --row-h: 260px;
+}
+
+.vrow--lg {
+  --row-h: 560px;
+}
+
+/* Tiles one above the other. The flex weights of the children split the height. */
+.vstack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--vgap);
+  min-width: 0;
+}
+
+/* Phones: rows cannot just shrink (3 verticals would be tiny), so the rows of a
+   section are dissolved and ALL its tiles flow in one wrapping container, one tile
+   per line: horizontals take the full width, verticals are centered and narrower
+   (a full-width 9:16 would be taller than the screen). Stacks flatten too. */
+@media (max-width: 640px) {
+  .vblocks {
+    gap: 32px;
+  }
+
+  .vrows {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .vrow,
+  .vstack {
+    display: contents;
+  }
+
+  .vrows .vtile {
+    flex: 0 0 100% !important;
+    aspect-ratio: 16 / 9 !important;
+  }
+
+  .vrows .vtile--v {
+    flex: 0 0 min(78%, 280px) !important;
+    aspect-ratio: 9 / 16 !important;
+  }
+}
