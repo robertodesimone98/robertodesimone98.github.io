@@ -80,16 +80,9 @@
   width: 100%;
 }
 
-/* Brand: highlighter sweep, defined in theme.css (".theme-brand .nav-title").
-   Room around the title for the marker; negative margin keeps the alignment. */
-.theme-brand .nav-title {
-  padding: 2px 6px 3px;
-  margin: 0 -6px;
-  /* The negative margins make the title's own box 12px wider than the space it takes
-     in the layout: without this the max-width: 100% above would clip it with "...". */
-  max-width: calc(100% + 12px);
-}
-
+/* Brand: HUD corners around the whole link (label + title), defined in theme.css.
+   Not on the title itself: it has overflow: hidden (ellipsis) and would clip them.
+   The orange title colour is in theme.css too. */
 .theme-brand .nav-title::after {
   display: none;
 }

@@ -101,9 +101,7 @@
 /* Button: one shared class, a different look per zone.
    Markup: <button class="btn btn--primary"> or <Link class="btn btn--secondary">.
    Gaming = flat hard offset shadow that "presses" on hover.
-   Brand  = fill sweeps in from the left; the label colour flips along the same
-            edge (two gradients clipped to text + box, moved together), so the
-            text is never unreadable mid-transition. */
+   Brand  = HUD corners that open around the button on hover/focus. */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -184,53 +182,118 @@
   box-shadow: 0 0 0 transparent;
 }
 
-/* ---- Brand: sweep fill ---- */
+/* ---- Brand: HUD corners (buttons and text links) ----
+   Hover/focus: four L-shaped corners open outward from the element's edge
+   (inset 0 -> -6px). The element itself keeps its colours, with two exceptions on
+   buttons: filled (primary) gets a slight brightness lift, outline (secondary) gets a
+   light tint of the accent. Text links keep their colour and just get the corners.
+   Used by: .btn, .link-accent, header nav links (.nav a), project prev/next (.nav-link).
+   Nothing clips the 6px around these elements (checked: Hero, ProjectsSection,
+   ProjectDetail, headers, ProjectNav); if one ever does, add padding there or use -4px. */
+.theme-brand .btn,
+.theme-brand .nav-link {
+  position: relative;          /* anchor for the corners (.link-accent and .nav a already are) */
+}
+
+.theme-brand .btn::before,
+.theme-brand .link-accent::before,
+.theme-brand .nav a::before,
+.theme-brand .nav-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  --c: var(--accent-primary);  /* local to the pseudo-element */
+  background:
+    linear-gradient(var(--c), var(--c)) 0 0 / 10px 2px no-repeat,
+    linear-gradient(var(--c), var(--c)) 0 0 / 2px 10px no-repeat,
+    linear-gradient(var(--c), var(--c)) 100% 0 / 10px 2px no-repeat,
+    linear-gradient(var(--c), var(--c)) 100% 0 / 2px 10px no-repeat,
+    linear-gradient(var(--c), var(--c)) 0 100% / 10px 2px no-repeat,
+    linear-gradient(var(--c), var(--c)) 0 100% / 2px 10px no-repeat,
+    linear-gradient(var(--c), var(--c)) 100% 100% / 10px 2px no-repeat,
+    linear-gradient(var(--c), var(--c)) 100% 100% / 2px 10px no-repeat;
+  transition: inset 0.2s ease, opacity 0.2s ease;
+}
+
+@media (hover: hover) {
+  .theme-brand .btn:hover::before,
+  .theme-brand .link-accent:hover::before,
+  .theme-brand .nav a:hover::before,
+  .theme-brand .nav-link:hover::before {
+    inset: -6px;
+    opacity: 1;
+  }
+}
+
+/* Keyboard focus: same corners. They replace the outline here; the outline is kept
+   transparent so it still shows in forced-colors (high contrast) mode. */
+.theme-brand .btn:focus-visible,
+.theme-brand .link-accent:focus-visible,
+.theme-brand .nav a:focus-visible,
+.theme-brand .nav-link:focus-visible {
+  outline: 2px solid transparent;
+}
+
+.theme-brand .btn:focus-visible::before,
+.theme-brand .link-accent:focus-visible::before,
+.theme-brand .nav a:focus-visible::before,
+.theme-brand .nav-link:focus-visible::before {
+  inset: -6px;
+  opacity: 1;
+}
+
+/* Buttons */
 .theme-brand .btn {
-  /* layer 1 = label colour (clipped to text), layer 2 = fill (clipped to box).
-     Both are 200% wide and slide together: right half = rest, left half = hover. */
-  background-image:
-    linear-gradient(90deg, var(--btn-text-hover) 50%, var(--btn-text-rest) 50%),
-    linear-gradient(90deg, var(--btn-fill-hover) 50%, var(--btn-fill-rest) 50%);
-  background-size: 200% 100%;
-  background-position: 100% 0;
-  background-repeat: no-repeat;
-  background-origin: border-box;
-  -webkit-background-clip: text, border-box;
-  background-clip: text, border-box;
-  -webkit-text-fill-color: transparent;
-  transition: background-position 0.35s cubic-bezier(0.7, 0, 0.2, 1), transform 0.2s ease;
+  /* One single transition for the element: a second rule would override this one. */
+  transition: background-color 0.2s ease, filter 0.2s ease, transform 0.2s ease;
 }
 
-.theme-brand .btn:hover {
-  background-position: 0 0;
+/* Primary: orange fill, white label. */
+.theme-brand .btn--primary {
+  background-color: var(--accent-primary);
+  color: var(--accent-primary-on);
+  border-color: var(--accent-primary);
 }
 
+/* Secondary: outline, orange label. */
+.theme-brand .btn--secondary {
+  background-color: transparent;
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+@media (hover: hover) {
+  .theme-brand .btn--primary:hover {
+    filter: brightness(1.12);
+  }
+
+  .theme-brand .btn--secondary:hover {
+    background-color: var(--btn-contact-background);   /* ~12% accent */
+  }
+}
+
+.theme-brand .btn--primary:focus-visible {
+  filter: brightness(1.12);
+}
+
+.theme-brand .btn--secondary:focus-visible {
+  background-color: var(--btn-contact-background);
+}
+
+/* After the hover rules so it wins on equal specificity. */
 .theme-brand .btn:active {
   transform: scale(0.98);
 }
 
-/* Primary: orange, white label -> sweeps to white with orange label.
-   The orange border keeps the white state defined on the cream background. */
-.theme-brand .btn--primary {
-  --btn-text-rest: var(--accent-primary-on);
-  --btn-text-hover: var(--accent-primary);
-  --btn-fill-rest: var(--accent-primary);
-  --btn-fill-hover: #FFFFFF;       /* [DERIVED] */
-  border-color: var(--accent-primary);
-}
-
-/* Secondary: outline, orange label -> sweeps to orange fill with white label. */
-.theme-brand .btn--secondary {
-  --btn-text-rest: var(--accent-primary);
-  --btn-text-hover: var(--accent-primary-on);
-  --btn-fill-rest: transparent;
-  --btn-fill-hover: var(--accent-primary);
-  border-color: var(--accent-primary);
-}
-
 @media (prefers-reduced-motion: reduce) {
   .theme-gaming .btn,
-  .theme-brand .btn {
+  .theme-brand .btn,
+  .theme-brand .btn::before,
+  .theme-brand .link-accent::before,
+  .theme-brand .nav a::before,
+  .theme-brand .nav-link::before {
     transition: none;
   }
   .theme-gaming .btn:hover,
@@ -296,98 +359,45 @@
   }
 }
 
-/* ---- Brand text links: highlighter sweep (same mechanism as .btn) ----
-   An orange fill sweeps in from the left behind the text and the label turns white
-   along the same edge (two gradients: label colour clipped to the text, fill clipped
-   to the box), so the text is never unreadable mid-transition.
-   Applies to: inline links (.link-accent), project prev/next titles (.nav-title),
-   header nav links (.nav a) and mobile menu rows. Gaming keeps its dot instead. */
+/* ---- Brand text links ----
+   Orange at rest, same colour on hover/focus: the feedback is the HUD corners defined
+   above (shared with the buttons). Applies to: inline links (.link-accent), header nav
+   links (.nav a) and project prev/next (.nav-link, orange title). The mobile menu rows
+   are full width, so corners would not fit: they stay plain orange text.
+   Gaming keeps its dot instead. The nav selectors repeat :hover/:focus-visible to beat
+   the grey/white hover colours in Header.css. */
 .theme-brand .link-accent,
+.theme-brand .nav a,
+.theme-brand .nav a:hover,
+.theme-brand .nav a:focus-visible,
 .theme-brand .nav-title,
-.theme-brand .nav a,
 .theme-brand .mobile-menu > a {
-  --sw-text-rest: var(--accent-primary);
-  --sw-text-hover: var(--accent-primary-on);
-  --sw-fill-rest: transparent;
-  --sw-fill-hover: var(--accent-primary);
-  background-image:
-    linear-gradient(90deg, var(--sw-text-hover) 50%, var(--sw-text-rest) 50%),
-    linear-gradient(90deg, var(--sw-fill-hover) 50%, var(--sw-fill-rest) 50%);
-  /* 220% (not 200% as in .btn): at rest the hard edge of the gradient must sit OUTSIDE
-     the box. At exactly 200% it falls on the left edge and, depending on the screen
-     scale / sub-pixel position, leaves a thin orange line there. */
-  background-size: 220% 100%;
-  background-position: 100% 0;
-  background-repeat: no-repeat;
-  background-origin: border-box;
-  -webkit-background-clip: text, border-box;
-  background-clip: text, border-box;
-  -webkit-text-fill-color: transparent;
-  border-radius: 3px;
-  transition: background-position 0.35s cubic-bezier(0.7, 0, 0.2, 1), color 0.35s ease;
+  color: var(--accent-primary);
 }
 
-/* Rest colour of the label where it is not orange. */
-.theme-brand .nav a,
-.theme-brand .mobile-menu > a {
-  --sw-text-rest: var(--text-secondary);
-}
-
-.theme-brand .nav a.active,
-.theme-brand .mobile-menu > a.active {
-  --sw-text-rest: var(--accent-primary);
-}
-
-/* A little room around the text so the highlight looks like a marker; the negative
-   margin keeps the text exactly where it was. */
+/* The nav page is told apart by the 2px underline (Header.css), not by colour.
+   Small box around the text: the corners sit ~8px from it. The negative margin keeps
+   the text exactly where it was. */
 .theme-brand .link-accent {
-  padding: 1px 4px;
-  margin: 0 -4px;
+  padding: 2px;
+  margin: 0 -2px;
 }
 
 .theme-brand .nav a {
-  padding: 6px 8px;
-  margin: 0 -8px;
+  padding: 4px 2px;
+  margin: 0 -2px;
 }
 
-/* The underline is replaced by the highlight. */
+/* Inline links (e.g. the client link in the metadata) may wrap: a block box keeps the
+   corners on a rectangle. The back link is already inline-flex (icon + label). */
+.theme-brand .link-accent:not(.back-link) {
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* The underline is replaced by the corners. */
 .theme-brand .link-accent::after {
   display: none;
-}
-
-/* Hover (mouse) and focus (keyboard). `color` only matters for icons that use
-   currentColor (e.g. the grid icon of the back link): it turns white with the fill. */
-.theme-brand .link-accent:focus-visible,
-.theme-brand .nav-link:focus-visible .nav-title,
-.theme-brand .nav a:focus-visible,
-.theme-brand .mobile-menu > a:focus-visible {
-  background-position: 0 0;
-  color: var(--accent-primary-on);
-}
-
-@media (hover: hover) {
-  .theme-brand .link-accent:hover,
-  .theme-brand .nav-link:hover .nav-title,
-  .theme-brand .nav a:hover,
-  .theme-brand .mobile-menu > a:hover {
-    background-position: 0 0;
-    color: var(--accent-primary-on);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .theme-brand .link-accent,
-  .theme-brand .nav-title,
-  .theme-brand .nav a,
-  .theme-brand .mobile-menu > a {
-    transition: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .theme-gaming .link-accent::after {
-    transition: none;
-  }
 }
 
 .highlight {

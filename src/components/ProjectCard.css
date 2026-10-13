@@ -50,6 +50,12 @@
   aspect-ratio: 4 / 3;
 }
 
+/* Brand: the title is a link => primary accent at rest; hover adds an
+   underline so the change is not colour only. */
+.theme-brand .card-title {
+  color: var(--accent-primary);
+}
+
 /* Gaming: same language as .btn (theme.css): primary border, hard offset shadow,
    the card moves toward its shadow on hover and "presses" on click. */
 .theme-gaming .card {
