@@ -90,26 +90,43 @@
   transition: color 0.2s ease;
 }
 
-.nav a::after {
-  content: '';
-  position: absolute;
-  background: var(--accent-primary);
-  transition: transform 0.25s ease;
-}
-
 .nav a:hover {
   color: var(--text-primary);
 }
 
-/* Active link: accent text in both zones. */
+/* Active link: accent text here; both zones override it below / in theme.css. */
 .nav a.active {
   color: var(--accent-primary);
 }
 
+/* Gaming: the links are clickable => primary accent (green) at rest, white on
+   hover/focus, like the .link-accent links. The current section is the exception:
+   white (text colour) with the dot under it. Same idea as brand (theme.css: dark text
+   + corners): accent = you can click it, text colour = you are here. */
+.theme-gaming .nav a {
+  color: var(--accent-primary);
+}
+
+.theme-gaming .nav a.active {
+  color: var(--text-primary);
+}
+
+@media (hover: hover) {
+  .theme-gaming .nav a:hover {
+    color: var(--text-primary);
+  }
+}
+
+.theme-gaming .nav a:focus-visible {
+  color: var(--text-primary);
+}
+
 /* Indicators are swapped between zones on purpose; colors stay per theme.
-   - Gaming: ONE dot (.nav-dot, positioned by Header.jsx) that slides under the
-     hovered link, or the active one when nothing is hovered. Green + glow.
-   - Brand: highlight sweep on hover (theme.css); the active link has a 2px underline. */
+   ONE element slides to the hovered/focused link, or to the active one when
+   nothing is hovered (Header.jsx measures the link).
+   - Gaming: .nav-dot, a glowing dot under the link. Green + glow.
+   - Brand: .nav-lock, two opposite corners (top-right, bottom-left) around the
+     link: the same corners as the text-link hover in theme.css. */
 
 /* Gaming: sliding dot */
 .nav-dot {
@@ -139,25 +156,42 @@
   }
 }
 
-.theme-gaming .nav a::after {
+/* Brand: sliding corners */
+.nav-lock {
   display: none;
 }
 
-/* Brand: the active link keeps a static underline. */
-.theme-brand .nav a::after {
+.theme-brand .nav-lock {
+  display: block;
+  position: absolute;
   left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  transform: scaleX(0);
-  transform-origin: left;
+  top: 0;
+  /* The link's box plus 3px on each side; Header.jsx passes only the measures. */
+  width: calc(var(--lock-w) + 6px);
+  height: calc(var(--lock-h) + 6px);
+  transform: translate(calc(var(--lock-x) - 3px), calc(var(--lock-y) - 3px));
+  pointer-events: none;
+  --c: var(--accent-primary);  /* local to this element */
+  background:
+    linear-gradient(var(--c), var(--c)) 100% 0 / 7px 1.5px no-repeat,
+    linear-gradient(var(--c), var(--c)) 100% 0 / 1.5px 7px no-repeat,
+    linear-gradient(var(--c), var(--c)) 0 100% / 7px 1.5px no-repeat,
+    linear-gradient(var(--c), var(--c)) 0 100% / 1.5px 7px no-repeat;
 }
 
-.theme-brand .nav a.active::after {
-  transform: scaleX(1);
+/* Slide transition only after the first placement (is-ready), as for the dot. */
+.theme-brand .nav-lock.is-ready {
+  transition:
+    transform 0.3s cubic-bezier(0.3, 0.8, 0.3, 1),
+    width 0.3s cubic-bezier(0.3, 0.8, 0.3, 1),
+    height 0.3s cubic-bezier(0.3, 0.8, 0.3, 1);
 }
 
-/* Brand hover/focus: orange highlight sweep, defined in theme.css (".theme-brand .nav a"). */
+@media (prefers-reduced-motion: reduce) {
+  .theme-brand .nav-lock.is-ready {
+    transition: none;
+  }
+}
 
 /* ---------- Actions (right) ---------- */
 .header-actions {
@@ -212,6 +246,7 @@
   font-size: 24px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  color: var(--accent-primary);   /* clickable => green; the current section is white, below */
 }
 
 .theme-brand .mobile-menu > a {
@@ -224,6 +259,11 @@
 .mobile-menu > a:hover,
 .mobile-menu > a.active {
   color: var(--accent-primary);
+}
+
+/* Gaming: the current section is the one that is NOT green. */
+.theme-gaming .mobile-menu > a.active {
+  color: var(--text-primary);
 }
 
 .mobile-menu-actions {

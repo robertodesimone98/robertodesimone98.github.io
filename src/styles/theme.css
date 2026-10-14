@@ -101,7 +101,8 @@
 /* Button: one shared class, a different look per zone.
    Markup: <button class="btn btn--primary"> or <Link class="btn btn--secondary">.
    Gaming = flat hard offset shadow that "presses" on hover.
-   Brand  = HUD corners that open around the button on hover/focus. */
+   Brand  = HUD corners that open around the button on hover/focus; primary: the label
+            rolls up (white to white), secondary: the background fills dark. */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -172,8 +173,10 @@
   color: #FFFFFF;                  /* [DERIVED] white label on hover */
 }
 
+/* Secondary: the label turns white, like the primary. No background change (the old
+   12% tint was barely visible on the dark page and looked muddy over images). */
 .theme-gaming .btn--secondary:hover {
-  background: var(--btn-contact-background);
+  color: #FFFFFF;                  /* [DERIVED] white label on hover */
 }
 
 /* Must come after :hover to win on equal specificity. */
@@ -183,21 +186,26 @@
 }
 
 /* ---- Brand: HUD corners (buttons and text links) ----
-   Hover/focus: four L-shaped corners open outward from the element's edge
-   (inset 0 -> -6px). The element itself keeps its colours, with two exceptions on
-   buttons: filled (primary) gets a slight brightness lift, outline (secondary) gets a
-   light tint of the accent. Text links keep their colour and just get the corners.
-   Used by: .btn, .link-accent, header nav links (.nav a), project prev/next (.nav-link).
-   Nothing clips the 6px around these elements (checked: Hero, ProjectsSection,
-   ProjectDetail, headers, ProjectNav); if one ever does, add padding there or use -4px. */
+   Hover/focus: L-shaped corners open outward from the element's edge.
+   - Buttons: four corners (10px arms, 2px thick), opening to -6px.
+   - Text links: two opposite corners, top-right and bottom-left (7px arms, 1.5px thick),
+     opening to -3px. Lighter, so they don't turn a line of text into a crosshair.
+   The corners never change the element's own colours; what changes inside the button is
+   defined with the buttons below (primary: the label rolls up; secondary: the
+   background fills dark). Text links keep their colour and just get the corners.
+   Used by: .btn, .link-accent, project prev/next (.nav-link). The header nav links do
+   not use ::before: they get ONE sliding pair of the same corners (.nav-lock, Header.css).
+   Nothing clips the 6px around buttons or the 3px around links (checked: Hero,
+   ProjectsSection, ProjectDetail, headers, ProjectNav); if one ever does, add padding
+   there or reduce the offset. */
 .theme-brand .btn,
 .theme-brand .nav-link {
   position: relative;          /* anchor for the corners (.link-accent and .nav a already are) */
 }
 
+/* Shared by buttons and links: box, visibility, transition. */
 .theme-brand .btn::before,
 .theme-brand .link-accent::before,
-.theme-brand .nav a::before,
 .theme-brand .nav-link::before {
   content: '';
   position: absolute;
@@ -205,6 +213,11 @@
   pointer-events: none;
   opacity: 0;
   --c: var(--accent-primary);  /* local to the pseudo-element */
+  transition: inset 0.2s ease, opacity 0.2s ease;
+}
+
+/* Buttons: four corners. */
+.theme-brand .btn::before {
   background:
     linear-gradient(var(--c), var(--c)) 0 0 / 10px 2px no-repeat,
     linear-gradient(var(--c), var(--c)) 0 0 / 2px 10px no-repeat,
@@ -214,15 +227,27 @@
     linear-gradient(var(--c), var(--c)) 0 100% / 2px 10px no-repeat,
     linear-gradient(var(--c), var(--c)) 100% 100% / 10px 2px no-repeat,
     linear-gradient(var(--c), var(--c)) 100% 100% / 2px 10px no-repeat;
-  transition: inset 0.2s ease, opacity 0.2s ease;
+}
+
+/* Text links: two opposite corners, top-right and bottom-left. */
+.theme-brand .link-accent::before,
+.theme-brand .nav-link::before {
+  background:
+    linear-gradient(var(--c), var(--c)) 100% 0 / 7px 1.5px no-repeat,
+    linear-gradient(var(--c), var(--c)) 100% 0 / 1.5px 7px no-repeat,
+    linear-gradient(var(--c), var(--c)) 0 100% / 7px 1.5px no-repeat,
+    linear-gradient(var(--c), var(--c)) 0 100% / 1.5px 7px no-repeat;
 }
 
 @media (hover: hover) {
-  .theme-brand .btn:hover::before,
-  .theme-brand .link-accent:hover::before,
-  .theme-brand .nav a:hover::before,
-  .theme-brand .nav-link:hover::before {
+  .theme-brand .btn:hover::before {
     inset: -6px;
+    opacity: 1;
+  }
+
+  .theme-brand .link-accent:hover::before,
+  .theme-brand .nav-link:hover::before {
+    inset: -3px;
     opacity: 1;
   }
 }
@@ -236,18 +261,22 @@
   outline: 2px solid transparent;
 }
 
-.theme-brand .btn:focus-visible::before,
-.theme-brand .link-accent:focus-visible::before,
-.theme-brand .nav a:focus-visible::before,
-.theme-brand .nav-link:focus-visible::before {
+.theme-brand .btn:focus-visible::before {
   inset: -6px;
+  opacity: 1;
+}
+
+.theme-brand .link-accent:focus-visible::before,
+.theme-brand .nav-link:focus-visible::before {
+  inset: -3px;
   opacity: 1;
 }
 
 /* Buttons */
 .theme-brand .btn {
   /* One single transition for the element: a second rule would override this one. */
-  transition: background-color 0.2s ease, filter 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 /* Primary: orange fill, white label. */
@@ -264,22 +293,58 @@
   border-color: var(--accent-primary);
 }
 
+/* Secondary hover/focus: the outline button fills dark (--text-primary) with a cream
+   label (--bg-page), the same accent -> dark change as links and cards. */
 @media (hover: hover) {
-  .theme-brand .btn--primary:hover {
-    filter: brightness(1.12);
-  }
-
   .theme-brand .btn--secondary:hover {
-    background-color: var(--btn-contact-background);   /* ~12% accent */
+    background-color: var(--text-primary);
+    border-color: var(--text-primary);
+    color: var(--bg-page);
   }
-}
-
-.theme-brand .btn--primary:focus-visible {
-  filter: brightness(1.12);
 }
 
 .theme-brand .btn--secondary:focus-visible {
-  background-color: var(--btn-contact-background);
+  background-color: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--bg-page);
+}
+
+/* Primary label: on hover/focus the label rolls out through the top and an identical
+   copy (same white) comes in from below. The fill does not change.
+   Markup (primary buttons only):
+   <span class="btn-label"><span class="btn-label-inner" data-label="X">X</span></span>
+   The copy is the ::after of the inner span (content from data-label); the empty alt
+   text after the slash keeps screen readers from reading it twice. Brand only: in
+   gaming the spans are plain.
+   The line box (1.6em) is taller than the glyphs on purpose: with a tighter one the
+   descenders (g, j, p) of the outgoing line stick out of its box and show up as small
+   white marks at the top of the button once the copy has rolled in. */
+.theme-brand .btn-label {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.6em;
+  line-height: 1.6em;
+}
+
+.theme-brand .btn-label-inner {
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.3, 0.8, 0.3, 1);
+}
+
+.theme-brand .btn-label-inner::after {
+  content: attr(data-label);
+  content: attr(data-label) / '';
+  display: block;
+}
+
+@media (hover: hover) {
+  .theme-brand .btn--primary:hover .btn-label-inner {
+    transform: translateY(-50%);
+  }
+}
+
+.theme-brand .btn--primary:focus-visible .btn-label-inner {
+  transform: translateY(-50%);
 }
 
 /* After the hover rules so it wins on equal specificity. */
@@ -292,7 +357,6 @@
   .theme-brand .btn,
   .theme-brand .btn::before,
   .theme-brand .link-accent::before,
-  .theme-brand .nav a::before,
   .theme-brand .nav-link::before {
     transition: none;
   }
@@ -300,6 +364,10 @@
   .theme-gaming .btn:active,
   .theme-brand .btn:active {
     transform: none;
+  }
+
+  .theme-brand .btn-label-inner {
+    transition: none;
   }
 }
 
@@ -360,24 +428,52 @@
 }
 
 /* ---- Brand text links ----
-   Orange at rest, same colour on hover/focus: the feedback is the HUD corners defined
-   above (shared with the buttons). Applies to: inline links (.link-accent), header nav
-   links (.nav a) and project prev/next (.nav-link, orange title). The mobile menu rows
-   are full width, so corners would not fit: they stay plain orange text.
-   Gaming keeps its dot instead. The nav selectors repeat :hover/:focus-visible to beat
-   the grey/white hover colours in Header.css. */
+   Orange at rest, same colour on hover/focus: the feedback is the two-corner HUD
+   defined above (a lighter version of the button corners). Applies to: inline links
+   (.link-accent), header nav links (.nav a) and project prev/next (.nav-link, orange
+   title). The mobile menu rows are full width, so corners would not fit: they stay
+   plain orange text.
+   Hover/focus: the text turns dark (--text-primary) while the corners stay orange, the
+   same accent -> text colour change as the logo and the gaming links. The hover rules
+   below are more specific than Header.css / ProjectNav.css, so they win over their
+   own hover colours.
+   Active nav link (and active mobile menu row): dark text too, always. In the header
+   the sliding corners (.nav-lock) mark it; the other links stay orange.
+   Gaming keeps its dot instead. */
 .theme-brand .link-accent,
 .theme-brand .nav a,
-.theme-brand .nav a:hover,
-.theme-brand .nav a:focus-visible,
 .theme-brand .nav-title,
 .theme-brand .mobile-menu > a {
   color: var(--accent-primary);
 }
 
-/* The nav page is told apart by the 2px underline (Header.css), not by colour.
-   Small box around the text: the corners sit ~8px from it. The negative margin keeps
-   the text exactly where it was. */
+/* .nav a and .nav-title already have a colour transition (Header.css, ProjectNav.css). */
+.theme-brand .link-accent {
+  transition: color 0.2s ease;
+}
+
+@media (hover: hover) {
+  .theme-brand .link-accent:hover,
+  .theme-brand .nav a:hover,
+  .theme-brand .nav-link:hover .nav-title {
+    color: var(--text-primary);
+  }
+}
+
+.theme-brand .link-accent:focus-visible,
+.theme-brand .nav a:focus-visible,
+.theme-brand .nav-link:focus-visible .nav-title {
+  color: var(--text-primary);
+}
+
+.theme-brand .nav a.active,
+.theme-brand .mobile-menu > a.active {
+  color: var(--text-primary);
+}
+
+/* The active nav page is told apart by the sliding corners (.nav-lock) and its dark text.
+   Small box around the text: it sets the size of the corners (3px outside this box,
+   ~5px from the text). The negative margin keeps the text exactly where it was. */
 .theme-brand .link-accent {
   padding: 2px;
   margin: 0 -2px;

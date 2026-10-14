@@ -83,6 +83,13 @@ function ProjectCard({ zone, project, staggerIndex = 0 }) {
       <div className="card-body">
         <div className="card-title-row">
           <span className="card-title">{project.title}</span>
+          <span className="card-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12l14 0" />
+              <path d="M13 18l6 -6" />
+              <path d="M13 6l6 6" />
+            </svg>
+          </span>
         </div>
         <div className="card-origin">
           {originIcons[project.origin]}

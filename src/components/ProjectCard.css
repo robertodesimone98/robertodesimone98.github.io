@@ -50,10 +50,74 @@
   aspect-ratio: 4 / 3;
 }
 
-/* Brand: the title is a link => primary accent at rest; hover adds an
-   underline so the change is not colour only. */
+/* Brand: the title is a link => primary accent at rest. Hover/focus: the title turns
+   dark (same accent -> text colour change as the text links in theme.css) and an orange
+   arrow slides in after it, to say "open". The arrow is brand only (hidden in gaming) and
+   always takes its 16px + gap, so titles wrap slightly earlier than without it. */
 .theme-brand .card-title {
   color: var(--accent-primary);
+}
+
+.theme-brand .card-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.card-arrow {
+  display: none;
+}
+
+.theme-brand .card-arrow {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 19px;                /* height of the first title line (14px, line-height normal) */
+  color: var(--accent-primary);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.card-arrow svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (hover: hover) {
+  .theme-brand .card:hover .card-title {
+    color: var(--text-primary);
+  }
+
+  .theme-brand .card:hover .card-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.theme-brand .card:focus-visible .card-title {
+  color: var(--text-primary);
+}
+
+.theme-brand .card:focus-visible .card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Gaming: the title is a link => primary accent (green) at rest, white on hover/focus,
+   like the .link-accent links and ProjectNav. (Brand: orange, dark on hover + arrow.) */
+.theme-gaming .card-title {
+  color: var(--accent-primary);
+}
+
+@media (hover: hover) {
+  .theme-gaming .card:hover .card-title {
+    color: var(--text-primary);
+  }
+}
+
+.theme-gaming .card:focus-visible .card-title {
+  color: var(--text-primary);
 }
 
 /* Gaming: same language as .btn (theme.css): primary border, hard offset shadow,
@@ -202,6 +266,11 @@
   }
 
   .card:hover .card-image {
+    transform: none;
+  }
+
+  .theme-brand .card-arrow {
+    transition: none;
     transform: none;
   }
 }

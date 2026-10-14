@@ -1,4 +1,13 @@
+/* Segmented IT | EN toggle, same in both zones (colours come from the zone theme).
+   A thumb (filled with --accent-primary) sits behind the current language; on hover
+   it slides to the other one (see LangSwitch.jsx for the click lock). */
 .lang-switch {
+  --ls-thumb: var(--accent-primary);        /* orange on brand, green on gaming */
+  --ls-thumb-on: var(--accent-primary-on);  /* label on the thumb: white / dark teal */
+  --ls-rest: var(--text-primary);           /* label off the thumb (brand: see below) */
+  --ls-pos: 0;                              /* thumb position: 0 = IT, 1 = EN */
+
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,17 +15,15 @@
   /* Fixed box (same in both zones): the pill must not move on zone switch. */
   width: 76px;
   height: 36px;
-  gap: 8px;
+  padding: 2px;
   border: 1px solid var(--border-strong);
   border-radius: 999px;
-  padding: 0;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.04em;
   cursor: pointer;
   background: none;
-  color: var(--text-primary);
-  transition: border-color 0.2s ease;
+  color: var(--ls-rest);
 }
 
 /* Gaming: same display font as the nav. */
@@ -27,8 +34,9 @@
   letter-spacing: 0.12em;
 }
 
-.lang-switch:hover,
-.lang-switch:focus-visible {
+/* Brand: clickable => primary accent for border and label. */
+.theme-brand .lang-switch {
+  --ls-rest: var(--accent-primary);
   border-color: var(--accent-primary);
 }
 
@@ -37,19 +45,89 @@
   outline-offset: 2px;
 }
 
-.lang-switch .inactive {
-  opacity: 0.4;
+/* Thumb: half of the inner width, moved by --ls-pos. */
+.lang-switch-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(50% - 2px);
+  height: calc(100% - 4px);
+  border-radius: 999px;
+  background: var(--ls-thumb);
+  transform: translateX(calc(var(--ls-pos) * 100%));
+  transition: transform 0.3s cubic-bezier(0.3, 0.8, 0.3, 1);
+  pointer-events: none;
 }
 
-/* Brand: clickable => primary accent for border and label. Hover tints the
-   pill, since the border is already orange. */
-.theme-brand .lang-switch {
-  color: var(--accent-primary);
-  border-color: var(--accent-primary);
-  transition: background-color 0.2s ease;
+.lang-switch-it,
+.lang-switch-en {
+  position: relative;          /* above the thumb */
+  z-index: 1;
+  flex: 1;
+  text-align: center;
+  transition: color 0.2s ease;
 }
 
-.theme-brand .lang-switch:hover,
-.theme-brand .lang-switch:focus-visible {
-  background-color: var(--btn-contact-background);
+/* Gaming: letter-spacing adds space after the last letter; shift it back so the label
+   is centered in its half. */
+.theme-gaming .lang-switch-it,
+.theme-gaming .lang-switch-en {
+  text-indent: 0.12em;
+}
+
+/* Labels: the one on the thumb uses --ls-thumb-on, the other --ls-rest. */
+.lang-switch-it {
+  color: var(--ls-thumb-on);
+}
+
+.lang-switch-en {
+  color: var(--ls-rest);
+}
+
+.lang-switch.is-en {
+  --ls-pos: 1;
+}
+
+.lang-switch.is-en .lang-switch-it {
+  color: var(--ls-rest);
+}
+
+.lang-switch.is-en .lang-switch-en {
+  color: var(--ls-thumb-on);
+}
+
+/* Hover preview: the thumb goes to the other language. Pointer devices only, and not
+   right after a click (.is-locked) until the pointer leaves. */
+@media (hover: hover) {
+  .lang-switch:not(.is-locked):hover {
+    --ls-pos: 1;
+  }
+
+  .lang-switch:not(.is-locked):hover .lang-switch-it {
+    color: var(--ls-rest);
+  }
+
+  .lang-switch:not(.is-locked):hover .lang-switch-en {
+    color: var(--ls-thumb-on);
+  }
+
+  .lang-switch.is-en:not(.is-locked):hover {
+    --ls-pos: 0;
+  }
+
+  .lang-switch.is-en:not(.is-locked):hover .lang-switch-it {
+    color: var(--ls-thumb-on);
+  }
+
+  .lang-switch.is-en:not(.is-locked):hover .lang-switch-en {
+    color: var(--ls-rest);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lang-switch-thumb,
+  .lang-switch-it,
+  .lang-switch-en {
+    transition: none;
+  }
 }

@@ -30,20 +30,25 @@ function Header({ zone }) {
 
   const isClickScrolling = useRef(false)
 
-  // Brand nav: ONE dot that slides under the hovered link (or the active one
-  // when nothing is hovered). Position is measured, so it is recomputed on
-  // resize and once fonts are loaded (they change the link widths).
+  // Nav indicator: ONE element that slides to the hovered/focused link, or to
+  // the active one when nothing is hovered. Gaming: a dot under the link
+  // (.nav-dot). Brand: two corners around the link (.nav-lock). Position and
+  // size are measured, so they are recomputed on resize and once fonts are
+  // loaded (they change the link widths).
   const navRef = useRef(null)
   const linkRefs = useRef({})
   const [hoveredId, setHoveredId] = useState(null)
   const [dotX, setDotX] = useState(0)
+  const [box, setBox] = useState({ x: 0, y: 0, w: 0, h: 0 })
   const [dotReady, setDotReady] = useState(false)
   const dotTarget = hoveredId ?? activeSection
 
   useLayoutEffect(() => {
     const place = () => {
       const el = linkRefs.current[dotTarget]
-      if (el) setDotX(el.offsetLeft + el.offsetWidth / 2)
+      if (!el) return
+      setDotX(el.offsetLeft + el.offsetWidth / 2)
+      setBox({ x: el.offsetLeft, y: el.offsetTop, w: el.offsetWidth, h: el.offsetHeight })
     }
     place()
 
@@ -146,6 +151,16 @@ function Header({ zone }) {
           <span
             className={`nav-dot${dotReady ? ' is-ready' : ''}`}
             style={{ transform: `translateX(${dotX}px)` }}
+            aria-hidden="true"
+          />
+          <span
+            className={`nav-lock${dotReady ? ' is-ready' : ''}`}
+            style={{
+              '--lock-x': `${box.x}px`,
+              '--lock-y': `${box.y}px`,
+              '--lock-w': `${box.w}px`,
+              '--lock-h': `${box.h}px`,
+            }}
             aria-hidden="true"
           />
         </nav>

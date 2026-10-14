@@ -42,9 +42,37 @@
 }
 
 .nav-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-size: 11px;
   color: var(--text-muted);
   letter-spacing: 0.03em;
+}
+
+/* Arrow next to the label: clickable => primary accent (orange on brand, green on
+   gaming). On hover/focus it moves 3px in its own direction. */
+.nav-arrow {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--accent-primary);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .nav-arrow {
+    transition: transform 0.25s ease;
+  }
+
+  .nav-link.prev:hover .nav-arrow,
+  .nav-link.prev:focus-visible .nav-arrow {
+    transform: translateX(-3px);
+  }
+
+  .nav-link.next:hover .nav-arrow,
+  .nav-link.next:focus-visible .nav-arrow {
+    transform: translateX(3px);
+  }
 }
 
 .nav-title {

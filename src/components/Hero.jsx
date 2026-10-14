@@ -10,6 +10,7 @@ function Hero({ zone }) {
   const { video, poster } = zoneMedia[zone].hero
   const videoRef = useRef(null)
   const [videoFailed, setVideoFailed] = useState(false)
+  const ctaLabel = t(`${zone}.hero.ctaProjects`)
 
   useEffect(() => {
     const el = videoRef.current
@@ -51,7 +52,11 @@ function Hero({ zone }) {
           <p>{t(`${zone}.hero.subtitle`)}</p>
           <div className="cta-row">
             <button className="btn btn--primary" onClick={() => scrollToSection('projects')}>
-              {t(`${zone}.hero.ctaProjects`)}
+              <span className="btn-label">
+                <span className="btn-label-inner" data-label={ctaLabel}>
+                  {ctaLabel}
+                </span>
+              </span>
             </button>
           </div>
         </div>
