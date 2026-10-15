@@ -22,7 +22,7 @@ function ProjectsSection({ zone }) {
 
   // 3 columns on desktop, 2 on phones: show two full rows before "show all".
   const isMobile = useMediaQuery('(max-width: 640px)')
-  const defaultCount = isMobile ? 4 : 6
+  const defaultCount = isMobile ? 4 : 3
 
   const visibleProjects = showAll ? projects : projects.slice(0, defaultCount)
   const hasMore = projects.length > defaultCount

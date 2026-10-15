@@ -19,8 +19,21 @@ function isMobileViewport() {
   return window.innerWidth <= MOBILE_BREAKPOINT
 }
 
+// The animation currently running, if any: { rafId, onDone }.
+let activeScroll = null
+
+// Stops the running scroll animation (e.g. on a route change) and calls its
+// onDone, so callers like Header can reset their "click scrolling" flag.
+export function cancelScrollAnimation() {
+  if (!activeScroll) return
+  cancelAnimationFrame(activeScroll.rafId)
+  const { onDone } = activeScroll
+  activeScroll = null
+  onDone?.()
+}
+
 // Animates scroll to targetY with easing. onDone fires when the animation
-// actually finishes, not on a guessed timeout.
+// actually finishes (or is cancelled), not on a guessed timeout.
 export function animatedScrollTo(targetY, duration = SCROLL_DURATION, onDone) {
   const startY = window.scrollY
   const diff = targetY - startY
@@ -31,6 +44,8 @@ export function animatedScrollTo(targetY, duration = SCROLL_DURATION, onDone) {
     return
   }
 
+  const me = { rafId: 0, onDone }
+  activeScroll = me
   const startTime = performance.now()
 
   function step(now) {
@@ -40,13 +55,14 @@ export function animatedScrollTo(targetY, duration = SCROLL_DURATION, onDone) {
     window.scrollTo(0, startY + diff * eased)
 
     if (progress < 1) {
-      requestAnimationFrame(step)
+      me.rafId = requestAnimationFrame(step)
     } else {
+      if (activeScroll === me) activeScroll = null
       onDone?.()
     }
   }
 
-  requestAnimationFrame(step)
+  me.rafId = requestAnimationFrame(step)
 }
 
 // Scrolls to a section by id, accounting for the sticky header height.
