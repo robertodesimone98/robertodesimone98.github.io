@@ -1,13 +1,15 @@
 .hero {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  min-height: clamp(380px, 65vh, 620px);
   background: var(--bg-page);
 }
 
-/* Video behind the text, full width of the hero. No scrim, no side fade. */
+/* Video on its own band, full width. The text lives below it, not on top. */
+.hero-media {
+  position: relative;
+  overflow: hidden;
+  height: clamp(240px, 52vh, 560px);
+  background: var(--bg-card-image);
+}
+
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -25,8 +27,14 @@
 }
 
 .hero-content {
-  padding: 52px 28px;
+  padding: 40px 28px 0;
   max-width: 620px;
+}
+
+/* Gaming: the round logo already takes up the space below the video edge,
+   so the text block needs less top padding. Only matches when the avatar exists. */
+.avatar-link + .hero-content-wrap .hero-content {
+  padding-top: 20px;
 }
 
 /* Role label above the title: secondary accent (emphasis, not clickable). */
@@ -45,7 +53,7 @@
   font-weight: 500;
   font-size: clamp(34px, 5.5vw, 48px);
   line-height: 1.12;
-  margin: 0 0 20px;
+  margin: 0 0 16px;
   color: var(--text-primary);
 }
 
@@ -58,16 +66,26 @@
   text-transform: uppercase;
 }
 
+.hero-wordmark {
+  display: block;
+  width: min(100%, 520px);
+  height: auto;
+}
+
 .hero-content p {
   font-size: 15px;
   color: var(--text-secondary);
   line-height: 1.65;
-  margin: 0 0 26px;
+  margin: 0;
   max-width: 480px;
 }
 
-.cta-row {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+@media (max-width: 640px) {
+  .hero-content {
+    padding: 32px 20px 0;
+  }
+
+  .avatar-link + .hero-content-wrap .hero-content {
+    padding-top: 16px;
+  }
 }
