@@ -1,0 +1,54 @@
+.avatar-link {
+  --avatar-size: 96px;
+  --avatar-border: 4px;
+
+  display: block;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  /* metà dell'altezza sopra, metà sotto il bordo inferiore del video */
+  margin: calc(var(--avatar-size) / -2) auto 0;
+  border: var(--avatar-border) solid #fff;
+  border-radius: 50%;
+  background: var(--bg-page);
+  overflow: hidden;
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+@media (min-width: 640px) {
+  .avatar-link {
+    --avatar-size: 136px;
+    --avatar-border: 5px;
+  }
+}
+
+.avatar-link__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Il bordo sfuma da bianco a verde mentre si accende il glow */
+.avatar-link:hover,
+.avatar-link:focus-visible {
+  border-color: var(--accent-primary);
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--accent-primary) 25%, transparent),
+    0 0 22px color-mix(in srgb, var(--accent-primary) 55%, transparent);
+}
+
+.avatar-link:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar-link {
+    transition: none;
+  }
+}

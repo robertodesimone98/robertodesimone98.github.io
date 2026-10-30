@@ -5,16 +5,24 @@
   padding: 72px 28px 56px;
 }
 
+.about-inner {
+  text-align: center;
+}
+
 .about-title-row {
   margin-bottom: 24px;
 }
 
 .about-intro {
-  margin: 0;
+  margin: 0 auto;
   max-width: 640px;
   font-size: 16px;
   line-height: 1.7;
   color: var(--text-secondary);
+  /* Centered block, justified lines, last line centered. Needs lang on <html> for hyphens. */
+  text-align: justify;
+  text-align-last: center;
+  hyphens: auto;
 }
 
 .about-tools {
@@ -34,6 +42,7 @@
 .tool-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   margin: 0;
   padding: 0;
@@ -70,11 +79,19 @@
 
 .about-cta {
   display: flex;
+  justify-content: center;
   margin-top: 32px;
 }
 
 @media (max-width: 640px) {
   .about-section {
     padding: 48px 20px 40px;
+  }
+
+  /* Phones: centered only, no justification (see Hero.css). */
+  .about-intro {
+    text-align: center;
+    text-align-last: auto;
+    hyphens: manual;
   }
 }

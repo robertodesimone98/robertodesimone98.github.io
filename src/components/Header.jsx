@@ -6,13 +6,14 @@ import LangSwitch from './LangSwitch'
 import ZoneSwitch from './ZoneSwitch'
 import './Header.css'
 
-const SECTIONS = ['hero', 'projects', 'about', 'contact']
+// Same order as on the page: the active-section highlight relies on it.
+const SECTIONS = ['hero', 'contact', 'projects', 'about']
 
 const NAV_ITEMS = [
   { id: 'hero', labelKey: 'home' },
+  { id: 'contact', labelKey: 'contact' },
   { id: 'projects', labelKey: 'projects' },
   { id: 'about', labelKey: 'about' },
-  { id: 'contact', labelKey: 'contact' },
 ]
 
 // Home-only header. Project pages use their own header (as in the reference),

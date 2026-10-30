@@ -1,0 +1,77 @@
+.contact-links {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 28px 28px 36px;
+}
+
+/* The gap leaves room for the gaming offset shadow (4px) and the brand HUD corners (6px). */
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Square icon button: size and padding only; colours, shadow, corners and hover
+   come from .btn / .btn--primary in theme.css. */
+.contact-link {
+  width: 44px;
+  padding: 0;
+  gap: 0;
+}
+
+/* Window one icon cell tall (32px = the 1.6em line box of the text label, at 20px). */
+.contact-icon-roll {
+  display: block;
+  overflow: hidden;
+  height: 32px;
+}
+
+.contact-icon-roll-inner {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.3, 0.8, 0.3, 1);
+}
+
+.contact-icon-cell {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+}
+
+.contact-icon-cell svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Gaming: a single icon, no roll. */
+.theme-gaming .contact-icon-cell:nth-child(2) {
+  display: none;
+}
+
+/* Brand: on hover/focus the icon rolls out through the top and the copy comes in. */
+@media (hover: hover) {
+  .theme-brand .contact-link:hover .contact-icon-roll-inner {
+    transform: translateY(-50%);
+  }
+}
+
+.theme-brand .contact-link:focus-visible .contact-icon-roll-inner {
+  transform: translateY(-50%);
+}
+
+@media (max-width: 640px) {
+  .contact-links {
+    padding: 24px 20px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-icon-roll-inner {
+    transition: none;
+  }
+}

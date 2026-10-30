@@ -25,6 +25,9 @@ i18n
     interpolation: { escapeValue: false },
   })
 
+// languageChanged may fire before this listener exists: set lang now too (needed by hyphens: auto).
+document.documentElement.lang = i18n.language
+
 i18n.on('languageChanged', (lng) => {
   localStorage.setItem(STORAGE_KEY, lng)
   document.documentElement.lang = lng
