@@ -1,0 +1,65 @@
+/* Full-width band; the content inside lines up with the other sections (960px). */
+.clients-section {
+  background: var(--bg-section-alt);
+  border-top: 0.5px solid var(--border-default);
+  border-bottom: 0.5px solid var(--border-default);
+}
+
+.clients-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+.clients-title {
+  margin: 0 0 16px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.client-slot {
+  display: flex;
+  flex: 1 1 120px;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Empty slot (data/shared/clients.js, placeholder: true). */
+.client-slot.is-placeholder {
+  border: 1px dashed var(--border-strong);
+}
+
+.client-logo {
+  max-width: 100%;
+  max-height: 32px;
+  object-fit: contain;
+}
+
+@media (max-width: 640px) {
+  .clients-inner {
+    padding: 24px 20px;
+  }
+
+  .client-slot {
+    flex-basis: calc(50% - 8px);
+  }
+}

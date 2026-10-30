@@ -1,0 +1,80 @@
+/* Same box as .projects-section so every section lines up. */
+.about-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 72px 28px 56px;
+}
+
+.about-title-row {
+  margin-bottom: 24px;
+}
+
+.about-intro {
+  margin: 0;
+  max-width: 640px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.about-tools {
+  margin-top: 32px;
+}
+
+/* Small label above a group (same look as the labels of the project detail). */
+.about-label {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Tools are NOT clickable: brand = quiet pill with the secondary accent on the icon,
+   gaming = outline pill in the secondary accent (the convention for non-clickable emphasis). */
+.tool-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid var(--border-default);
+  border-radius: 999px;
+  background: var(--bg-card);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.tool-icon {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  color: var(--accent-secondary);
+}
+
+.theme-gaming .tool-pill {
+  border-color: var(--accent-secondary);
+  background: transparent;
+  color: var(--accent-secondary);
+}
+
+.about-cta {
+  display: flex;
+  margin-top: 32px;
+}
+
+@media (max-width: 640px) {
+  .about-section {
+    padding: 48px 20px 40px;
+  }
+}

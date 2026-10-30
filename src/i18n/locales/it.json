@@ -114,6 +114,12 @@
           }
         }
       }
+    },
+    "about": {
+      "cta": "Parliamone"
+    },
+    "clients": {
+      "title": "Canali e clienti"
     }
   },
   "brand": {
@@ -209,13 +215,20 @@
           }
         }
       }
+    },
+    "about": {
+      "cta": "Scrivimi"
+    },
+    "clients": {
+      "title": "Hanno lavorato con me"
     }
   },
   "about": {
     "title": "Chi sono",
     "role": "Video Editor",
     "introGaming": "Sono un <hl>video editor</hl> e i videogiochi sono la mia passione: monto highlight, trailer e contenuti per Instagram con un unico obiettivo, tenere incollato chi guarda dal primo secondo. Lavoro sul <hl>ritmo</hl>, sul suono e sui momenti che fanno la differenza, perché una buona clip non si limita a mostrare la partita: la racconta.",
-    "introBrand": "Sono un <hl>video editor</hl> e lavoro con brand e creator per trasformare idee e materiale grezzo in video chiari e curati. Mi occupo di contenuti <hl>social</hl> e video di brand, con attenzione a coerenza visiva, ritmo e messaggio. Il mio obiettivo è che ogni video suoni come il brand che rappresenta."
+    "introBrand": "Sono un <hl>video editor</hl> e lavoro con brand e creator per trasformare idee e materiale grezzo in video chiari e curati. Mi occupo di contenuti <hl>social</hl> e video di brand, con attenzione a coerenza visiva, ritmo e messaggio. Il mio obiettivo è che ogni video suoni come il brand che rappresenta.",
+    "toolsLabel": "Strumenti"
   },
   "projects": {
     "sectionTitle": "Progetti",
@@ -258,5 +271,29 @@
   "video": {
     "play": "Riproduci su {{platform}}: {{title}}",
     "openOn": "Apri su {{platform}}: {{title}}"
+  },
+  "experience": {
+    "title": "Esperienza",
+    "education": "Formazione",
+    "present": "in corso",
+    "items": {
+      "placeholder-1": {
+        "role": "[Ruolo 1]",
+        "description": "[Descrizione breve: cosa hai fatto e con quale risultato.]"
+      },
+      "placeholder-2": {
+        "role": "[Ruolo 2]",
+        "description": "[Descrizione breve: cosa hai fatto e con quale risultato.]"
+      },
+      "placeholder-3": {
+        "role": "[Ruolo 3]",
+        "description": "[Descrizione breve: cosa hai fatto e con quale risultato.]"
+      }
+    },
+    "educationItems": {
+      "placeholder-1": {
+        "title": "[Titolo di studio / corso]"
+      }
+    }
   }
 }

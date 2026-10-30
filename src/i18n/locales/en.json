@@ -114,6 +114,12 @@
           }
         }
       }
+    },
+    "about": {
+      "cta": "Let's talk"
+    },
+    "clients": {
+      "title": "Channels and clients"
     }
   },
   "brand": {
@@ -209,13 +215,20 @@
           }
         }
       }
+    },
+    "about": {
+      "cta": "Get in touch"
+    },
+    "clients": {
+      "title": "Brands I've worked with"
     }
   },
   "about": {
     "title": "About",
     "role": "Video Editor",
     "introGaming": "I'm a <hl>video editor</hl> and gaming is my thing: I cut highlights, trailers and Instagram content with one goal, keeping viewers watching from the first second. I work on <hl>rhythm</hl>, sound and the moments that make the difference, because a good clip doesn't just show the game: it tells it.",
-    "introBrand": "I'm a <hl>video editor</hl> working with brands and creators to turn ideas and raw footage into clear, polished videos. I focus on <hl>social</hl> content and brand videos, with attention to visual consistency, pacing and message. My goal is for every video to sound like the brand behind it."
+    "introBrand": "I'm a <hl>video editor</hl> working with brands and creators to turn ideas and raw footage into clear, polished videos. I focus on <hl>social</hl> content and brand videos, with attention to visual consistency, pacing and message. My goal is for every video to sound like the brand behind it.",
+    "toolsLabel": "Tools"
   },
   "projects": {
     "sectionTitle": "Projects",
@@ -258,5 +271,29 @@
   "video": {
     "play": "Play on {{platform}}: {{title}}",
     "openOn": "Open on {{platform}}: {{title}}"
+  },
+  "experience": {
+    "title": "Experience",
+    "education": "Education",
+    "present": "present",
+    "items": {
+      "placeholder-1": {
+        "role": "[Role 1]",
+        "description": "[Short description: what you did and the result.]"
+      },
+      "placeholder-2": {
+        "role": "[Role 2]",
+        "description": "[Short description: what you did and the result.]"
+      },
+      "placeholder-3": {
+        "role": "[Role 3]",
+        "description": "[Short description: what you did and the result.]"
+      }
+    },
+    "educationItems": {
+      "placeholder-1": {
+        "title": "[Degree / course]"
+      }
+    }
   }
 }
