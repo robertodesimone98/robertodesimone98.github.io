@@ -1,7 +1,15 @@
+/* Full-width band (same look as .clients-section); the content inside keeps the 960px box
+   so every section still lines up. */
 .projects-section {
+  background: var(--bg-section-alt);
+  border-top: 0.5px solid var(--border-default);
+  border-bottom: 0.5px solid var(--border-default);
+}
+
+.projects-inner {
   max-width: 960px;
   margin: 0 auto;
-  padding: 72px 28px 56px;
+  padding: 56px 28px;
 }
 
 .section-title-row {
@@ -35,8 +43,8 @@
 }
 
 @media (max-width: 640px) {
-  .projects-section {
-    padding: 48px 20px 40px;
+  .projects-inner {
+    padding: 40px 20px;
   }
 
   .project-grid {
