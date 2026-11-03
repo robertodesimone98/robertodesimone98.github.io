@@ -11,6 +11,15 @@
   padding: 28px;
 }
 
+/* Title sits in the 960px column; the marquee runs full-width below it. */
+.clients-section > .clients-inner:first-child {
+  padding-bottom: 0;
+}
+
+.clients-inner--static {
+  padding-top: 16px;
+}
+
 .clients-title {
   margin: 0 0 16px;
   font-family: var(--font-body);
@@ -54,12 +63,105 @@
   object-fit: contain;
 }
 
+/* ---- Marquee ---- */
+.clients-marquee {
+  --marquee-gap: 48px;
+  --marquee-duration: 30s;
+  overflow: hidden;
+  padding: 20px 0 28px;
+}
+
+.clients-marquee.has-fade {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.clients-track {
+  display: flex;
+  width: max-content;
+}
+
+.clients-group {
+  display: flex;
+  flex: 0 0 auto;
+}
+
+/* The trailing padding (= gap) keeps the spacing identical between sets and across the
+   loop seam. */
+.clients-set {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: var(--marquee-gap);
+  margin: 0;
+  padding: 0 var(--marquee-gap) 0 0;
+  list-style: none;
+}
+
+.clients-set .client-slot {
+  flex: 0 0 auto;
+  min-width: 120px;
+}
+
+.clients-track[data-ready='true'] {
+  animation: clients-scroll var(--marquee-duration) linear infinite;
+}
+
+.clients-marquee.is-reverse .clients-track {
+  animation-direction: reverse;
+}
+
+@media (hover: hover) {
+  .clients-marquee.pause-on-hover:hover .clients-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes clients-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* No motion: show one static, centered row instead of the loop. */
+@media (prefers-reduced-motion: reduce) {
+  .clients-track[data-ready='true'] {
+    animation: none;
+  }
+
+  .clients-marquee {
+    padding: 20px 28px 28px;
+  }
+
+  .clients-track {
+    width: auto;
+  }
+
+  .clients-group {
+    justify-content: center;
+  }
+
+  .clients-set {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .clients-group[aria-hidden='true'],
+  .clients-set[aria-hidden='true'] {
+    display: none;
+  }
+}
+
 @media (max-width: 640px) {
   .clients-inner {
     padding: 24px 20px;
   }
 
-  .client-slot {
+  .clients-inner--static .client-slot {
     flex-basis: calc(50% - 8px);
   }
 }

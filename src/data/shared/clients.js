@@ -10,6 +10,19 @@
 //
 // PLACEHOLDER: the brand entries are empty slots (dashed box). Replace them with the
 // real clients; `placeholder: true` is only for these empty slots.
+//
+// MARQUEE (scorrimento orizzontale dei loghi), per zona:
+//   speed          velocita' in px al secondo (piu' alto = piu' veloce)
+//   direction      'left' | 'right'
+//   pauseOnHover   true = si ferma col mouse sopra
+//   gap            spazio tra i loghi in px
+//   fade           true = bordi sfumati a destra e sinistra
+// enabled: false = torna alla riga statica di prima.
+const marqueeByZone = {
+  gaming: { enabled: true, speed: 40, direction: 'left', pauseOnHover: true, gap: 48, fade: true },
+  brand: { enabled: true, speed: 40, direction: 'left', pauseOnHover: true, gap: 48, fade: true },
+}
+
 const clientsByZone = {
   gaming: [],
   brand: [
@@ -24,4 +37,8 @@ const clientsByZone = {
 
 export function getClients(zone) {
   return clientsByZone[zone] ?? []
+}
+
+export function getMarqueeSettings(zone) {
+  return marqueeByZone[zone] ?? marqueeByZone.brand
 }
