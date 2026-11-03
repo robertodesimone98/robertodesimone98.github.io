@@ -66,11 +66,7 @@ function AboutSection({ zone }) {
 
           <div className="about-cta">
             <button className="btn btn--primary" onClick={() => scrollToSection('contact')}>
-              <span className="btn-label">
-                <span className="btn-label-inner" data-label={ctaLabel}>
-                  {ctaLabel}
-                </span>
-              </span>
+              {ctaLabel}
             </button>
           </div>
         </div>

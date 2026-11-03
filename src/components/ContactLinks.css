@@ -22,46 +22,15 @@
   gap: 0;
 }
 
-/* Window one icon cell tall (32px = the 1.6em line box of the text label, at 20px). */
-.contact-icon-roll {
-  display: block;
-  overflow: hidden;
-  height: 32px;
-}
-
-.contact-icon-roll-inner {
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s cubic-bezier(0.3, 0.8, 0.3, 1);
-}
-
-.contact-icon-cell {
-  flex: none;
+.contact-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 32px;
 }
 
-.contact-icon-cell svg {
+.contact-icon svg {
   width: 20px;
   height: 20px;
-}
-
-/* Gaming: a single icon, no roll. */
-.theme-gaming .contact-icon-cell:nth-child(2) {
-  display: none;
-}
-
-/* Brand: on hover/focus the icon rolls out through the top and the copy comes in. */
-@media (hover: hover) {
-  .theme-brand .contact-link:hover .contact-icon-roll-inner {
-    transform: translateY(-50%);
-  }
-}
-
-.theme-brand .contact-link:focus-visible .contact-icon-roll-inner {
-  transform: translateY(-50%);
 }
 
 @media (max-width: 640px) {
@@ -70,8 +39,3 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .contact-icon-roll-inner {
-    transition: none;
-  }
-}

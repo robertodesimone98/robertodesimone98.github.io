@@ -14,8 +14,7 @@ const ICONS = {
 
 // Row of icon buttons between the hero and the projects. Looks come from the shared
 // .btn .btn--primary rules in theme.css (gaming: offset shadow that presses; brand:
-// HUD corners). The icon is rendered twice: on brand the copy rolls in from below on
-// hover (same effect as the text label of .btn--primary); on gaming the copy is hidden.
+// HUD corners, and the icon takes the dark colour on hover like the label of .btn--primary).
 function ContactLinks({ zone }) {
   const { t } = useTranslation()
   const links = getContact(zone)
@@ -39,15 +38,8 @@ function ContactLinks({ zone }) {
                 aria-label={label}
                 {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               >
-                <span className="contact-icon-roll" aria-hidden="true">
-                  <span className="contact-icon-roll-inner">
-                    <span className="contact-icon-cell">
-                      <Icon />
-                    </span>
-                    <span className="contact-icon-cell">
-                      <Icon />
-                    </span>
-                  </span>
+                <span className="contact-icon" aria-hidden="true">
+                  <Icon />
                 </span>
               </a>
             </li>

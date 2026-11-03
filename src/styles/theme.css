@@ -101,8 +101,9 @@
 /* Button: one shared class, a different look per zone.
    Markup: <button class="btn btn--primary"> or <Link class="btn btn--secondary">.
    Gaming = flat hard offset shadow that "presses" on hover.
-   Brand  = HUD corners that open around the button on hover/focus; primary: the label
-            rolls up (white to white), secondary: the background fills dark. */
+   Brand  = HUD corners that open around the button on hover/focus; primary: the orange
+            fill stays and the label (or icon) turns dark, secondary: the outline button
+            fills orange with a dark label. */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -191,8 +192,8 @@
    - Text links: two opposite corners, top-right and bottom-left (7px arms, 1.5px thick),
      opening to -3px. Lighter, so they don't turn a line of text into a crosshair.
    The corners never change the element's own colours; what changes inside the button is
-   defined with the buttons below (primary: the label rolls up; secondary: the
-   background fills dark). Text links keep their colour and just get the corners.
+   defined with the buttons below (primary: the label turns dark; secondary: the
+   background fills orange). Text links keep their colour and just get the corners.
    Used by: .btn, .link-accent, project prev/next (.nav-link). The header nav links do
    not use ::before: they get ONE sliding pair of the same corners (.nav-lock, Header.css).
    Nothing clips the 6px around buttons or the 3px around links (checked: Hero,
@@ -293,58 +294,33 @@
   border-color: var(--accent-primary);
 }
 
-/* Secondary hover/focus: the outline button fills dark (--text-primary) with a cream
-   label (--bg-page), the same accent -> dark change as links and cards. */
+/* Secondary hover/focus: the outline button fills orange and the label turns dark
+   (--text-primary). No new colour values. */
 @media (hover: hover) {
   .theme-brand .btn--secondary:hover {
-    background-color: var(--text-primary);
-    border-color: var(--text-primary);
-    color: var(--bg-page);
+    background-color: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
   }
 }
 
 .theme-brand .btn--secondary:focus-visible {
-  background-color: var(--text-primary);
-  border-color: var(--text-primary);
-  color: var(--bg-page);
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
 }
 
-/* Primary label: on hover/focus the label rolls out through the top and an identical
-   copy (same white) comes in from below. The fill does not change.
-   Markup (primary buttons only):
-   <span class="btn-label"><span class="btn-label-inner" data-label="X">X</span></span>
-   The copy is the ::after of the inner span (content from data-label); the empty alt
-   text after the slash keeps screen readers from reading it twice. Brand only: in
-   gaming the spans are plain.
-   The line box (1.6em) is taller than the glyphs on purpose: with a tighter one the
-   descenders (g, j, p) of the outgoing line stick out of its box and show up as small
-   white marks at the top of the button once the copy has rolled in. */
-.theme-brand .btn-label {
-  display: inline-block;
-  overflow: hidden;
-  height: 1.6em;
-  line-height: 1.6em;
-}
-
-.theme-brand .btn-label-inner {
-  display: block;
-  transition: transform 0.3s cubic-bezier(0.3, 0.8, 0.3, 1);
-}
-
-.theme-brand .btn-label-inner::after {
-  content: attr(data-label);
-  content: attr(data-label) / '';
-  display: block;
-}
-
+/* Primary hover/focus: the orange fill never changes; only the content (label or icon)
+   turns dark (--text-primary). The label is plain text inside the button: no markup
+   needed. */
 @media (hover: hover) {
-  .theme-brand .btn--primary:hover .btn-label-inner {
-    transform: translateY(-50%);
+  .theme-brand .btn--primary:hover {
+    color: var(--text-primary);
   }
 }
 
-.theme-brand .btn--primary:focus-visible .btn-label-inner {
-  transform: translateY(-50%);
+.theme-brand .btn--primary:focus-visible {
+  color: var(--text-primary);
 }
 
 /* After the hover rules so it wins on equal specificity. */
@@ -364,10 +340,6 @@
   .theme-gaming .btn:active,
   .theme-brand .btn:active {
     transform: none;
-  }
-
-  .theme-brand .btn-label-inner {
-    transition: none;
   }
 }
 
