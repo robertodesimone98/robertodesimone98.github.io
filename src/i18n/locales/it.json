@@ -112,6 +112,14 @@
             }
           }
         }
+      },
+      "groups": {
+        "work": {
+          "subtitle": "per studi e creator"
+        },
+        "personal": {
+          "subtitle": "dal mio canale"
+        }
       }
     },
     "about": {
@@ -212,6 +220,14 @@
             }
           }
         }
+      },
+      "groups": {
+        "work": {
+          "subtitle": "per clienti e brand"
+        },
+        "personal": {
+          "subtitle": "sperimentazioni e idee mie"
+        }
       }
     },
     "about": {
@@ -238,11 +254,24 @@
       "events": "Eventi",
       "motion": "Motion graphics",
       "color": "Color grading",
-      "short-film": "Cortometraggio"
+      "short-film": "Cortometraggio",
+      "food": "Food",
+      "storytelling": "Storytelling",
+      "overview": "Panoramica",
+      "thumbnails": "Miniature"
+    },
+    "groups": {
+      "work": {
+        "title": "Lavori"
+      },
+      "personal": {
+        "title": "Progetti personali"
+      }
     }
   },
   "projectDetail": {
     "labels": {
+      "category": "CATEGORIA",
       "channels": "PUBBLICATO SU",
       "period": "PERIODO",
       "client": "CLIENTE",

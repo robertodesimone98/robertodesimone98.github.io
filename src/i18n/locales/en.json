@@ -112,6 +112,14 @@
             }
           }
         }
+      },
+      "groups": {
+        "work": {
+          "subtitle": "for studios and creators"
+        },
+        "personal": {
+          "subtitle": "from my channel"
+        }
       }
     },
     "about": {
@@ -212,6 +220,14 @@
             }
           }
         }
+      },
+      "groups": {
+        "work": {
+          "subtitle": "for clients and brands"
+        },
+        "personal": {
+          "subtitle": "experiments and my own ideas"
+        }
       }
     },
     "about": {
@@ -238,11 +254,24 @@
       "events": "Events",
       "motion": "Motion graphics",
       "color": "Color grading",
-      "short-film": "Short film"
+      "short-film": "Short film",
+      "food": "Food",
+      "storytelling": "Storytelling",
+      "overview": "Overview",
+      "thumbnails": "Thumbnails"
+    },
+    "groups": {
+      "work": {
+        "title": "Work"
+      },
+      "personal": {
+        "title": "Personal projects"
+      }
     }
   },
   "projectDetail": {
     "labels": {
+      "category": "CATEGORY",
       "channels": "PUBLISHED ON",
       "period": "PERIOD",
       "client": "CLIENT",

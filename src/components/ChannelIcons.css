@@ -1,0 +1,11 @@
+.channel-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-primary);
+}
+
+.channel-icons svg {
+  width: 18px;
+  height: 18px;
+}

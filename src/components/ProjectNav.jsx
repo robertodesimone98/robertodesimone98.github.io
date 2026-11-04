@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { getProjectGroup } from '../data/projects'
 import './ProjectNav.css'
 
 // Arrows (same icon style as the other inline SVGs). Decorative: the label says it.
@@ -19,9 +20,21 @@ const arrowRight = (
   </svg>
 )
 
-// Previous / next project, limited to the current zone.
-function ProjectNav({ zone, previous, next }) {
+// Previous / next project, limited to the current zone, in the order of the home (list by
+// list). Under the label, the list each project belongs to; it is highlighted when it is
+// not the list of the project being read, so crossing from one list to the other is visible.
+function ProjectNav({ zone, current, previous, next }) {
   const { t } = useTranslation()
+  const currentGroup = getProjectGroup(current)
+
+  function groupLabel(project) {
+    const group = getProjectGroup(project)
+    return (
+      <span className={`nav-group${group !== currentGroup ? ' is-other' : ''}`}>
+        {t(`projects.groups.${group}.title`)}
+      </span>
+    )
+  }
 
   return (
     <nav className="project-nav-fixed" aria-label={t('projectNav.label')}>
@@ -32,6 +45,7 @@ function ProjectNav({ zone, previous, next }) {
               {arrowLeft}
               {t('projectNav.previous')}
             </span>
+            {groupLabel(previous)}
             <span className="nav-title">{previous.title}</span>
           </Link>
         ) : (
@@ -43,6 +57,7 @@ function ProjectNav({ zone, previous, next }) {
               {t('projectNav.next')}
               {arrowRight}
             </span>
+            {groupLabel(next)}
             <span className="nav-title">{next.title}</span>
           </Link>
         )}

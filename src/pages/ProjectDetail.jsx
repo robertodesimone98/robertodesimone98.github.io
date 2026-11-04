@@ -1,21 +1,15 @@
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { SiYoutube, SiInstagram, SiTiktok } from 'react-icons/si'
-import { getProjectBySlug, getAdjacentProjects, getOriginField, channelLabels } from '../data/projects'
+import { getProjectBySlug, getAdjacentProjects, getProjectGroup, getOriginField } from '../data/projects'
 import { formatPeriod } from '../utils/formatPeriod'
 import { useInView } from '../hooks/useInView'
 import ProjectHeader from '../components/ProjectHeader'
 import ProjectNav from '../components/ProjectNav'
+import ChannelIcons from '../components/ChannelIcons'
 import VideoTile from '../components/VideoTile'
 import VideoBlocks from '../components/VideoBlocks'
 import Highlights from '../components/Highlights'
 import '../components/ProjectDetail.css'
-
-const channelIcons = {
-  youtube: SiYoutube,
-  instagram: SiInstagram,
-  tiktok: SiTiktok,
-}
 
 // Zone is already validated by ZoneLayout. Same page for both zones; the
 // content comes from data/<zone>/projects.js and the texts from the locales.
@@ -60,9 +54,9 @@ function ProjectDetail() {
 
         <div className="project-body">
           <div ref={contentRef} className={`fade-in-section ${isContentVisible ? 'is-visible' : ''}`}>
+            <p className="project-group-label">{t(`projects.groups.${getProjectGroup(project)}.title`)}</p>
             <div className="project-title-row">
               <h1>{project.title}</h1>
-              <span className="category-badge">{t(`projects.categories.${project.category}`)}</span>
             </div>
 
             {description && (
@@ -74,16 +68,15 @@ function ProjectDetail() {
             <div className="metadata-row">
               <div>
                 <div className="metadata-label">{t('projectDetail.labels.channels')}</div>
-                <div className="channel-icons">
-                  {project.channels.map((channel) => {
-                    const Icon = channelIcons[channel]
-                    return Icon ? <Icon key={channel} title={channelLabels[channel]} aria-label={channelLabels[channel]} /> : null
-                  })}
-                </div>
+                <ChannelIcons channels={project.channels} />
               </div>
               <div>
                 <div className="metadata-label">{t('projectDetail.labels.period')}</div>
                 <div className="metadata-value">{period}</div>
+              </div>
+              <div>
+                <div className="metadata-label">{t('projectDetail.labels.category')}</div>
+                <div className="metadata-value">{t(`projects.categories.${project.category}`)}</div>
               </div>
               <div>
                 <div className="metadata-label">{t(`projectDetail.labels.${origin.labelKey}`)}</div>
@@ -117,7 +110,7 @@ function ProjectDetail() {
         </div>
       </div>
 
-      <ProjectNav zone={zone} previous={previous} next={next} />
+      <ProjectNav zone={zone} current={project} previous={previous} next={next} />
     </div>
   )
 }

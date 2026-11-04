@@ -50,6 +50,18 @@
   letter-spacing: 0.03em;
 }
 
+/* List of the linked project: muted when it is the same list, secondary accent
+   (non-clickable emphasis) when it changes. */
+.nav-group {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.nav-group.is-other {
+  color: var(--accent-secondary);
+}
+
 /* Arrow next to the label: clickable => primary accent (orange on brand, green on
    gaming). On hover/focus it moves 3px in its own direction. */
 .nav-arrow {

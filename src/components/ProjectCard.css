@@ -206,50 +206,49 @@
   color: var(--accent-primary);
 }
 
-/* Client / school / "personal project": non-clickable emphasis => secondary accent. */
-.card-origin {
-  display: flex;
-  align-items: flex-start;
-  gap: 5px;
+/* Category (one per project) above the title: non-clickable emphasis => secondary accent. */
+.card-category {
+  display: block;
+  margin-bottom: 4px;
   color: var(--accent-secondary);
-  font-size: 13px;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.card-origin svg {
-  width: 15px;
-  height: 15px;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-.card-footer-row {
+/* Client name (brand, work list only) on the left, channel icons always on the right. */
+.card-meta-row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   margin-top: auto;
   padding-top: 10px;
-  gap: 8px;
+  min-height: 18px;
 }
 
-.card-channels {
-  color: var(--text-muted);
-  font-size: 13px;
+.card-client {
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: var(--text-secondary);
+  font-size: 12px;
 }
 
-/* One category per project. Neutral on purpose: it is a label, not a link. */
-.category-badge {
+.card-meta-row .channel-icons {
   flex-shrink: 0;
-  padding: 2px 8px;
-  border: 0.5px solid var(--border-strong);
-  border-radius: 999px;
+  margin-left: auto;
+}
+
+.card .channel-icons {
+  gap: 8px;
   color: var(--text-secondary);
-  font-size: 11px;
-  letter-spacing: 0.03em;
-  white-space: nowrap;
+}
+
+.card .channel-icons svg {
+  width: 16px;
+  height: 16px;
 }
 
 @media (prefers-reduced-motion: reduce) {

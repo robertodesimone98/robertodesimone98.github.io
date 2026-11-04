@@ -36,6 +36,17 @@
   text-transform: uppercase;
 }
 
+/* Space between the two lists of the section. */
+.projects-group + .projects-group {
+  margin-top: 48px;
+}
+
+.section-subtitle {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

@@ -1,7 +1,7 @@
 import { gamingProjects } from './gaming/projects'
 import { brandProjects } from './brand/projects'
 
-// Display order = order in the array of each zone (first = shown first).
+// Inside each list, display order = order in the array of the zone (first = shown first).
 const projectsByZone = {
   gaming: gamingProjects,
   brand: brandProjects,
@@ -14,8 +14,29 @@ export const channelLabels = {
   tiktok: 'TikTok',
 }
 
+// Two lists per zone: 'work' (made for a client) and 'personal' (own channel, personal
+// projects, courses). The order of the lists is different in each zone.
+const GROUP_ORDER = {
+  gaming: ['personal', 'work'],
+  brand: ['work', 'personal'],
+}
+
+export function getProjectGroup(project) {
+  return project.origin === 'client' ? 'work' : 'personal'
+}
+
+// [{ group: 'work' | 'personal', projects: [...] }], in the order shown on the home.
+// A list with no projects is left out.
+export function getGroupedProjects(zone) {
+  const list = projectsByZone[zone] ?? []
+  return (GROUP_ORDER[zone] ?? ['work', 'personal'])
+    .map((group) => ({ group, projects: list.filter((p) => getProjectGroup(p) === group) }))
+    .filter((g) => g.projects.length > 0)
+}
+
+// Flat list in VISUAL order (list by list): ProjectNav previous/next follows it.
 export function getProjects(zone) {
-  return projectsByZone[zone] ?? []
+  return getGroupedProjects(zone).flatMap((g) => g.projects)
 }
 
 export function getProjectBySlug(zone, slug) {
