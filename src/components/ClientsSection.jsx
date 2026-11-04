@@ -4,13 +4,29 @@ import { getClients, getMarqueeSettings } from '../data/shared/clients'
 import { useInView } from '../hooks/useInView'
 import './ClientsSection.css'
 
-function ClientItem({ client }) {
+// One logo. With `url` it is a link (new tab); the hidden duplicate copies of the
+// marquee must not be reachable with the keyboard, hence tabIndex -1.
+function ClientItem({ client, hidden = false }) {
+  const content = client.logo ? (
+    <img className="client-logo" src={client.logo} alt={client.name} draggable="false" />
+  ) : (
+    client.name
+  )
+
   return (
     <li className={`client-slot ${client.placeholder ? 'is-placeholder' : ''}`}>
-      {client.logo ? (
-        <img className="client-logo" src={client.logo} alt={client.name} />
+      {client.url ? (
+        <a
+          className="client-link"
+          href={client.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          tabIndex={hidden ? -1 : undefined}
+        >
+          {content}
+        </a>
       ) : (
-        client.name
+        content
       )}
     </li>
   )
@@ -70,7 +86,7 @@ function ClientsMarquee({ clients, settings }) {
           aria-hidden={hidden || i > 0 ? 'true' : undefined}
         >
           {clients.map((client) => (
-            <ClientItem key={client.id} client={client} />
+            <ClientItem key={client.id} client={client} hidden={hidden || i > 0} />
           ))}
         </ul>
       ))}
@@ -102,7 +118,11 @@ function ClientsSection({ zone }) {
   const title = t(`${zone}.clients.title`)
 
   return (
-    <section className="clients-section" id="clients" aria-labelledby="clients-title">
+    <section
+      className={`clients-section ${settings.grayscale ? 'is-grayscale' : ''}`}
+      id="clients"
+      aria-labelledby="clients-title"
+    >
       <div className="clients-inner">
         <h2 className="clients-title" id="clients-title">
           {title}

@@ -7,9 +7,11 @@
 //   name  brand name (not translated); used as alt text of the logo
 //   logo  optional path of an image in /public, e.g. '/clients/acme.svg'.
 //         Without it the name is shown as text.
+//   url   optional link (opens in a new tab). Without it the logo is not clickable.
+//   placeholder  true = empty dashed slot (only for slots without a logo yet)
 //
-// PLACEHOLDER: the brand entries are empty slots (dashed box). Replace them with the
-// real clients; `placeholder: true` is only for these empty slots.
+// PLACEHOLDER: the brand entries use sample logos (public/clients/brand-N.svg) and a
+// sample link. Replace logo, name and url with the real clients.
 //
 // MARQUEE (scorrimento orizzontale dei loghi), per zona:
 //   speed          velocita' in px al secondo (piu' alto = piu' veloce)
@@ -17,21 +19,22 @@
 //   pauseOnHover   true = si ferma col mouse sopra
 //   gap            spazio tra i loghi in px
 //   fade           true = bordi sfumati a destra e sinistra
+//   grayscale      true = loghi in grigio e piu' tenui, a colori pieni in hover
 // enabled: false = torna alla riga statica di prima.
 const marqueeByZone = {
-  gaming: { enabled: true, speed: 40, direction: 'left', pauseOnHover: true, gap: 48, fade: true },
-  brand: { enabled: true, speed: 40, direction: 'left', pauseOnHover: true, gap: 48, fade: true },
+  gaming: { enabled: true, speed: 40, direction: 'left', pauseOnHover: true, gap: 48, fade: true, grayscale: true },
+  brand: { enabled: true, speed: 40, direction: 'left', pauseOnHover: true, gap: 48, fade: true, grayscale: true },
 }
 
 const clientsByZone = {
   gaming: [],
   brand: [
-    { id: 'client-1', name: '[Logo 1]', placeholder: true },
-    { id: 'client-2', name: '[Logo 2]', placeholder: true },
-    { id: 'client-3', name: '[Logo 3]', placeholder: true },
-    { id: 'client-4', name: '[Logo 4]', placeholder: true },
-    { id: 'client-5', name: '[Logo 5]', placeholder: true },
-    { id: 'client-6', name: '[Logo 6]', placeholder: true },
+    { id: 'client-1', name: 'Brand 1', logo: '/clients/brand-1.svg', url: 'https://example.com' },
+    { id: 'client-2', name: 'Brand 2', logo: '/clients/brand-2.svg', url: 'https://example.com' },
+    { id: 'client-3', name: 'Brand 3', logo: '/clients/brand-3.svg', url: 'https://example.com' },
+    { id: 'client-4', name: 'Brand 4', logo: '/clients/brand-4.svg', url: 'https://example.com' },
+    { id: 'client-5', name: 'Brand 5', logo: '/clients/brand-5.svg', url: 'https://example.com' },
+    { id: 'client-6', name: 'Brand 6', logo: '/clients/brand-6.svg', url: 'https://example.com' },
   ],
 }
 
