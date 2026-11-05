@@ -54,7 +54,7 @@ function AboutSection({ zone }) {
               {tools.map((tool) => (
                 <li key={tool.id} className="tool-pill">
                   {tool.icon ? (
-                    <img className="tool-icon" src={tool.icon} alt="" width="18" height="18" />
+                    <img className="tool-icon" src={tool.icon} alt="" />
                   ) : (
                     <PlaceholderToolIcon />
                   )}

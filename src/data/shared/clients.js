@@ -29,12 +29,14 @@ const marqueeByZone = {
 const clientsByZone = {
   gaming: [],
   brand: [
-    { id: 'client-1', name: 'Brand 1', logo: '/clients/brand-1.svg', url: 'https://example.com' },
-    { id: 'client-2', name: 'Brand 2', logo: '/clients/brand-2.svg', url: 'https://example.com' },
-    { id: 'client-3', name: 'Brand 3', logo: '/clients/brand-3.svg', url: 'https://example.com' },
-    { id: 'client-4', name: 'Brand 4', logo: '/clients/brand-4.svg', url: 'https://example.com' },
-    { id: 'client-5', name: 'Brand 5', logo: '/clients/brand-5.svg', url: 'https://example.com' },
-    { id: 'client-6', name: 'Brand 6', logo: '/clients/brand-6.svg', url: 'https://example.com' },
+    { id: 'slim-dogs', name: 'Slim Dogs', logo: '/clients/slim-dogs.jpg', url: 'https://www.slimdogsproduction.com/' },
+    { id: 'pratt-quello', name: 'PrattQuello', logo: '/clients/pratt-quello.jpg', url: 'https://www.youtube.com/@Prattquello' },
+    { id: 'san-carlo', name: 'San Carlo', logo: '/clients/san-carlo.png', url: 'https://www.sancarlo.it/it/default.asp' },
+    { id: 'festa-cinema-roma', name: 'Festa del Cinema di Roma', logo: '/clients/festa-cinema-roma.jpg', url: 'https://www.romacinemafest.it/it/festa-cinema-roma/' },
+    { id: 'gaming-dogs', name: 'Gaming Dogs', logo: '/clients/gaming-dogs.jpg', url: 'https://www.youtube.com/channel/UClhYfl7drwcs2VDJ6F8JaTA' },
+    { id: 'a-benetton', name: 'Alessandro Benetton', logo: '/clients/a-benetton.jpg', url: 'https://www.youtube.com/alessandrobenetton' },
+    { id: 'givova', name: 'Givova', logo: '/clients/givova.jpg', url: 'https://www.givovashopping.it/' },
+    { id: 'nuvola-yoga', name: 'Nuvola Yoga', logo: '/clients/nuvola-yoga.jpg', url: 'https://nuvolayoga.com/' },
   ],
 }
 

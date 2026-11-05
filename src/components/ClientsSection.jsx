@@ -7,10 +7,13 @@ import './ClientsSection.css'
 // One logo. With `url` it is a link (new tab); the hidden duplicate copies of the
 // marquee must not be reachable with the keyboard, hence tabIndex -1.
 function ClientItem({ client, hidden = false }) {
-  const content = client.logo ? (
-    <img className="client-logo" src={client.logo} alt={client.name} draggable="false" />
-  ) : (
-    client.name
+  const content = (
+    <>
+      {client.logo && (
+        <img className="client-logo" src={client.logo} alt="" draggable="false" />
+      )}
+      <span className="client-name">{client.name}</span>
+    </>
   )
 
   return (

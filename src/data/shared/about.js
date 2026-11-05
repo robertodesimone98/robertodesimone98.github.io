@@ -6,8 +6,7 @@
 //   icon  optional path of an image in /public, e.g. '/icons/tools/premiere.svg'.
 //         Without it the pill shows a generic placeholder icon.
 export const tools = [
-  { id: 'tool-1', name: '[Software 1]' },
-  { id: 'tool-2', name: '[Software 2]' },
-  { id: 'tool-3', name: '[Software 3]' },
-  { id: 'tool-4', name: '[Software 4]' },
+  { id: 'davinci-resolve', name: 'DaVinci Resolve', icon: '/icons/tools/davinci.png'},
+  { id: 'ae', name: 'Adobe After Effects', icon: '/icons/tools/ae.png' },
+  { id: 'pr', name: 'Adobe Premiere Pro', icon: '/icons/tools/pr.png' },
 ]
