@@ -13,8 +13,8 @@ function ProjectCard({ zone, project, staggerIndex = 0 }) {
   const [previewLoaded, setPreviewLoaded] = useState(false)
   const [cardRef, isVisible] = useInView()
 
-  // Client name: brand only, and only for the projects made for a client (list "work").
-  const clientName = zone === 'brand' && project.origin === 'client' ? project.client : null
+  // Client name: only for the projects made for a client (list "work"), in both zones.
+  const clientName = project.origin === 'client' ? project.client : null
 
   function handleMouseEnter() {
     const video = videoRef.current
