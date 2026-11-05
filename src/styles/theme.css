@@ -31,6 +31,8 @@
   --btn-contact-background: rgba(35, 176, 139, 0.12);
   --btn-shadow: rgba(35, 176, 139, 0.5);
   --nav-glow: 0 0 10px 1px rgba(35, 176, 139, 0.8);
+
+  --selection-text: rgba(35, 176, 139, 0.35);
 }
 
 /* Zone wrapper: also carries background/color/font, because body only sees
@@ -68,6 +70,9 @@
   --btn-contact-background: rgba(35, 176, 139, 0.12);   /* [DERIVED] same pattern as reference */
   --btn-shadow: rgba(35, 176, 139, 0.5);                /* [DERIVED] hard offset shadow of gaming buttons, same green */
   --nav-glow: 0 0 10px 1px rgba(35, 176, 139, 0.8);     /* [DERIVED] glow around the nav dot, gaming only */
+
+  --selection-text: #F2711C;
+  --selection-shadow: 1px 1px 0 rgba(242, 113, 28, 0.55);
 }
 
 .theme-brand {
@@ -94,6 +99,9 @@
 
   --btn-contact-background: rgba(242, 113, 28, 0.12);   /* [DERIVED] */
   --nav-glow: none;                                     /* [DERIVED] no glow on brand */
+
+  --selection-text: #23b08b;
+  --selection-shadow: 0 0 8px rgba(35, 176, 139, 0.9);
 }
 
 /* Shared rules, copied from the reference (engine badges removed:
@@ -518,4 +526,10 @@
 .underline-hover:hover::after,
 .underline-hover:focus-visible::after {
   transform: scaleX(1);
+}
+
+::selection {
+  background: transparent;
+  color: var(--selection-text);
+  text-shadow: var(--selection-shadow);
 }
