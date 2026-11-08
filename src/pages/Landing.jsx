@@ -10,14 +10,14 @@ function Landing() {
       <ZonePanel
         zone="gaming"
         to="/gaming"
-        eyebrow={t('landing.eyebrow')}
+        eyebrow={t('landing.eyebrowGaming')}
         title={t('landing.titleGaming')}
         subtitle={t('landing.subtitleGaming')}
       />
       <ZonePanel
         zone="brand"
         to="/brand"
-        eyebrow={t('landing.eyebrow')}
+        eyebrow={t('landing.eyebrowBrand')}
         title={t('landing.titleBrand')}
         subtitle={t('landing.subtitleBrand')}
       />

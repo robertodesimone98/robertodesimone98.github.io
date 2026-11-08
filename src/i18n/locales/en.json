@@ -1,10 +1,11 @@
 {
   "landing": {
-    "eyebrow": "Section",
+    "eyebrowGaming": "Cinematic",
     "titleGaming": "Gaming",
-    "titleBrand": "Brand",
-    "subtitleGaming": "video projects · Instagram",
-    "subtitleBrand": "social and brand projects"
+    "subtitleGaming": "Shots and stories from the worlds of video games",
+    "eyebrowBrand": "Brands & Creators",
+    "titleBrand": "Clients",
+    "subtitleBrand": "Impactful stories, designed for social"
   },
   "header": {
     "nav": {
@@ -23,9 +24,9 @@
   },
   "gaming": {
     "hero": {
-      "eyebrow": "Video Editor",
+      "eyebrow": "Video Editor & Content Creator",
       "title": "rawb.start",
-      "subtitle": "Highlights, trailers and content for your community: pace, impact and every key moment right where it belongs."
+      "subtitle": "The game gives you a camera. I look for another one.\nI capture scenes from the angle the game doesn't offer you, choose every camera move and framing, then turn them into a visual story."
     },
     "projects": {
       "items": {
