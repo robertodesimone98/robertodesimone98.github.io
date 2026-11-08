@@ -20,23 +20,3 @@
     border-top: 1px solid rgba(128, 128, 128, 0.25);
   }
 }
-
-// it.json
-"landing": {
-  "eyebrowGaming": "Cinematic",
-  "titleGaming": "Gaming",
-  "subtitleGaming": "Inquadrature e storie dai mondi dei videogiochi",
-  "eyebrowBrand": "Brands & Creators",
-  "titleBrand": "Clients",
-  "subtitleBrand": "Video e storie su misura per i tuoi social"
-}
-
-// en.json
-"landing": {
-  "eyebrowGaming": "Cinematic",
-  "titleGaming": "Gaming",
-  "subtitleGaming": "Framing and stories from the worlds of video games",
-  "eyebrowBrand": "Brands & Creators",
-  "titleBrand": "Clients",
-  "subtitleBrand": "Videos and stories made to measure for your socials"
-}
