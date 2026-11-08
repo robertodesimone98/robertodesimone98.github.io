@@ -5,5 +5,6 @@
 //   institution  school / course provider (a name: not translated)
 //   period       { from, to } as in formatPeriod.js
 export const education = [
-  { id: 'placeholder-1', institution: '[Istituto]', period: { from: '2017', to: '2020' } },
+  { id: 'its-rossellini', institution: 'ITS Roberto Rossellini', period: { from: '2023', to: '2025' } },
+  { id: 'accademia-informatica', institution: 'Accademia Informatica', period: { from: '2022' } },
 ]

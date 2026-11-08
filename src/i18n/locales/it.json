@@ -119,7 +119,7 @@
           "subtitle": "per studi e creator"
         },
         "personal": {
-          "subtitle": "dal mio canale"
+          "subtitle": "dai miei canali"
         }
       }
     },
@@ -227,7 +227,7 @@
           "subtitle": "per clienti e brand"
         },
         "personal": {
-          "subtitle": "sperimentazioni e idee mie"
+          "subtitle": "ricerca e sperimentazione"
         }
       }
     },
@@ -266,7 +266,7 @@
         "title": "Lavori"
       },
       "personal": {
-        "title": "Progetti personali"
+        "title": "Progetti"
       }
     }
   },
@@ -305,22 +305,25 @@
     "education": "Formazione",
     "present": "in corso",
     "items": {
-      "placeholder-1": {
-        "role": "[Ruolo 1]",
-        "description": "[Descrizione breve: cosa hai fatto e con quale risultato.]"
+      "slim-dogs": {
+        "role": "Video Editor",
+        "description": "Montaggio long-form e short-form per YouTube e social, con focus su ritmo e retention. Per creator e brand come Gaming Dogs, Amazon Prime Video e San Carlo."
       },
-      "placeholder-2": {
-        "role": "[Ruolo 2]",
-        "description": "[Descrizione breve: cosa hai fatto e con quale risultato.]"
+      "festa-del-cinema": {
+        "role": "Operatore, montatore e fotografo",
+        "description": "Riprese e montaggio delle masterclass con Viggo Mortensen e Dennis Lehane, tra gli altri. Foto del red carpet."
       },
-      "placeholder-3": {
-        "role": "[Ruolo 3]",
-        "description": "[Descrizione breve: cosa hai fatto e con quale risultato.]"
+      "freelance": {
+        "role": "Operatore e montatore video",
+        "description": "Reel, trailer e showreel di giochi indie per Cama's Game Slice. Riprese di eventi per Rome Future Week e Roma3x3."
       }
     },
     "educationItems": {
-      "placeholder-1": {
-        "title": "[Titolo di studio / corso]"
+      "its-rossellini": {
+        "title": "Diploma Tecnico Superiore Videomaker Cinema e TV"
+      },
+      "accademia-informatica": {
+        "title": "Corso Videomaker"
       }
     }
   }

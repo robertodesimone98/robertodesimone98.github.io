@@ -119,7 +119,7 @@
           "subtitle": "for studios and creators"
         },
         "personal": {
-          "subtitle": "from my channel"
+          "subtitle": "from my channels"
         }
       }
     },
@@ -227,7 +227,7 @@
           "subtitle": "for clients and brands"
         },
         "personal": {
-          "subtitle": "experiments and my own ideas"
+          "subtitle": "research and experimentation"
         }
       }
     },
@@ -266,7 +266,7 @@
         "title": "Work"
       },
       "personal": {
-        "title": "Personal projects"
+        "title": "Projects"
       }
     }
   },
@@ -305,22 +305,25 @@
     "education": "Education",
     "present": "present",
     "items": {
-      "placeholder-1": {
-        "role": "[Role 1]",
-        "description": "[Short description: what you did and the result.]"
+      "slim-dogs": {
+        "role": "Video Editor",
+        "description": "Long-form and short-form editing for YouTube and social, focused on pacing and retention. For creators and brands like Gaming Dogs, Amazon Prime Video and San Carlo."
       },
-      "placeholder-2": {
-        "role": "[Role 2]",
-        "description": "[Short description: what you did and the result.]"
+      "festa-del-cinema": {
+        "role": "Video Operator, Editor and Photographer",
+        "description": "Shot and edited masterclasses with Viggo Mortensen and Dennis Lehane, among others. Red carpet photography."
       },
-      "placeholder-3": {
-        "role": "[Role 3]",
-        "description": "[Short description: what you did and the result.]"
+      "freelance": {
+        "role": "Video Operator and Editor",
+        "description": "Reels, trailers and showreels for indie games for Cama's Game Slice. Event coverage for Rome Future Week and Roma3x3."
       }
     },
     "educationItems": {
-      "placeholder-1": {
-        "title": "[Degree / course]"
+      "its-rossellini": {
+        "title": "Higher Technical Diploma in Film and TV Production"
+      },
+      "accademia-informatica": {
+        "title": "Videomaker Course"
       }
     }
   }

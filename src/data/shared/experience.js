@@ -6,7 +6,7 @@
 //   org     company / client name (a brand name: not translated)
 //   period  { from, to } as in formatPeriod.js ('YYYY' or 'YYYY-MM'; to can be 'present')
 export const experience = [
-  { id: 'placeholder-1', org: '[Azienda / Cliente]', period: { from: '2024', to: 'present' } },
-  { id: 'placeholder-2', org: '[Azienda / Cliente]', period: { from: '2022', to: '2024' } },
-  { id: 'placeholder-3', org: '[Azienda / Cliente]', period: { from: '2020', to: '2022' } },
+  { id: 'slim-dogs', org: 'Slim Dogs', period: { from: '2025', to: '2026' } },
+  { id: 'festa-del-cinema', org: 'Festa del Cinema di Roma', period: { from: '2024-10' } },
+  { id: 'freelance', org: 'Freelance', period: { from: '2023', to: '2025' } },
 ]

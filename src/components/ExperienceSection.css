@@ -37,6 +37,10 @@
   color: var(--text-muted);
 }
 
+.theme-brand .experience-period {
+  color: var(--accent-secondary);
+}
+
 .theme-gaming .experience-period {
   font-family: var(--font-display);
   font-size: 24px;
@@ -64,11 +68,7 @@
 .experience-org {
   font-size: 14px;
   font-weight: 500;
-  color: var(--text-secondary);
-}
-
-.theme-gaming .experience-org {
-  color: var(--text-muted);
+  color: var(--accent-secondary);
 }
 
 .experience-description {
