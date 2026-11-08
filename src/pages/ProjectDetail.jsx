@@ -1,8 +1,9 @@
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { getProjectBySlug, getAdjacentProjects, getProjectGroup, getOriginField } from '../data/projects'
+import { getProjectBySlug, getAdjacentProjects, getProjectGroup, getOriginField, showsMeta } from '../data/projects'
 import { formatPeriod } from '../utils/formatPeriod'
 import { useInView } from '../hooks/useInView'
+import { categoryLabel } from '../utils/categories'
 import ProjectHeader from '../components/ProjectHeader'
 import ProjectNav from '../components/ProjectNav'
 import ChannelIcons from '../components/ChannelIcons'
@@ -37,6 +38,7 @@ function ProjectDetail() {
 
   const { previous, next } = getAdjacentProjects(zone, slug)
   const origin = getOriginField(project)
+  const showMeta = showsMeta(zone, project)
   const originValue = origin.value || t('projectDetail.labels.personalValue')
   const period = formatPeriod(project.period, i18n.language, t('projectDetail.labels.present'))
   const description = t(`${zone}.projects.items.${slug}.description`, { defaultValue: '' })
@@ -70,14 +72,18 @@ function ProjectDetail() {
                 <div className="metadata-label">{t('projectDetail.labels.channels')}</div>
                 <ChannelIcons channels={project.channels} />
               </div>
-              <div>
-                <div className="metadata-label">{t('projectDetail.labels.period')}</div>
-                <div className="metadata-value">{period}</div>
-              </div>
-              <div>
-                <div className="metadata-label">{t('projectDetail.labels.category')}</div>
-                <div className="metadata-value">{t(`projects.categories.${project.category}`)}</div>
-              </div>
+              {showMeta && (
+                <>
+                  <div>
+                    <div className="metadata-label">{t('projectDetail.labels.period')}</div>
+                    <div className="metadata-value">{period}</div>
+                  </div>
+                  <div>
+                    <div className="metadata-label">{t('projectDetail.labels.category')}</div>
+                    <div className="metadata-value">{categoryLabel(project, t)}</div>
+                  </div>
+                </>
+              )}
               <div>
                 <div className="metadata-label">{t(`projectDetail.labels.${origin.labelKey}`)}</div>
                 <div className="metadata-value">

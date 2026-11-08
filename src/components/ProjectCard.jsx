@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import ChannelIcons from './ChannelIcons'
 import { useInView } from '../hooks/useInView'
+import { categoryLabel } from '../utils/categories'
+import { showsMeta } from '../data/projects'
 import './ProjectCard.css'
 
 // Card of the projects grid. Cover + (optional) hover preview video, as in the
@@ -15,6 +17,8 @@ function ProjectCard({ zone, project, staggerIndex = 0 }) {
 
   // Client name: only for the projects made for a client (list "work"), in both zones.
   const clientName = project.origin === 'client' ? project.client : null
+
+  const showMeta = showsMeta(zone, project)
 
   function handleMouseEnter() {
     const video = videoRef.current
@@ -56,7 +60,7 @@ function ProjectCard({ zone, project, staggerIndex = 0 }) {
       </div>
 
       <div className="card-body">
-        <span className="card-category">{t(`projects.categories.${project.category}`)}</span>
+        {showMeta && <span className="card-category">{categoryLabel(project, t)}</span>}
         <div className="card-title-row">
           <span className="card-title">{project.title}</span>
           <span className="card-arrow" aria-hidden="true">

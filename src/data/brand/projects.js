@@ -7,7 +7,7 @@ import { placeholderBases } from '../shared/placeholders'
 // Texts live in the locales: brand.projects.items.<slug>...
 
 // One entry per placeholder slot (see shared/placeholders.js).
-const CATEGORIES = ['social', 'events', 'social', 'social', 'motion', 'events', 'motion', 'color', 'short-film']
+const CATEGORIES = [['trailer', 'social'], 'events', 'social', 'social', 'motion', 'events', 'motion', 'color', 'short-film']
 const ORIGINS = [
   { origin: 'client', client: 'Brand Esempio', clientUrl: 'https://example.com' },
   { origin: 'course', client: 'ITS Esempio' },

@@ -25,6 +25,11 @@ export function getProjectGroup(project) {
   return project.origin === 'client' ? 'work' : 'personal'
 }
 
+// Gaming: the projects that are not client work show no period and no category.
+export function showsMeta(zone, project) {
+  return !(zone === 'gaming' && getProjectGroup(project) === 'personal')
+}
+
 // [{ group: 'work' | 'personal', projects: [...] }], in the order shown on the home.
 // A list with no projects is left out.
 export function getGroupedProjects(zone) {

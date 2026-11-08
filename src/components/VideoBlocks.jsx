@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { useInView } from '../hooks/useInView'
 import VideoTile from './VideoTile'
 import Highlights from './Highlights'
 import './VideoBlocks.css'
@@ -52,6 +53,26 @@ function Row({ row, title }) {
   )
 }
 
+function Section({ title, description, section, projectTitle }) {
+  const [ref, isVisible] = useInView()
+
+  return (
+    <section ref={ref} className={`vsection fade-in-section ${isVisible ? 'is-visible' : ''}`}>
+      {title && <h2 className="vsection-title">{title}</h2>}
+      {description && (
+        <p className="vsection-description">
+          <Highlights text={description} />
+        </p>
+      )}
+      <div className="vrows">
+        {section.rows.map((row, i) => (
+          <Row key={i} row={row} title={projectTitle} />
+        ))}
+      </div>
+    </section>
+  )
+}
+
 function VideoBlocks({ zone, project }) {
   const { t, i18n } = useTranslation()
   const base = `${zone}.projects.items.${project.slug}.sections`
@@ -68,19 +89,13 @@ function VideoBlocks({ zone, project }) {
         const description = text(section.id, 'description')
 
         return (
-          <section className="vsection" key={section.id}>
-            {title && <h2 className="vsection-title">{title}</h2>}
-            {description && (
-              <p className="vsection-description">
-                <Highlights text={description} />
-              </p>
-            )}
-            <div className="vrows">
-              {section.rows.map((row, i) => (
-                <Row key={i} row={row} title={project.title} />
-              ))}
-            </div>
-          </section>
+          <Section
+            key={section.id}
+            title={title}
+            description={description}
+            section={section}
+            projectTitle={project.title}
+          />
         )
       })}
     </div>
