@@ -47,9 +47,9 @@ export const gamingProjects = [
     // 'lg' so each video fills its column (a smaller size would leave it narrower).
     sections: [
       columns(
-        section('fist', row([ig('https://www.instagram.com/rawb.start/reel/DfAmfXPNC2r/', V(1))], 'lg')),
-        section('metro', row([ig('https://www.instagram.com/rawb.start/reel/DehrK4nuzUK/', V(2))], 'lg')),
-        section('constance', row([ig('https://www.instagram.com/rawb.start/reel/DeOxKRzMOHE/', V(3))], 'lg')),
+        section('fist', row([ig('https://www.instagram.com/rawb.start/reel/DfAmfXPNC2r/', '/ig-previews/fist-trailer.jpg')], 'lg')),
+        section('metro', row([ig('https://www.instagram.com/rawb.start/reel/DehrK4nuzUK/', '/ig-previews/metro-trailer.jpg')], 'lg')),
+        section('constance', row([ig('https://www.instagram.com/rawb.start/reel/DeOxKRzMOHE/', '/ig-previews/constance-trailer.jpg')], 'lg')),
       ),
     ],
   },
@@ -65,14 +65,14 @@ export const gamingProjects = [
     // Two sections of 3 verticals, with NO title/description (no keys in the locales).
     sections: [
       section('set-1', row([
-        ig('https://www.instagram.com/rawb.start/reel/DfDBB4iBLd5/', V(1)),
-        ig('https://www.instagram.com/rawb.start/reel/DfSqshQt-K8/', V(2)),
-        ig('https://www.instagram.com/rawb.start/reel/DfKWvKghKV1/', V(3)),
+        ig('https://www.instagram.com/rawb.start/reel/DfDBB4iBLd5/', V(1)), //rdr2
+        ig('https://www.instagram.com/rawb.start/reel/DfSqshQt-K8/', V(2)), //stray
+        ig('https://www.instagram.com/rawb.start/reel/DfKWvKghKV1/', V(3)), //hogwarts
       ], 'lg')),
       section('set-2', row([
-        ig('https://www.instagram.com/rawb.start/reel/DeALaIxsuLu/', V(4)),
-        ig('https://www.instagram.com/rawb.start/reel/Decdal6Mehp/', V(1)),
-        ig('https://www.instagram.com/rawb.start/reel/DezwelrpPD9/', V(2)),
+        ig('https://www.instagram.com/rawb.start/reel/DeALaIxsuLu/', '/ig-previews/tw3-panoramic.jpg'), //tw
+        ig('https://www.instagram.com/rawb.start/reel/Decdal6Mehp/', '/ig-previews/fh6-panoramic.jpg'), //fh
+        ig('https://www.instagram.com/rawb.start/reel/DezwelrpPD9/', 'V(2)'), //fist
       ], 'lg')),
     ],
   },
@@ -88,13 +88,13 @@ export const gamingProjects = [
     // Two sections, no title/description: first 3 verticals, then 2.
     sections: [
       section('set-1', row([
-        ig('https://www.instagram.com/rawb.start/reel/De2GD2thXIs/', V(1)),
-        ig('https://www.instagram.com/rawb.start/reel/DeEo9UEssNJ/', V(2)),
-        ig('https://www.instagram.com/rawb.start/reel/DfaeZdvhihC/', V(3)),
+        ig('https://www.instagram.com/rawb.start/reel/De2GD2thXIs/', V(1)), //rdr2
+        ig('https://www.instagram.com/rawb.start/reel/DeEo9UEssNJ/', '/ig-previews/cp2077-miniature.jpg'), //cp
+        ig('https://www.instagram.com/rawb.start/reel/DfaeZdvhihC/', V(3)), //gta
       ], 'lg')),
       section('set-2', row([
-        ig('https://www.instagram.com/rawb.start/reel/DfFyZ_Euqqb/', V(4)),
-        ig('https://www.instagram.com/rawb.start/reel/DeXIDPgMbK0/', V(1)),
+        ig('https://www.instagram.com/rawb.start/reel/DfFyZ_Euqqb/', V(4)), //yakuza
+        ig('https://www.instagram.com/rawb.start/reel/DeXIDPgMbK0/', V(1)), //tw
       ], 'lg')),
     ],
   },
