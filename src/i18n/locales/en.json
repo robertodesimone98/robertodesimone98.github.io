@@ -30,91 +30,9 @@
     },
     "projects": {
       "items": {
-        "gaming-placeholder-1": {
-          "description": "Placeholder project to try the layouts: _two horizontals_, _one vertical_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "two-h": {
-              "title": "Layout: two horizontals",
-              "description": "Sample text for the **two horizontals** section. Title and description of each section are optional."
-            },
-            "single-v": {
-              "title": "Layout: one vertical"
-            }
-          }
-        },
-        "gaming-placeholder-2": {
-          "description": "Placeholder project to try the layouts: _three verticals_, _grid of verticals_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "three-v": {
-              "title": "Layout: three verticals",
-              "description": "Sample text for the **three verticals** section. Title and description of each section are optional."
-            },
-            "grid-6v": {
-              "title": "Layout: grid of verticals"
-            }
-          }
-        },
-        "gaming-placeholder-3": {
-          "description": "Placeholder project to try the layouts: _horizontal and vertical_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "h-v": {
-              "title": "Layout: horizontal and vertical",
-              "description": "Sample text for the **horizontal and vertical** section. Title and description of each section are optional."
-            }
-          }
-        },
-        "gaming-placeholder-4": {
-          "description": "Placeholder project to try the layouts: _horizontal and two verticals_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "h-2v": {
-              "title": "Layout: horizontal and two verticals",
-              "description": "Sample text for the **horizontal and two verticals** section. Title and description of each section are optional."
-            }
-          }
-        },
-        "gaming-placeholder-5": {
-          "sections": {
-            "big-2small": {
-              "title": "Layout: big one and two small ones",
-              "description": "Sample text for the **big one and two small ones** section. Title and description of each section are optional."
-            }
-          }
-        },
-        "gaming-placeholder-6": {
-          "description": "Placeholder project to try the layouts: _verticals on the sides, stack in the middle_.\nThe text supports **highlights** and italics."
-        },
-        "gaming-placeholder-7": {
-          "description": "Placeholder project to try the layouts: _2×2 grid_, _rows of different height_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "grid-2x2": {
-              "title": "Layout: 2×2 grid",
-              "description": "Sample text for the **2×2 grid** section. Title and description of each section are optional."
-            },
-            "sizes": {
-              "title": "Layout: rows of different height"
-            }
-          }
-        },
-        "gaming-placeholder-8": {
-          "description": "Placeholder project to try the layouts: _rows of different height_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "sizes": {
-              "title": "Layout: rows of different height",
-              "description": "Sample text for the **rows of different height** section. Title and description of each section are optional."
-            }
-          }
-        },
-        "gaming-placeholder-9": {
-          "description": "Placeholder project to try the layouts: _one large horizontal_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "single-h-lg": {
-              "title": "Layout: one large horizontal",
-              "description": "Sample text for the **one large horizontal** section. Title and description of each section are optional."
-            }
-          }
-        },
         "trailers": {
           "title": "Trailers",
+          "description": "Cinematic trailers for **major games**, cut for _Instagram_, TikTok and YouTube.",
           "sections": {
             "fist": {
               "title": "F.I.S.T"
@@ -128,12 +46,15 @@
           }
         },
         "ambient-overviews": {
-          "title": "Environment overviews"
+          "title": "Environment overviews",
+          "description": "Environmental showcases that let the **world** of each game speak for itself."
         },
         "miniatures": {
-          "title": "Miniatures"
+          "title": "Miniatures",
+          "description": "Everything is **pretty** and _tiny_!"
         },
         "camas-game-slice": {
+          "title": "A Slice of indies",
           "description": "Cama's Game Slice entrusted me with the video for their **indie games**: a series of **trailers**, a **showreel** bringing all the titles together, and the **portfolio**'s videos, from the hero to the project card previews."
         }
       },

@@ -10,10 +10,14 @@
   color: var(--text-secondary);
 }
 
-/* Hero: always 16:9 (the tile fills it). */
+/* Hero: 16:9 by default, 21:9 banner on gaming (the tile fills it). */
 .project-hero {
   aspect-ratio: 16 / 9;
   margin-top: 28px;
+}
+
+.theme-gaming .project-hero {
+  aspect-ratio: 17 / 3;
 }
 
 /* Room for the fixed ProjectNav bar. */
@@ -52,10 +56,19 @@
 }
 
 .theme-gaming .project-title-row h1 {
-  font-weight: 400;
+  /* font-weight: 400;
   font-size: 48px;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
+  text-transform: uppercase; */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .project-description {
