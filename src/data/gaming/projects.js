@@ -99,21 +99,21 @@ export const gamingProjects = [
     ],
   },
   {
-    // Client work (list "Lavori"). TODO: confirm the client name.
-    // TODO: add `period: { from: 'YYYY-MM', to: 'YYYY-MM' }` (the field is hidden while missing).
+    // Client work (list "Lavori").
     slug: 'camas-game-slice',
-    title: "Cama's Game Slice",
-    category: 'trailer',
+    title: "A Slice of Indie",
+    category: ['trailer', 'web'],
     origin: 'client',
     client: "Cama's Game Slice",
     clientUrl: 'https://camilla-bianca.github.io/', // the client name links to the portfolio
     channels: ['youtube'],
-    cover: H(4),
-    hero: image(H(4)),
+    period: { from: '2024-03', to: 'present' },
+    cover: '/covers/cama-cover.jpg',
+    hero: image('/heroes/cama-hero.jpg'),
     link: { type: 'website', url: 'https://camilla-bianca.github.io/' }, // button at the end of the page
     // One section, no title/description: two horizontals.
     sections: [
-      section('videos', row([yt('-Ze_h8uSDOo', H(2)), yt('CgECediqz7U', H(3))])),
+      section('videos', row([yt('-Ze_h8uSDOo'), yt('CgECediqz7U')])),
     ],
   },
 ]

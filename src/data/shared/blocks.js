@@ -19,7 +19,9 @@
 // SECTION: { id, rows: [row, ...] }. The id is the key of its title/description
 //          in the locales: <zone>.projects.items.<slug>.sections.<id>.{title,description}
 
-export const yt = (id, cover, orientation = 'h') => ({ kind: 'youtube', id, orientation, cover })
+const ytThumb = (id) => `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`
+export const yt = (id, cover = ytThumb(id), orientation = 'h') => ({ kind: 'youtube', id, orientation, cover })
+//export const yt = (id, cover, orientation = 'h') => ({ kind: 'youtube', id, orientation, cover })
 export const drive = (id, cover, orientation = 'h') => ({ kind: 'drive', id, orientation, cover })
 export const ig = (url, cover, orientation = 'v') => ({ kind: 'instagram', url, orientation, cover })
 export const image = (src) => ({ kind: 'image', src })

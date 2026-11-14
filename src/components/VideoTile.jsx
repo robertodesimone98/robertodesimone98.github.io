@@ -17,6 +17,18 @@ function embedSrc(tile) {
   return `https://drive.google.com/file/d/${tile.id}/preview`
 }
 
+// YouTube thumbnails from best to smallest. If a size doesn't exist, YouTube still
+// answers with a 120px grey placeholder (no error), so we detect it by its width.
+const YT_SIZES = ['maxresdefault', 'sddefault', 'hqdefault']
+
+function nextYoutubeThumb(img) {
+  if (!img.src.includes('i.ytimg.com') || img.naturalWidth > 120) return
+  const i = YT_SIZES.findIndex((s) => img.src.includes(s))
+  if (i >= 0 && i < YT_SIZES.length - 1) {
+    img.src = img.src.replace(YT_SIZES[i], YT_SIZES[i + 1])
+  }
+}
+
 // One video of the portfolio. Same mechanism everywhere (hero and blocks):
 // cover image, light hover effect, click.
 //   youtube / drive -> click swaps the cover for the player, in place
@@ -55,7 +67,13 @@ function VideoTile({ tile, title, className = '', style }) {
 
   const inner = (
     <>
-      <img className="vtile-cover" src={tile.cover} alt="" loading="lazy" />
+      <img
+        className="vtile-cover"
+        src={tile.cover}
+        alt=""
+        loading="lazy"
+        onLoad={(e) => nextYoutubeThumb(e.currentTarget)}
+      />
       <span className="vtile-action" aria-hidden="true">
         {tile.kind === 'instagram' ? (
           <LuArrowUpRight />

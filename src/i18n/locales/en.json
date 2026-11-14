@@ -134,7 +134,7 @@
           "title": "Miniatures"
         },
         "camas-game-slice": {
-          "description": "A client who commissioned several trailers for their indie games, plus a showreel featuring all of their games. I also took care of their portfolio, with the videos for the hero and the project cards."
+          "description": "Cama's Game Slice entrusted me with the video for their **indie games**: a series of **trailers**, a **showreel** bringing all the titles together, and the **portfolio**'s videos, from the hero to the project card previews."
         }
       },
       "groups": {
@@ -275,6 +275,7 @@
     "categories": {
       "social": "Social",
       "trailer": "Trailer",
+      "web": "Web video",
       "motion": "Motion Graphics",
       "color": "Color Correction",
       "short-film": "Short film",
