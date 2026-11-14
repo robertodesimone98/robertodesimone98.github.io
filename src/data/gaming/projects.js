@@ -65,14 +65,14 @@ export const gamingProjects = [
     // Two sections of 3 verticals, with NO title/description (no keys in the locales).
     sections: [
       section('set-1', row([
-        ig('https://www.instagram.com/rawb.start/reel/DfDBB4iBLd5/', V(1)), //rdr2
-        ig('https://www.instagram.com/rawb.start/reel/DfSqshQt-K8/', V(2)), //stray
-        ig('https://www.instagram.com/rawb.start/reel/DfKWvKghKV1/', V(3)), //hogwarts
+        ig('https://www.instagram.com/rawb.start/reel/DfDBB4iBLd5/', '/ig-previews/rdr2-panoramic.jpg'), //rdr2
+        ig('https://www.instagram.com/rawb.start/reel/DfSqshQt-K8/', '/ig-previews/stray-panoramic.jpg'), //stray
+        ig('https://www.instagram.com/rawb.start/reel/DfKWvKghKV1/', '/ig-previews/hogwarts-panoramic.jpg'), //hogwarts
       ], 'lg')),
       section('set-2', row([
         ig('https://www.instagram.com/rawb.start/reel/DeALaIxsuLu/', '/ig-previews/tw3-panoramic.jpg'), //tw
         ig('https://www.instagram.com/rawb.start/reel/Decdal6Mehp/', '/ig-previews/fh6-panoramic.jpg'), //fh
-        ig('https://www.instagram.com/rawb.start/reel/DezwelrpPD9/', 'V(2)'), //fist
+        ig('https://www.instagram.com/rawb.start/reel/DezwelrpPD9/', '/ig-previews/fist-panoramic.jpg'), //fist
       ], 'lg')),
     ],
   },
@@ -88,13 +88,13 @@ export const gamingProjects = [
     // Two sections, no title/description: first 3 verticals, then 2.
     sections: [
       section('set-1', row([
-        ig('https://www.instagram.com/rawb.start/reel/De2GD2thXIs/', V(1)), //rdr2
+        ig('https://www.instagram.com/rawb.start/reel/De2GD2thXIs/', '/ig-previews/rdr2-miniature.jpg'), //rdr2
         ig('https://www.instagram.com/rawb.start/reel/DeEo9UEssNJ/', '/ig-previews/cp2077-miniature.jpg'), //cp
-        ig('https://www.instagram.com/rawb.start/reel/DfaeZdvhihC/', V(3)), //gta
+        ig('https://www.instagram.com/rawb.start/reel/DfaeZdvhihC/', '/ig-previews/gtav-miniature.jpg'), //gta
       ], 'lg')),
       section('set-2', row([
-        ig('https://www.instagram.com/rawb.start/reel/DfFyZ_Euqqb/', V(4)), //yakuza
-        ig('https://www.instagram.com/rawb.start/reel/DeXIDPgMbK0/', V(1)), //tw
+        ig('https://www.instagram.com/rawb.start/reel/DfFyZ_Euqqb/', '/ig-previews/yakuza-miniature.jpg'), //yakuza
+        ig('https://www.instagram.com/rawb.start/reel/DeXIDPgMbK0/', '/ig-previews/tw3-miniature.jpg'), //tw
       ], 'lg')),
     ],
   },
