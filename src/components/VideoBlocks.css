@@ -36,6 +36,25 @@
   gap: var(--vgap);
 }
 
+/* Sections side by side: one column each, titles/descriptions centered over the video.
+   Stacked (one per line) on phones, see the media query below. */
+.vcolumns {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.vcolumns > .vsection {
+  min-width: 0;
+}
+
+.vcolumns .vsection-title,
+.vcolumns .vsection-description {
+  text-align: center;
+  margin-inline: auto;
+}
+
 /* Max height of a row. Width cap = sum of aspects x height (+ gaps). */
 .vrow {
   --row-h: 420px;
@@ -69,6 +88,11 @@
    (a full-width 9:16 would be taller than the screen). Stacks flatten too. */
 @media (max-width: 640px) {
   .vblocks {
+    gap: 32px;
+  }
+
+  .vcolumns {
+    grid-template-columns: minmax(0, 1fr);
     gap: 32px;
   }
 

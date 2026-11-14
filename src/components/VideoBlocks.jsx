@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { useInView } from '../hooks/useInView'
 import VideoTile from './VideoTile'
 import Highlights from './Highlights'
+import { projectTitle } from '../utils/projectTitle'
 import './VideoBlocks.css'
 
 const ASPECT = { h: 16 / 9, v: 9 / 16 }
@@ -82,22 +83,34 @@ function VideoBlocks({ zone, project }) {
     return i18n.exists(key) ? t(key) : ''
   }
 
+  const title = projectTitle(project, zone, t)
+
+  const renderSection = (section) => (
+    <Section
+      key={section.id}
+      title={text(section.id, 'title')}
+      description={text(section.id, 'description')}
+      section={section}
+      projectTitle={title}
+    />
+  )
+
   return (
     <div className="vblocks">
-      {project.sections.map((section) => {
-        const title = text(section.id, 'title')
-        const description = text(section.id, 'description')
-
-        return (
-          <Section
-            key={section.id}
-            title={title}
-            description={description}
-            section={section}
-            projectTitle={project.title}
-          />
-        )
-      })}
+      {project.sections.map((entry) =>
+        entry.columns ? (
+          // Sections side by side (see `columns` in data/shared/blocks.js).
+          <div
+            key={entry.columns.map((s) => s.id).join('+')}
+            className="vcolumns"
+            style={{ '--cols': entry.columns.length }}
+          >
+            {entry.columns.map(renderSection)}
+          </div>
+        ) : (
+          renderSection(entry)
+        ),
+      )}
     </div>
   )
 }

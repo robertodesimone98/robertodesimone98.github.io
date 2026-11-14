@@ -1,9 +1,8 @@
-import { placeholderBases } from '../shared/placeholders'
+import { image, yt, ig, row, section, columns } from '../shared/blocks'
 
-// PLACEHOLDER projects: their layouts/covers/heroes come from data/shared/placeholders.js
-// (the same ones Brand uses, to compare the two styles); here only slug, title, category
-// and origin are set. Replace with real content: one object per project, newest first,
-// with the fields below (delete shared/placeholders.js when done).
+// Gaming projects: one object per project, in the order they are shown, with the
+// fields below. Covers/heroes are still PLACEHOLDERS (public/placeholders): replace them.
+// (Brand still uses data/shared/placeholders.js.)
 //
 // Project fields:
 //   slug          url + key of the texts in the locales
@@ -30,53 +29,91 @@ import { placeholderBases } from '../shared/placeholders'
 // published there (card: Instagram icon + handle; detail: CHANNEL label + link).
 const CHANNEL = { client: '@rawb.start', clientUrl: 'https://www.instagram.com/rawb.start/' }
 
-// One entry per placeholder slot (see shared/placeholders.js).
-const CATEGORIES = ['trailer', 'social', 'social', 'social', 'trailer', 'social', 'trailer', 'social', 'trailer']
-const ORIGINS = [
-  { origin: 'client', client: 'Studio Esempio', clientUrl: 'https://example.com' },
-  { origin: 'channel', ...CHANNEL },
-  { origin: 'client', client: 'Cliente Esempio' },
-  { origin: 'channel', ...CHANNEL },
-  { origin: 'client', client: 'Altro Cliente', clientUrl: 'https://example.com' },
-  { origin: 'channel', ...CHANNEL },
-  { origin: 'channel', ...CHANNEL },
-  { origin: 'channel', ...CHANNEL },
-  { origin: 'channel', ...CHANNEL },
+// TEMPORARY placeholder images, replace with the real ones.
+const V = (n) => `/placeholders/v-${n}.svg`
+const H = (n) => `/placeholders/h-${n}.svg`
+
+export const gamingProjects = [
+  {
+    slug: 'trailers',
+    title: 'Trailer',
+    category: 'trailer',
+    origin: 'channel',
+    ...CHANNEL,
+    channels: ['instagram', 'tiktok', 'youtube'],
+    cover: V(1),
+    hero: image(H(1)),
+    // Three sections side by side (one vertical each), titles centered over the video.
+    // 'lg' so each video fills its column (a smaller size would leave it narrower).
+    sections: [
+      columns(
+        section('fist', row([ig('https://www.instagram.com/rawb.start/reel/DfAmfXPNC2r/', V(1))], 'lg')),
+        section('metro', row([ig('https://www.instagram.com/rawb.start/reel/DehrK4nuzUK/', V(2))], 'lg')),
+        section('constance', row([ig('https://www.instagram.com/rawb.start/reel/DeOxKRzMOHE/', V(3))], 'lg')),
+      ),
+    ],
+  },
+  {
+    slug: 'ambient-overviews',
+    title: 'Panoramiche ambientali',
+    category: 'overview',
+    origin: 'channel',
+    ...CHANNEL,
+    channels: ['instagram', 'tiktok', 'youtube'],
+    cover: V(2),
+    hero: image(H(2)),
+    // Two sections of 3 verticals, with NO title/description (no keys in the locales).
+    sections: [
+      section('set-1', row([
+        ig('https://www.instagram.com/rawb.start/reel/DfDBB4iBLd5/', V(1)),
+        ig('https://www.instagram.com/rawb.start/reel/DfSqshQt-K8/', V(2)),
+        ig('https://www.instagram.com/rawb.start/reel/DfKWvKghKV1/', V(3)),
+      ], 'lg')),
+      section('set-2', row([
+        ig('https://www.instagram.com/rawb.start/reel/DeALaIxsuLu/', V(4)),
+        ig('https://www.instagram.com/rawb.start/reel/Decdal6Mehp/', V(1)),
+        ig('https://www.instagram.com/rawb.start/reel/DezwelrpPD9/', V(2)),
+      ], 'lg')),
+    ],
+  },
+  {
+    slug: 'miniatures',
+    title: 'Miniature',
+    category: 'miniatures',
+    origin: 'channel',
+    ...CHANNEL,
+    channels: ['instagram', 'tiktok', 'youtube'],
+    cover: V(3),
+    hero: image(H(3)),
+    // Two sections, no title/description: first 3 verticals, then 2.
+    sections: [
+      section('set-1', row([
+        ig('https://www.instagram.com/rawb.start/reel/De2GD2thXIs/', V(1)),
+        ig('https://www.instagram.com/rawb.start/reel/DeEo9UEssNJ/', V(2)),
+        ig('https://www.instagram.com/rawb.start/reel/DfaeZdvhihC/', V(3)),
+      ], 'lg')),
+      section('set-2', row([
+        ig('https://www.instagram.com/rawb.start/reel/DfFyZ_Euqqb/', V(4)),
+        ig('https://www.instagram.com/rawb.start/reel/DeXIDPgMbK0/', V(1)),
+      ], 'lg')),
+    ],
+  },
+  {
+    // Client work (list "Lavori"). TODO: confirm the client name.
+    // TODO: add `period: { from: 'YYYY-MM', to: 'YYYY-MM' }` (the field is hidden while missing).
+    slug: 'camas-game-slice',
+    title: "Cama's Game Slice",
+    category: 'trailer',
+    origin: 'client',
+    client: "Cama's Game Slice",
+    clientUrl: 'https://camilla-bianca.github.io/', // the client name links to the portfolio
+    channels: ['youtube'],
+    cover: H(4),
+    hero: image(H(4)),
+    link: { type: 'website', url: 'https://camilla-bianca.github.io/' }, // button at the end of the page
+    // One section, no title/description: two horizontals.
+    sections: [
+      section('videos', row([yt('-Ze_h8uSDOo', H(2)), yt('CgECediqz7U', H(3))])),
+    ],
+  },
 ]
-
-// Hover preview of each card, same order as the slots above (null = no video).
-const PREVIEWS = [
-  '/videos/preview/preview-bosque.mp4',
-  '/videos/preview/preview-coi.mp4',
-  '/videos/preview/preview-af.mp4',
-  '/videos/preview/preview-ct.mp4',
-  '/videos/preview/preview-gb.mp4',
-  '/videos/preview/preview-gbnd.mp4',
-  '/videos/preview/preview-pr.mp4',
-  null, 
-  null,
-]
-
-// Card cover of each project, same order (null = keep the placeholder cover).
-const COVERS = [
-  '/covers/cover-bosque.jpg',
-  '/covers/cover-coi.jpg',
-  '/covers/cover-af.jpg',
-  '/covers/cover-ct.jpg',
-  '/covers/cover-gb.jpg',
-  '/covers/cover-gbnd.jpg',
-  '/covers/cover-pr.jpg',
-  null,
-  null,
-]
-
-export const gamingProjects = placeholderBases.map((base, i) => ({
-  slug: `gaming-placeholder-${i + 1}`,
-  title: `Gaming placeholder ${i + 1}`,
-  category: CATEGORIES[i],
-  ...ORIGINS[i],
-  ...base,
-  //cover: COVERS[i] ?? base.cover,
-  preview: PREVIEWS[i],
-}))
-

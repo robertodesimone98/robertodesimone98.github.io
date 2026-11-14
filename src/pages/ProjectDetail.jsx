@@ -4,6 +4,7 @@ import { getProjectBySlug, getAdjacentProjects, getProjectGroup, getOriginField,
 import { formatPeriod } from '../utils/formatPeriod'
 import { useInView } from '../hooks/useInView'
 import { categoryLabel } from '../utils/categories'
+import { projectTitle } from '../utils/projectTitle'
 import ProjectHeader from '../components/ProjectHeader'
 import ProjectNav from '../components/ProjectNav'
 import ChannelIcons from '../components/ChannelIcons'
@@ -41,6 +42,7 @@ function ProjectDetail() {
   const showMeta = showsMeta(zone, project)
   const originValue = origin.value || t('projectDetail.labels.personalValue')
   const period = formatPeriod(project.period, i18n.language, t('projectDetail.labels.present'))
+  const title = projectTitle(project, zone, t)
   const description = t(`${zone}.projects.items.${slug}.description`, { defaultValue: '' })
 
   // key={slug}: the page is remounted when going to the previous/next project,
@@ -51,14 +53,14 @@ function ProjectDetail() {
 
       <div className="project-detail-wrap">
         <div className="project-hero">
-          <VideoTile tile={project.hero} title={project.title} style={{ height: '100%' }} />
+          <VideoTile tile={project.hero} title={title} style={{ height: '100%' }} />
         </div>
 
         <div className="project-body">
           <div ref={contentRef} className={`fade-in-section ${isContentVisible ? 'is-visible' : ''}`}>
             <p className="project-group-label">{t(`projects.groups.${getProjectGroup(project)}.title`)}</p>
             <div className="project-title-row">
-              <h1>{project.title}</h1>
+              <h1>{title}</h1>
             </div>
 
             {description && (
@@ -72,17 +74,17 @@ function ProjectDetail() {
                 <div className="metadata-label">{t('projectDetail.labels.channels')}</div>
                 <ChannelIcons channels={project.channels} />
               </div>
+              {showMeta && period && (
+                <div>
+                  <div className="metadata-label">{t('projectDetail.labels.period')}</div>
+                  <div className="metadata-value">{period}</div>
+                </div>
+              )}
               {showMeta && (
-                <>
-                  <div>
-                    <div className="metadata-label">{t('projectDetail.labels.period')}</div>
-                    <div className="metadata-value">{period}</div>
-                  </div>
-                  <div>
-                    <div className="metadata-label">{t('projectDetail.labels.category')}</div>
-                    <div className="metadata-value">{categoryLabel(project, t)}</div>
-                  </div>
-                </>
+                <div>
+                  <div className="metadata-label">{t('projectDetail.labels.category')}</div>
+                  <div className="metadata-value">{categoryLabel(project, t)}</div>
+                </div>
               )}
               <div>
                 <div className="metadata-label">{t(`projectDetail.labels.${origin.labelKey}`)}</div>

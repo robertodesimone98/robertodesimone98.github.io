@@ -5,6 +5,7 @@ import ChannelIcons from './ChannelIcons'
 import { useInView } from '../hooks/useInView'
 import { categoryLabel } from '../utils/categories'
 import { showsMeta } from '../data/projects'
+import { projectTitle } from '../utils/projectTitle'
 import './ProjectCard.css'
 
 // Card of the projects grid. Cover + (optional) hover preview video, as in the
@@ -19,6 +20,7 @@ function ProjectCard({ zone, project, staggerIndex = 0 }) {
   const clientName = project.origin === 'client' ? project.client : null
 
   const showMeta = showsMeta(zone, project)
+  const title = projectTitle(project, zone, t)
 
   function handleMouseEnter() {
     const video = videoRef.current
@@ -49,7 +51,7 @@ function ProjectCard({ zone, project, staggerIndex = 0 }) {
       <div className="card-media">
         <img
           src={project.cover}
-          alt={project.title}
+          alt={title}
           className="card-image"
           loading="lazy"
           style={project.coverPosition ? { objectPosition: project.coverPosition } : undefined}
@@ -62,7 +64,7 @@ function ProjectCard({ zone, project, staggerIndex = 0 }) {
       <div className="card-body">
         {showMeta && <span className="card-category">{categoryLabel(project, t)}</span>}
         <div className="card-title-row">
-          <span className="card-title">{project.title}</span>
+          <span className="card-title">{title}</span>
           <span className="card-arrow" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12l14 0" />

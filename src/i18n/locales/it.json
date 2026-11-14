@@ -112,6 +112,29 @@
               "description": "Testo di prova della sezione **una orizzontale grande**. Titolo e descrizione di ogni sezione sono opzionali."
             }
           }
+        },
+        "trailers": {
+          "title": "Trailer",
+          "sections": {
+            "fist": {
+              "title": "F.I.S.T"
+            },
+            "metro": {
+              "title": "Metro"
+            },
+            "constance": {
+              "title": "Constance"
+            }
+          }
+        },
+        "ambient-overviews": {
+          "title": "Panoramiche ambientali"
+        },
+        "miniatures": {
+          "title": "Miniature"
+        },
+        "camas-game-slice": {
+          "description": "Cliente che mi ha richiesto diversi trailer dei suoi giochi indie e anche uno showreel con tutti i suoi giochi. Mi sono occupato anche del suo portfolio, con i video della hero e delle card dei progetti."
         }
       },
       "groups": {
@@ -252,14 +275,17 @@
     "categories": {
       "social": "Social",
       "trailer": "Trailer",
-      "events": "Eventi",
-      "motion": "Motion graphics",
-      "color": "Color grading",
+      "motion": "Motion Graphic",
+      "color": "Color correction",
       "short-film": "Cortometraggio",
+      "backstage": "Backstage",
+      "masterclass": "Masterclass",
+      "travel": "Travel",
       "food": "Food",
+      "short": "Short film",
       "storytelling": "Storytelling",
       "overview": "Panoramica",
-      "thumbnails": "Miniature"
+      "miniatures": "Miniature"
     },
     "groups": {
       "work": {

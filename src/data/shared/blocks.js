@@ -11,6 +11,11 @@
 //        All items of a row share the same height, whatever the mix.
 // STACK: { stack: [tile, tile, ...] }  tiles one above the other, as a single row item.
 //
+// COLUMNS: { columns: [section, section, ...] }  sections side by side (one per column), as
+//          a single entry of `sections`. Each keeps its own title/description (centered).
+//          On phones the columns stack, one per line. Use it for a few narrow sections
+//          (e.g. three single verticals) so the page is not 3 screens tall.
+//
 // SECTION: { id, rows: [row, ...] }. The id is the key of its title/description
 //          in the locales: <zone>.projects.items.<slug>.sections.<id>.{title,description}
 
@@ -22,6 +27,7 @@ export const image = (src) => ({ kind: 'image', src })
 export const stack = (...tiles) => ({ stack: tiles })
 export const row = (items, size) => ({ items, size })
 export const section = (id, ...rows) => ({ id, rows })
+export const columns = (...sections) => ({ columns: sections })
 
 // Splits many tiles into rows of `perRow` (last row can be shorter).
 //   grid([a, b, c, d, e], 3) -> two rows: [a, b, c] and [d, e]

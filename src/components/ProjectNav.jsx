@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { getProjectGroup } from '../data/projects'
+import { projectTitle } from '../utils/projectTitle'
 import './ProjectNav.css'
 
 // Arrows (same icon style as the other inline SVGs). Decorative: the label says it.
@@ -46,7 +47,7 @@ function ProjectNav({ zone, current, previous, next }) {
               {t('projectNav.previous')}
             </span>
             {groupLabel(previous)}
-            <span className="nav-title">{previous.title}</span>
+            <span className="nav-title">{projectTitle(previous, zone, t)}</span>
           </Link>
         ) : (
           <span />
@@ -58,7 +59,7 @@ function ProjectNav({ zone, current, previous, next }) {
               {arrowRight}
             </span>
             {groupLabel(next)}
-            <span className="nav-title">{next.title}</span>
+            <span className="nav-title">{projectTitle(next, zone, t)}</span>
           </Link>
         )}
       </div>

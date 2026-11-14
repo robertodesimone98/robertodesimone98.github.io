@@ -7,10 +7,10 @@ import { placeholderBases } from '../shared/placeholders'
 // Texts live in the locales: brand.projects.items.<slug>...
 
 // One entry per placeholder slot (see shared/placeholders.js).
-const CATEGORIES = [['trailer', 'social'], 'events', 'social', 'social', 'motion', 'events', 'motion', 'color', 'short-film']
+const CATEGORIES = ['social', ['social', 'food', 'storytelling', 'travel'], 'social', 'social', 'social', 'social', 'social', 'backstage', 'masterclass', 'color', 'motion', 'motion', 'social', 'short-film', 'short-film']
 const ORIGINS = [
-  { origin: 'client', client: 'Brand Esempio', clientUrl: 'https://example.com' },
-  { origin: 'course', client: 'ITS Esempio' },
+  { origin: 'client', client: 'Gaming Dogs', clientUrl: 'https://www.youtube.com/@gamingdogs' },
+  { origin: 'client', client: 'https://www.youtube.com/@Prattquello' },
   { origin: 'client', client: 'Brand Esempio' },
   { origin: 'personal' },
   { origin: 'client', client: 'Evento Esempio', clientUrl: 'https://example.com' },
@@ -18,17 +18,18 @@ const ORIGINS = [
   { origin: 'client', client: 'Brand Esempio', clientUrl: 'https://example.com' },
   { origin: 'personal' },
   { origin: 'personal' },
+  { origin: 'course', client: 'ITS Esempio' },
 ]
 
 // Hover preview of each card, same order as the slots above (null = no video).
 const PREVIEWS = [
-  '/videos/preview/preview-bosque.mp4',
-  '/videos/preview/preview-coi.mp4',
-  '/videos/preview/preview-af.mp4',
-  '/videos/preview/preview-ct.mp4',
-  '/videos/preview/preview-gb.mp4',
-  '/videos/preview/preview-gbnd.mp4',
-  '/videos/preview/preview-pr.mp4',
+  //'/videos/preview/preview-bosque.mp4',
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
   null, 
   null,
 ]
@@ -42,8 +43,8 @@ const COVERS = [
   '/covers/cover-gb.jpg',
   '/covers/cover-gbnd.jpg',
   '/covers/cover-pr.jpg',
-  null,
-  null,
+  '/covers/cover-pr.jpg',
+  '/covers/cover-pr.jpg',
 ]
 
 export const brandProjects = placeholderBases.map((base, i) => ({

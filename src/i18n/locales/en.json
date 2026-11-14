@@ -112,6 +112,29 @@
               "description": "Sample text for the **one large horizontal** section. Title and description of each section are optional."
             }
           }
+        },
+        "trailers": {
+          "title": "Trailers",
+          "sections": {
+            "fist": {
+              "title": "F.I.S.T"
+            },
+            "metro": {
+              "title": "Metro"
+            },
+            "constance": {
+              "title": "Constance"
+            }
+          }
+        },
+        "ambient-overviews": {
+          "title": "Environment overviews"
+        },
+        "miniatures": {
+          "title": "Miniatures"
+        },
+        "camas-game-slice": {
+          "description": "A client who commissioned several trailers for their indie games, plus a showreel featuring all of their games. I also took care of their portfolio, with the videos for the hero and the project cards."
         }
       },
       "groups": {
@@ -252,14 +275,17 @@
     "categories": {
       "social": "Social",
       "trailer": "Trailer",
-      "events": "Events",
-      "motion": "Motion graphics",
-      "color": "Color grading",
+      "motion": "Motion Graphics",
+      "color": "Color Correction",
       "short-film": "Short film",
+      "backstage": "Backstage",
+      "masterclass": "Masterclass",
+      "travel": "Travel",
       "food": "Food",
+      "short": "Short film",
       "storytelling": "Storytelling",
       "overview": "Overview",
-      "thumbnails": "Thumbnails"
+      "miniatures": "Miniatures"
     },
     "groups": {
       "work": {
