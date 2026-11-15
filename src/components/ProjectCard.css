@@ -171,7 +171,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.2s ease, transform 0.4s ease;
+  transition: opacity 0.2s ease, transform 0.4s ease, filter 0.3s ease;
 }
 
 .card-hover-preview {
@@ -185,6 +185,16 @@
 
   .card:hover .card-image {
     transform: scale(1.04);
+  }
+
+  .theme-gaming .card-image,
+  .theme-gaming .card-hover-preview {
+    filter: brightness(0.85) saturate(0.95) contrast(1.05);
+  }
+
+  .theme-gaming .card:hover .card-image,
+  .theme-gaming .card:hover .card-hover-preview {
+    filter: brightness(1.05) saturate(1.25) contrast(1.05);
   }
 }
 

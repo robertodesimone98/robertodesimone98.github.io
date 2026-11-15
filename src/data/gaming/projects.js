@@ -41,7 +41,7 @@ export const gamingProjects = [
     origin: 'channel',
     ...CHANNEL,
     channels: ['instagram', 'tiktok', 'youtube'],
-    cover: V(1),
+    cover: '/covers/trailers-cover.jpg',
     hero: image('/heroes/trailers-hero.jpg'),
     // Three sections side by side (one vertical each), titles centered over the video.
     // 'lg' so each video fills its column (a smaller size would leave it narrower).
@@ -60,7 +60,7 @@ export const gamingProjects = [
     origin: 'channel',
     ...CHANNEL,
     channels: ['instagram', 'tiktok', 'youtube'],
-    cover: V(2),
+    cover: '/covers/environments-cover.jpg',
     hero: image('/heroes/environments-hero.jpg'),
     // Two sections of 3 verticals, with NO title/description (no keys in the locales).
     sections: [
@@ -83,7 +83,7 @@ export const gamingProjects = [
     origin: 'channel',
     ...CHANNEL,
     channels: ['instagram', 'tiktok', 'youtube'],
-    cover: V(3),
+    cover: '/covers/miniature-cover.jpg',
     hero: image('/heroes/miniatures-hero.jpg'),
     // Two sections, no title/description: first 3 verticals, then 2.
     sections: [
