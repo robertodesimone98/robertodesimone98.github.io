@@ -35,6 +35,10 @@
   text-transform: uppercase;
 }
 
+.project-group-sep {
+  margin: 0 0.6em;
+}
+
 .project-title-row {
   display: flex;
   flex-wrap: wrap;

@@ -58,7 +58,11 @@ function ProjectDetail() {
 
         <div className="project-body">
           <div ref={contentRef} className={`fade-in-section ${isContentVisible ? 'is-visible' : ''}`}>
-            <p className="project-group-label">{t(`projects.groups.${getProjectGroup(project)}.title`)}</p>
+            <p className="project-group-label">
+              {t(`projects.groups.${getProjectGroup(project)}.title`)}
+              <span className="project-group-sep" aria-hidden="true">/</span>
+              {title}
+            </p>
             <div className="project-title-row">
               <h1>{title}</h1>
             </div>
