@@ -82,27 +82,23 @@
     },
     "projects": {
       "items": {
-        "brand-placeholder-1": {
-          "description": "Placeholder project to try the layouts: _two horizontals_, _one vertical_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "two-h": {
-              "title": "Layout: two horizontals",
-              "description": "Sample text for the **two horizontals** section. Title and description of each section are optional."
-            },
-            "single-v": {
-              "title": "Layout: one vertical"
-            }
-          }
+        "gaming-dogs": {
+          "description": "Gaming Dogs is the gaming channel by **Slim Dogs**, combining **video games** and **storytelling** through ironic and highly polished formats."
         },
-        "brand-placeholder-2": {
-          "description": "Placeholder project to try the layouts: _three verticals_, _grid of verticals_.\nThe text supports **highlights** and italics.",
+        "pratt": {
+          "description": "Prattquello",
           "sections": {
-            "three-v": {
-              "title": "Layout: three verticals",
-              "description": "Sample text for the **three verticals** section. Title and description of each section are optional."
+            "stories": {
+              "title": "Food Stories",
+              "description": "Prattquello is an Italian content creator who creates digital content focused on **food** and **entertainment**. His approach is summed up by the phrase **_eating is not just chewing_**, which lies at the heart of his main format, where food becomes a visual story: **_Food Stories_**. As an **editor**, I worked on the evolution of the format, introducing **improvements** to the structure of the videos and the way the content is presented. A balancing act between aesthetics and storytelling, making each story work in the most **direct** way possible."
             },
-            "grid-6v": {
-              "title": "Layout: grid of verticals"
+            "mulino": {
+              "title": "Mulino",
+              "description": "**_Il Mulino_** is a fast-paced format where **food** and **jokes** come together. In the **editing**, I focused on pushing the **timing** of the jokes and keeping the video's **energy** high, building a fast and **engaging** flow, especially in the vertical format."
+            },
+            "travel": {
+              "title": "Travel",
+              "description": "Format between **travel** and **food** that tells stories of traditions, places, and **people** through food. In the **editing**, I worked to give continuity to the **storytelling**, balancing contextual shots, preparation, and **human** interaction. The goal is to capture not only what is being eaten, but also the environment and the **stories** surrounding it."
             }
           }
         },
@@ -207,7 +203,8 @@
       "short": "Short film",
       "storytelling": "Storytelling",
       "overview": "Overview",
-      "miniatures": "Miniatures"
+      "miniatures": "Miniatures",
+      "gaming": "Gaming"
     },
     "groups": {
       "work": {

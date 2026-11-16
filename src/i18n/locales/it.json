@@ -82,27 +82,23 @@
     },
     "projects": {
       "items": {
-        "brand-placeholder-1": {
-          "description": "Progetto segnaposto per provare i layout: _due orizzontali_, _una verticale_.\nIl testo supporta le **evidenze** e il corsivo.",
-          "sections": {
-            "two-h": {
-              "title": "Layout: due orizzontali",
-              "description": "Testo di prova della sezione **due orizzontali**. Titolo e descrizione di ogni sezione sono opzionali."
-            },
-            "single-v": {
-              "title": "Layout: una verticale"
-            }
-          }
+        "gaming-dogs": {
+          "description": "Gaming Dogs p il canale gaming di **Slim Dogs**, che combina **videogiochi** e **storytelling** tramite ironia e formati altamente rifiniti."
         },
-        "brand-placeholder-2": {
-          "description": "Progetto segnaposto per provare i layout: _tre verticali_, _griglia di verticali_.\nIl testo supporta le **evidenze** e il corsivo.",
+        "pratt": {
+          "description": "Prattquello",
           "sections": {
-            "three-v": {
-              "title": "Layout: tre verticali",
-              "description": "Testo di prova della sezione **tre verticali**. Titolo e descrizione di ogni sezione sono opzionali."
+            "stories": {
+              "title": "Food Stories",
+              "description": "Prattquello è un content creator italiano che crea contenuti digitali focalizzati su **cibo** e **intrattenimento**. Il suo approccio è riassunto dalla frase **_mangiare non è solo masticare_**, che risiede al centro del suo format principale, in cui il cibo diventa un racconto visivo: **_Food Stories_**. Come **editor**, ho lavorato all'evoluzione del format, introducendo **miglioramenti** alla struttura dei video e al modo in cui il contenuto viene presentato. Un equilibrio tra estetica e narrazione, per far sì che ogni storia funzioni nel modo più **diretto** possibile."
             },
-            "grid-6v": {
-              "title": "Layout: griglia di verticali"
+            "mulino": {
+              "title": "Mulino",
+              "description": "**_Il Mulino_** è un format dal ritmo serrato in cui **cibo** e **battute** si incontrano. Nel **montaggio**, mi sono concentrato sull'ottimizzazione dei **tempi** comici e sul mantenimento di un'**energia** elevata, creando un flusso rapido e **coinvolgente**, pensato in particolare per il formato verticale."
+            },
+            "travel": {
+              "title": "Travel",
+              "description": "Un format a metà tra **viaggi** e **cibo** che racconta storie di tradizioni, luoghi e **persone** attraverso l'alimentazione. Nel **montaggio**, ho lavorato per dare continuità alla **narrazione**, bilanciando inquadrature di contesto, fasi di preparazione e interazione **umana**. L'obiettivo è catturare non solo ciò che viene mangiato, ma anche l'ambiente e le **storie** che vi ruotano attorno."
             }
           }
         },
@@ -207,7 +203,8 @@
       "short": "Short film",
       "storytelling": "Storytelling",
       "overview": "Panoramica",
-      "miniatures": "Miniature"
+      "miniatures": "Miniature",
+      "gaming": "Gaming"
     },
     "groups": {
       "work": {
