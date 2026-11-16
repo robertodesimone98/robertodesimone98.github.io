@@ -10,3 +10,6 @@ The site has two sections:
 - **Brand**: social and brand video projects
 
 Available in Italian and English.
+
+## License
+This repository contains the source code for a personal portfolio and is not licensed for reuse. Feel free to look around, but please don't copy the content or design as your own.
