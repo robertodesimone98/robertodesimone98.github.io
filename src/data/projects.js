@@ -14,6 +14,10 @@ export const channelLabels = {
   tiktok: 'TikTok',
 }
 
+// true if the project has at least one channel we know how to show
+export const hasChannels = (project) =>
+  [].concat(project.channels ?? []).some((c) => c in channelLabels)
+
 // Two lists per zone: 'work' (made for a client) and 'personal' (own channel, personal
 // projects, courses). The order of the lists is different in each zone.
 const GROUP_ORDER = {

@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { getProjectBySlug, getAdjacentProjects, getProjectGroup, getOriginField, showsMeta } from '../data/projects'
+import { getProjectBySlug, getAdjacentProjects, getProjectGroup, getOriginField, showsMeta, hasChannels } from '../data/projects'
 import { formatPeriod } from '../utils/formatPeriod'
 import { useInView } from '../hooks/useInView'
 import { categoryLabel } from '../utils/categories'
@@ -74,10 +74,12 @@ function ProjectDetail() {
             )}
 
             <div className="metadata-row">
-              <div>
-                <div className="metadata-label">{t('projectDetail.labels.channels')}</div>
-                <ChannelIcons channels={project.channels} />
-              </div>
+              {hasChannels(project) && (
+                <div>
+                  <div className="metadata-label">{t('projectDetail.labels.channels')}</div>
+                  <ChannelIcons channels={project.channels} />
+                </div>
+              )}
               {showMeta && period && (
                 <div>
                   <div className="metadata-label">{t('projectDetail.labels.period')}</div>

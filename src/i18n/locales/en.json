@@ -19,7 +19,7 @@
     "homeLabel": "Back to start page",
     "zone": {
       "gaming": "Gaming",
-      "brand": "Brand"
+      "brand": "Clients"
     }
   },
   "gaming": {
@@ -126,12 +126,48 @@
         "nuvola-yoga": {
           "description": "Content for the Nuvola Yoga YouTube channel, focused on **yoga** practice and **well-being**. I handled the **editing** with a calm and **relaxed pace**, paying particular attention to the **fluidity** of the instructors' movements."
         },
-        "brand-placeholder-8": {
-          "description": "Placeholder project to try the layouts: _rows of different height_.\nThe text supports **highlights** and italics.",
+        "backstage-hiver": {
+          "description": "**Behind the scenes** of the short film **_Hiver_**, created as the final project for the **Videomaker** course at **ITS Rossellini**. I worked both as a **camera operator** and **editor**, capturing key moments to **document** the set and conducting **interviews** with actors and crew members."
+        },
+        "masterclass-festa-cinema-roma": {
+          "description": "Thanks to **ITS Rossellini**, I had the opportunity to work at the prestigious **Festa del Cinema di Roma** as a **camera operator** and **editor** during masterclasses with renowned names in cinema: **Viggo Mortensen**, **Chiara Mastroianni**, the **D'Innocenzo brothers**, **Dennis Lehane**, and **Saverio Costanzo**. An extraordinary experience that allowed me to actively take part in one of the most important events in the **international film scene**."
+        },
+        "color-grading": {
+          "description": "**Color Grading** projects created independently to explore the **storytelling potential of color** and make the most of the **aesthetic** of each clip."
+        },
+        "brand-placeholder-9": {
+          "description": "Placeholder project to try the layouts: _one large horizontal_.\nThe text supports **highlights** and italics.",
           "sections": {
-            "sizes": {
-              "title": "Layout: rows of different height",
-              "description": "Sample text for the **rows of different height** section. Title and description of each section are optional."
+            "single-h-lg": {
+              "title": "Layout: one large horizontal",
+              "description": "Sample text for the **one large horizontal** section. Title and description of each section are optional."
+            }
+          }
+        },
+        "brand-placeholder-9": {
+          "description": "Placeholder project to try the layouts: _one large horizontal_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "single-h-lg": {
+              "title": "Layout: one large horizontal",
+              "description": "Sample text for the **one large horizontal** section. Title and description of each section are optional."
+            }
+          }
+        },
+        "brand-placeholder-9": {
+          "description": "Placeholder project to try the layouts: _one large horizontal_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "single-h-lg": {
+              "title": "Layout: one large horizontal",
+              "description": "Sample text for the **one large horizontal** section. Title and description of each section are optional."
+            }
+          }
+        },
+        "brand-placeholder-9": {
+          "description": "Placeholder project to try the layouts: _one large horizontal_.\nThe text supports **highlights** and italics.",
+          "sections": {
+            "single-h-lg": {
+              "title": "Layout: one large horizontal",
+              "description": "Sample text for the **one large horizontal** section. Title and description of each section are optional."
             }
           }
         },

@@ -1,4 +1,4 @@
-import { image, yt, ig, row, section } from '../shared/blocks'
+import { image, yt, ig, drive, row, section } from '../shared/blocks'
 
 export const brandProjects = [
   {
@@ -150,6 +150,98 @@ export const brandProjects = [
     link: { type: 'youtube', url: 'https://www.youtube.com/@nuvolayoga' },// facoltativo, bottone in fondo
     sections: [
       section('video', row([yt('4XmCfn8pCfE')]))
+    ],
+  },
+  {
+    slug: 'backstage-hiver',            // URL + chiave dei testi nei locales
+    title: 'Backstage Hiver',           // mostrato così com'è, non tradotto
+    category: 'backstage',               // 'social' | 'motion' | 'color' | 'short-film' | ...
+    origin: 'course',                 // 'client' | 'channel' | 'personal' | 'course'
+    client: 'ITS Rossellini',
+    clientUrl: 'https://itsrossellini.it/',         // facoltativo, il nome diventa un link
+    channels: [],
+    period: { from: '2025-02', to: '2025-05' },   // 'to' può essere 'present' o mancare
+    cover: '/covers/brand/its-cover.jpg',
+    hero: image('/heroes/nome-progetto.jpg'),     // oppure yt('ID_VIDEO')
+    preview: '', // facoltativo
+    link: { type: 'instagram', url: 'https://www.instagram.com/lhiver_corto/' },// facoltativo, bottone in fondo
+    sections: [
+      section('film', row([
+        drive('1pa2mvND_4ngHl3_XfLpSijDDoXv2EKl9', '/covers/brand/its-cover.jpg'),
+      ])),
+    ],
+  },
+  {
+    slug: 'masterclass-festa-cinema-roma',            // URL + chiave dei testi nei locales
+    title: 'Festa del Cinema di Roma: D\'Innocenzo Brothers Masterclass',           // mostrato così com'è, non tradotto
+    category: 'masterclass',               // 'social' | 'motion' | 'color' | 'short-film' | ...
+    origin: 'course',                 // 'client' | 'channel' | 'personal' | 'course'
+    client: 'ITS Rossellini',
+    clientUrl: 'https://itsrossellini.it/',         // facoltativo, il nome diventa un link
+    channels: [],
+    period: { from: '2024-10'},   // 'to' può essere 'present' o mancare
+    cover: '/covers/brand/festa-cinema-roma-cover.jpg',
+    hero: image('/heroes/nome-progetto.jpg'),     // oppure yt('ID_VIDEO')
+    preview: '/videos/preview/nome-progetto.mp4', // facoltativo
+    link: { type: 'website', url: 'https://www.romacinemafest.it/it/festa-cinema-roma/' },// facoltativo, bottone in fondo
+    sections: [
+      section('film', row([
+        drive('198fyQs6K2JBqrVcLXisAFerwjCELrL8c', '/covers/brand/its-cover.jpg'),
+      ])),
+    ],
+  },
+  {
+    slug: 'color-grading',            // URL + chiave dei testi nei locales
+    title: 'Color Grading',           // mostrato così com'è, non tradotto
+    category: 'color',               // 'social' | 'motion' | 'color' | 'short-film' | ...
+    origin: 'personal',                 // 'client' | 'channel' | 'personal' | 'course'
+    client: '',
+    clientUrl: '',         // facoltativo, il nome diventa un link
+    channels: [],
+    period: { from: '2024'},   // 'to' può essere 'present' o mancare
+    cover: '/covers/brand/color-cover.jpg',
+    hero: image('/heroes/nome-progetto.jpg'),     // oppure yt('ID_VIDEO')
+    preview: '', // facoltativo
+    link: null, // facoltativo, bottone in fondo
+    sections: [
+      section('video', row([yt('ID_YOUTUBE'), yt('ALTRO_ID')])),
+      section('reels', row([ig('https://www.instagram.com/reel/...', '/ig-previews/x.jpg')], 'lg')),
+    ],
+  },
+  {
+    slug: 'nome-progetto',            // URL + chiave dei testi nei locales
+    title: 'Nome Progetto',           // mostrato così com'è, non tradotto
+    category: 'social',               // 'social' | 'motion' | 'color' | 'short-film' | ...
+    origin: 'client',                 // 'client' | 'channel' | 'personal' | 'course'
+    client: 'Nome Cliente',
+    clientUrl: 'https://...',         // facoltativo, il nome diventa un link
+    channels: ['youtube', 'instagram'],
+    period: { from: '2025-03', to: '2025-09' },   // 'to' può essere 'present' o mancare
+    cover: '/covers/nome-progetto.jpg',
+    hero: image('/heroes/nome-progetto.jpg'),     // oppure yt('ID_VIDEO')
+    preview: '/videos/preview/nome-progetto.mp4', // facoltativo
+    link: { type: 'website', url: 'https://...' },// facoltativo, bottone in fondo
+    sections: [
+      section('video', row([yt('ID_YOUTUBE'), yt('ALTRO_ID')])),
+      section('reels', row([ig('https://www.instagram.com/reel/...', '/ig-previews/x.jpg')], 'lg')),
+    ],
+  },
+  {
+    slug: 'nome-progetto',            // URL + chiave dei testi nei locales
+    title: 'Nome Progetto',           // mostrato così com'è, non tradotto
+    category: 'social',               // 'social' | 'motion' | 'color' | 'short-film' | ...
+    origin: 'client',                 // 'client' | 'channel' | 'personal' | 'course'
+    client: 'Nome Cliente',
+    clientUrl: 'https://...',         // facoltativo, il nome diventa un link
+    channels: ['youtube', 'instagram'],
+    period: { from: '2025-03', to: '2025-09' },   // 'to' può essere 'present' o mancare
+    cover: '/covers/nome-progetto.jpg',
+    hero: image('/heroes/nome-progetto.jpg'),     // oppure yt('ID_VIDEO')
+    preview: '/videos/preview/nome-progetto.mp4', // facoltativo
+    link: { type: 'website', url: 'https://...' },// facoltativo, bottone in fondo
+    sections: [
+      section('video', row([yt('ID_YOUTUBE'), yt('ALTRO_ID')])),
+      section('reels', row([ig('https://www.instagram.com/reel/...', '/ig-previews/x.jpg')], 'lg')),
     ],
   },
   {

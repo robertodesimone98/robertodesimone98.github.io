@@ -16,8 +16,8 @@ function ProjectCard({ zone, project, staggerIndex = 0 }) {
   const [previewLoaded, setPreviewLoaded] = useState(false)
   const [cardRef, isVisible] = useInView()
 
-  // Client name: only for the projects made for a client (list "work"), in both zones.
-  const clientName = project.origin === 'client' ? project.client : null
+  // Client name: only for the projects made for a client or a course, in both zones.
+  const clientName = ['client', 'course'].includes(project.origin) ? project.client : null
 
   const showMeta = showsMeta(zone, project)
   const title = projectTitle(project, zone, t)

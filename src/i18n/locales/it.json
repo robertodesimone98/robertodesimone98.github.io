@@ -19,7 +19,7 @@
     "homeLabel": "Torna alla pagina iniziale",
     "zone": {
       "gaming": "Gaming",
-      "brand": "Brand"
+      "brand": "Clients"
     }
   },
   "gaming": {
@@ -126,12 +126,48 @@
         "nuvola-yoga": {
           "description": "Contenuti per il canale YouTube di Nuvola Yoga, incentrati sulla pratica dello **yoga** e sul **benessere**. Mi sono occupato del **montaggio**, adottando un **ritmo calmo** e disteso e prestando particolare attenzione alla **fluidità** dei movimenti degli istruttori."
         },
-        "brand-placeholder-8": {
-          "description": "Progetto segnaposto per provare i layout: _righe di altezza diversa_.\nIl testo supporta le **evidenze** e il corsivo.",
+        "backstage-hiver": {
+          "description": "**Dietro le quinte** del cortometraggio **_Hiver_**, realizzato come progetto finale del corso per **Videomaker** presso l’**ITS Rossellini**. Ho ricoperto il ruolo di **operatore di ripresa** e **montatore**, immortalando i momenti salienti per **documentare** il set e realizzando **interviste** ad attori e membri della troupe."
+        },
+        "masterclass-festa-cinema-roma": {
+          "description": "Grazie all'**ITS Rossellini**, ho avuto l'opportunità di lavorare alla prestigiosa **Festa del Cinema di Roma** in qualità di **operatore di ripresa** e **montatore** durante le masterclass con nomi illustri del cinema: **Viggo Mortensen**, **Chiara Mastroianni**, i **fratelli D'Innocenzo**, **Dennis Lehane** e **Saverio Costanzo**. Un'esperienza straordinaria che mi ha permesso di prendere parte attiva a uno degli eventi più importanti del **panorama cinematografico internazionale**."
+        },
+        "color-grading": {
+          "description": "Progetti di **color grading** realizzati in modo indipendente per esplorare il **potenziale narrativo del colore** e valorizzare al massimo l'**estetica** di ogni clip."
+        },
+        "brand-placeholder-9": {
+          "description": "Progetto segnaposto per provare i layout: _una orizzontale grande_.\nIl testo supporta le **evidenze** e il corsivo.",
           "sections": {
-            "sizes": {
-              "title": "Layout: righe di altezza diversa",
-              "description": "Testo di prova della sezione **righe di altezza diversa**. Titolo e descrizione di ogni sezione sono opzionali."
+            "single-h-lg": {
+              "title": "Layout: una orizzontale grande",
+              "description": "Testo di prova della sezione **una orizzontale grande**. Titolo e descrizione di ogni sezione sono opzionali."
+            }
+          }
+        },
+        "brand-placeholder-9": {
+          "description": "Progetto segnaposto per provare i layout: _una orizzontale grande_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "single-h-lg": {
+              "title": "Layout: una orizzontale grande",
+              "description": "Testo di prova della sezione **una orizzontale grande**. Titolo e descrizione di ogni sezione sono opzionali."
+            }
+          }
+        },
+        "brand-placeholder-9": {
+          "description": "Progetto segnaposto per provare i layout: _una orizzontale grande_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "single-h-lg": {
+              "title": "Layout: una orizzontale grande",
+              "description": "Testo di prova della sezione **una orizzontale grande**. Titolo e descrizione di ogni sezione sono opzionali."
+            }
+          }
+        },
+        "brand-placeholder-9": {
+          "description": "Progetto segnaposto per provare i layout: _una orizzontale grande_.\nIl testo supporta le **evidenze** e il corsivo.",
+          "sections": {
+            "single-h-lg": {
+              "title": "Layout: una orizzontale grande",
+              "description": "Testo di prova della sezione **una orizzontale grande**. Titolo e descrizione di ogni sezione sono opzionali."
             }
           }
         },
