@@ -102,46 +102,29 @@
             }
           }
         },
-        "brand-placeholder-3": {
-          "description": "Placeholder project to try the layouts: _horizontal and vertical_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "h-v": {
-              "title": "Layout: horizontal and vertical",
-              "description": "Sample text for the **horizontal and vertical** section. Title and description of each section are optional."
-            }
-          }
+        "alessandro-benetton": {
+          "description": "Video talks created for Alessandro Benetton, entrepreneur and manager, focusing on **experiences** and reflections on the **business world**. In the **editing**, I worked to structure the content in a clear and **smooth** way, refining the **pacing** and organization of the speech to improve the viewing experience."
         },
-        "brand-placeholder-4": {
-          "description": "Placeholder project to try the layouts: _horizontal and two verticals_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "h-2v": {
-              "title": "Layout: horizontal and two verticals",
-              "description": "Sample text for the **horizontal and two verticals** section. Title and description of each section are optional."
-            }
-          }
+        "san-carlo": {
+          "description": "San Carlo Taste Hunter is a **branded** project focused on **food** storytelling, featuring several content creators in the field. As an **editor**, I worked on the **re-editing** of existing videos, implementing the **changes requested** by the client and ensuring a **consistent** and effective result."
         },
-        "brand-placeholder-5": {
+        "slim-dogs": {
           "sections": {
-            "big-2small": {
-              "title": "Layout: big one and two small ones",
-              "description": "Sample text for the **big one and two small ones** section. Title and description of each section are optional."
-            }
-          }
-        },
-        "brand-placeholder-6": {
-          "description": "Placeholder project to try the layouts: _verticals on the sides, stack in the middle_.\nThe text supports **highlights** and italics."
-        },
-        "brand-placeholder-7": {
-          "description": "Placeholder project to try the layouts: _2×2 grid_, _rows of different height_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "grid-2x2": {
-              "title": "Layout: 2×2 grid",
-              "description": "Sample text for the **2×2 grid** section. Title and description of each section are optional."
+            "youtube": {
+              "title": "YouTube",
+              "description": "I worked on the main formats of Slim Dogs, including **_How the f**k did they do it_**, **_Production disasters_**, **_The science of…_**, and **_Professional reacts_**, content built around analysis, storytelling, and entertainment. I handled the **editing** and **pre-editing**, collaborating with writers on the selection of **content** and the construction of the **narrative structure**."
             },
-            "sizes": {
-              "title": "Layout: rows of different height"
+            "social": {
+              "title": "Social",
+              "description": "I worked on the most recognizable social formats of **Slim Dogs** and **Cane Secco** for **Instagram** and **TikTok**, contributing to the **editing** of content designed for a fast-paced and immediate language. In addition to editing, I also handled the **color correction** of some videos, focusing on pacing, **visual impact**, and readability in fast-paced formats."
             }
           }
+        },
+        "prime-video": {
+          "description": "Projects created in collaboration with **Amazon Prime Video** and **Slim Dogs**, featuring writers, actors, and other figures connected to the platform's series. I handled the **editing** of videos for **YouTube** and **social** content (reels and stories) for the launch of **The Traitors Italia**."
+        },
+        "nuvola-yoga": {
+          "description": "Content for the Nuvola Yoga YouTube channel, focused on **yoga** practice and **well-being**. I handled the **editing** with a calm and **relaxed pace**, paying particular attention to the **fluidity** of the instructors' movements."
         },
         "brand-placeholder-8": {
           "description": "Placeholder project to try the layouts: _rows of different height_.\nThe text supports **highlights** and italics.",

@@ -102,46 +102,29 @@
             }
           }
         },
-        "brand-placeholder-3": {
-          "description": "Progetto segnaposto per provare i layout: _orizzontale e verticale_.\nIl testo supporta le **evidenze** e il corsivo.",
-          "sections": {
-            "h-v": {
-              "title": "Layout: orizzontale e verticale",
-              "description": "Testo di prova della sezione **orizzontale e verticale**. Titolo e descrizione di ogni sezione sono opzionali."
-            }
-          }
+        "alessandro-benetton": {
+          "description": "Video talk realizzati per Alessandro Benetton, imprenditore e manager, incentrati su **esperienze** e riflessioni sul **mondo del business**. In fase di **montaggio**, ho lavorato per strutturare i contenuti in modo chiaro e **fluido**, perfezionando il **ritmo** e l'organizzazione del discorso per migliorare l'esperienza di visione."
         },
-        "brand-placeholder-4": {
-          "description": "Progetto segnaposto per provare i layout: _orizzontale e due verticali_.\nIl testo supporta le **evidenze** e il corsivo.",
-          "sections": {
-            "h-2v": {
-              "title": "Layout: orizzontale e due verticali",
-              "description": "Testo di prova della sezione **orizzontale e due verticali**. Titolo e descrizione di ogni sezione sono opzionali."
-            }
-          }
+        "san-carlo": {
+          "description": "San Carlo Taste Hunter è un progetto di **branded content** incentrato sulla narrazione legata al mondo del **cibo**, che vede la partecipazione di diversi **content creator** del settore. In qualità di **editor**, mi sono occupato del riadattamento di video già esistenti, apportando le **modifiche richieste** dal cliente e garantendo un risultato **coerente** ed efficace."
         },
-        "brand-placeholder-5": {
+        "slim-dogs": {
           "sections": {
-            "big-2small": {
-              "title": "Layout: grande e due piccoli",
-              "description": "Testo di prova della sezione **grande e due piccoli**. Titolo e descrizione di ogni sezione sono opzionali."
-            }
-          }
-        },
-        "brand-placeholder-6": {
-          "description": "Progetto segnaposto per provare i layout: _verticali ai lati e colonna al centro_.\nIl testo supporta le **evidenze** e il corsivo."
-        },
-        "brand-placeholder-7": {
-          "description": "Progetto segnaposto per provare i layout: _griglia 2×2_, _righe di altezza diversa_.\nIl testo supporta le **evidenze** e il corsivo.",
-          "sections": {
-            "grid-2x2": {
-              "title": "Layout: griglia 2×2",
-              "description": "Testo di prova della sezione **griglia 2×2**. Titolo e descrizione di ogni sezione sono opzionali."
+            "youtube": {
+              "title": "YouTube",
+              "description": "Ho lavorato ai principali format di Slim Dogs, tra cui **_Come ca**o hanno fatto_**, **_Disastri produttivi_**, **_La scienza di…_** e **_Professionista reagisce_**: contenuti basati su analisi, narrazione e intrattenimento. Mi sono occupato del **montaggio** e del **pre-montaggio**, collaborando con gli autori alla selezione dei **contenuti** e alla costruzione della **struttura narrativa**."
             },
-            "sizes": {
-              "title": "Layout: righe di altezza diversa"
+            "social": {
+              "title": "Social",
+              "description": "Ho lavorato ai format social più riconoscibili di **Slim Dogs** e **Cane Secco** per **Instagram** e **TikTok**, occupandomi del **montaggio** di contenuti pensati per un linguaggio rapido e immediato. Oltre al montaggio, ho curato anche la **color correction** di alcuni video, ponendo l'accento sul ritmo, sull'**impatto visivo** e sulla leggibilità in formati dal taglio dinamico."
             }
           }
+        },
+        "prime-video": {
+          "description": "Progetti realizzati in collaborazione con **Amazon Prime Video** e **Slim Dogs**, che hanno coinvolto sceneggiatori, attori e altre figure legate alle serie della piattaforma. Mi sono occupato del **montaggio** di video per **YouTube** e di contenuti per i **social** (reel e storie) in occasione del lancio di **The Traitors Italia**."
+        },
+        "nuvola-yoga": {
+          "description": "Contenuti per il canale YouTube di Nuvola Yoga, incentrati sulla pratica dello **yoga** e sul **benessere**. Mi sono occupato del **montaggio**, adottando un **ritmo calmo** e disteso e prestando particolare attenzione alla **fluidità** dei movimenti degli istruttori."
         },
         "brand-placeholder-8": {
           "description": "Progetto segnaposto per provare i layout: _righe di altezza diversa_.\nIl testo supporta le **evidenze** e il corsivo.",
