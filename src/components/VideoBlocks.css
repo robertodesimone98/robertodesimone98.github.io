@@ -74,6 +74,10 @@
   --row-h: 560px;
 }
 
+.vrow--xl {
+  --row-h: 600px;
+}
+
 /* Tiles one above the other. The flex weights of the children split the height. */
 .vstack {
   display: flex;

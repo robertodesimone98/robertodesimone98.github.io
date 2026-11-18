@@ -135,50 +135,20 @@
         "color-grading": {
           "description": "**Color Grading** projects created independently to explore the **storytelling potential of color** and make the most of the **aesthetic** of each clip."
         },
-        "brand-placeholder-9": {
-          "description": "Placeholder project to try the layouts: _one large horizontal_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "single-h-lg": {
-              "title": "Layout: one large horizontal",
-              "description": "Sample text for the **one large horizontal** section. Title and description of each section are optional."
-            }
-          }
+        "motion-graphic": {
+          "description": "This set of projects was created during the **Videomaker** course at **ITS Rossellini**, as part of the section focused on **After Effects**. All animations were created by me, while the illustrations were provided by the instructor."
         },
-        "brand-placeholder-9": {
-          "description": "Placeholder project to try the layouts: _one large horizontal_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "single-h-lg": {
-              "title": "Layout: one large horizontal",
-              "description": "Sample text for the **one large horizontal** section. Title and description of each section are optional."
-            }
-          }
+        "motion-video": {
+          "description": "This set of projects was created during the **Videomaker** course at **ITS Rossellini**, as part of the section focused on **After Effects**. All animations were created by me, while the clips and images were provided by the instructor."
         },
-        "brand-placeholder-9": {
-          "description": "Placeholder project to try the layouts: _one large horizontal_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "single-h-lg": {
-              "title": "Layout: one large horizontal",
-              "description": "Sample text for the **one large horizontal** section. Title and description of each section are optional."
-            }
-          }
+        "nimh24": {
+          "description": "Editing of the **Not In My House 24** event held on June 7, 2024, created for **Roma3x3** and sponsored by **Givova**. I edited the video to highlight the **energy** of the **basketball** tournament, using only footage shot by me. The video features dynamic sequences capturing the most spectacular and **intense** moments of the day. I wanted to give the event a personal touch through this **independent** edit, highlighting not only the action on the court, but also the **sportsmanship** and **passion** of the players."
         },
-        "brand-placeholder-9": {
-          "description": "Placeholder project to try the layouts: _one large horizontal_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "single-h-lg": {
-              "title": "Layout: one large horizontal",
-              "description": "Sample text for the **one large horizontal** section. Title and description of each section are optional."
-            }
-          }
+        "aspettando-il-779": {
+          "description": "**Aspettando il 779** (_Waiting for bus 779_) is a collaboration with fellow **Videomaking** students and teachers at **Accademia Informatica** to create a short film inspired by the play **_Waiting for Godot_**. In the short film, I worked as a camera **operator** and, in part, as an **editor**. The story revolves around waiting for an ATAC bus in Rome, a common experience that becomes the heart of the story, blending **humor and reflection** in a realistic setting."
         },
-        "brand-placeholder-9": {
-          "description": "Placeholder project to try the layouts: _one large horizontal_.\nThe text supports **highlights** and italics.",
-          "sections": {
-            "single-h-lg": {
-              "title": "Layout: one large horizontal",
-              "description": "Sample text for the **one large horizontal** section. Title and description of each section are optional."
-            }
-          }
+        "ops": {
+          "description": "Short film written and directed by me, developed in **three hours** and shot in a **single take**, exploring a **paradoxical** situation involving a car accident. Through a screenplay and direction built around **dark and bizarre humor**, the short plays with the audience's expectations, offering a **surreal** and unique take on an **unexpected situation**."
         }
       },
       "groups": {

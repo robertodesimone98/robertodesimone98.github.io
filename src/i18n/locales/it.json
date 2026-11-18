@@ -135,50 +135,20 @@
         "color-grading": {
           "description": "Progetti di **color grading** realizzati in modo indipendente per esplorare il **potenziale narrativo del colore** e valorizzare al massimo l'**estetica** di ogni clip."
         },
-        "brand-placeholder-9": {
-          "description": "Progetto segnaposto per provare i layout: _una orizzontale grande_.\nIl testo supporta le **evidenze** e il corsivo.",
-          "sections": {
-            "single-h-lg": {
-              "title": "Layout: una orizzontale grande",
-              "description": "Testo di prova della sezione **una orizzontale grande**. Titolo e descrizione di ogni sezione sono opzionali."
-            }
-          }
+        "motion-graphic": {
+          "description": "Questa serie di progetti è stata realizzata durante il corso per **Videomaker** presso l'**ITS Rossellini**, nell'ambito del modulo dedicato ad **After Effects**. Tutte le animazioni sono state create dal sottoscritto, mentre le illustrazioni sono state fornite dal docente."
         },
-        "brand-placeholder-9": {
-          "description": "Progetto segnaposto per provare i layout: _una orizzontale grande_.\nIl testo supporta le **evidenze** e il corsivo.",
-          "sections": {
-            "single-h-lg": {
-              "title": "Layout: una orizzontale grande",
-              "description": "Testo di prova della sezione **una orizzontale grande**. Titolo e descrizione di ogni sezione sono opzionali."
-            }
-          }
+        "motion-video": {
+          "description": "Questa serie di progetti è stata realizzata durante il corso per **Videomaker** presso l'**ITS Rossellini**, nell'ambito del modulo dedicato ad **After Effects**. Tutte le animazioni sono state create dal sottoscritto, mentre le illustrazioni sono state fornite dal docente."
         },
-        "brand-placeholder-9": {
-          "description": "Progetto segnaposto per provare i layout: _una orizzontale grande_.\nIl testo supporta le **evidenze** e il corsivo.",
-          "sections": {
-            "single-h-lg": {
-              "title": "Layout: una orizzontale grande",
-              "description": "Testo di prova della sezione **una orizzontale grande**. Titolo e descrizione di ogni sezione sono opzionali."
-            }
-          }
+        "nimh24": {
+          "description": "Montaggio dell'evento **Not In My House 24** del 7 giugno 2024, realizzato per **Roma3x3** e sponsorizzato da **Givova**. Ho curato il montaggio del video per mettere in risalto l'**energia** del torneo di **basket**, utilizzando esclusivamente riprese effettuate dal sottoscritto. Il filmato presenta sequenze dinamiche che catturano i momenti più spettacolari e **intensi** della giornata. Attraverso questo montaggio **indipendente**, ho voluto conferire all'evento un tocco personale, valorizzando non solo l'azione in campo, ma anche lo **spirito sportivo** e la **passione** dei giocatori."
         },
-        "brand-placeholder-9": {
-          "description": "Progetto segnaposto per provare i layout: _una orizzontale grande_.\nIl testo supporta le **evidenze** e il corsivo.",
-          "sections": {
-            "single-h-lg": {
-              "title": "Layout: una orizzontale grande",
-              "description": "Testo di prova della sezione **una orizzontale grande**. Titolo e descrizione di ogni sezione sono opzionali."
-            }
-          }
+        "aspettando-il-779": {
+          "description": "**Aspettando il 779** è un progetto realizzato in collaborazione con altri studenti e docenti del corso di **Videomaking** presso l’**Accademia Informatica**, che ha portato alla creazione di un cortometraggio ispirato all’opera teatrale **_Aspettando Godot_**. Nel film, ho ricoperto il ruolo di **operatore di ripresa** e, in parte, di **montatore**. La narrazione ruota attorno all’attesa di un autobus ATAC a Roma: un’esperienza quotidiana che diventa il fulcro della storia, fondendo **umorismo e riflessione** all’interno di un contesto realistico."
         },
-        "brand-placeholder-9": {
-          "description": "Progetto segnaposto per provare i layout: _una orizzontale grande_.\nIl testo supporta le **evidenze** e il corsivo.",
-          "sections": {
-            "single-h-lg": {
-              "title": "Layout: una orizzontale grande",
-              "description": "Testo di prova della sezione **una orizzontale grande**. Titolo e descrizione di ogni sezione sono opzionali."
-            }
-          }
+        "ops": {
+          "description": "Cortometraggio scritto e diretto da me, ideato in **tre ore** e girato in un **unico piano sequenza**. Il corto esplora una situazione **paradossale** legata a un incidente stradale. Attraverso una sceneggiatura e una regia improntate a un **umorismo dark e bizzarro**, il corto gioca con le aspettative dello spettatore, offrendo una visione **surreale** e originale di una **situazione inattesa**."
         }
       },
       "groups": {

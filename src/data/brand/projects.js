@@ -6,8 +6,8 @@ export const brandProjects = [
     title: 'Gaming Dogs',           // mostrato così com'è, non tradotto
     category: ['social', 'gaming'],               // 'social' | 'motion' | 'color' | 'short-film' | ...
     origin: 'client',                 // 'client' | 'channel' | 'personal' | 'course'
-    client: 'Gaming Dogs',
-    clientUrl: 'https://www.youtube.com/@gamingdogs',         // facoltativo, il nome diventa un link
+    client: 'Slim Dogs',
+    clientUrl: 'https://www.slimdogsproduction.com/',         // facoltativo, il nome diventa un link
     channels: ['youtube', 'instagram', 'tiktok'],
     period: { from: '2026-01', to: '2026-04' },   // 'to' può essere 'present' o mancare
     cover: '/covers/brand/gaming-dogs-cover.jpg',
@@ -15,7 +15,7 @@ export const brandProjects = [
     preview: '', // facoltativo
     link: { type: 'youtube', url: 'https://www.youtube.com/@gamingdogs' },// facoltativo, bottone in fondo
     sections: [
-      section('film', row([
+      section('video', row([
         yt('Kw6jHCRJOfo'),
         ig('https://www.instagram.com/reel/DYhgNiUqLCu/', '/ig-previews/brand/gaming_dogs-preview.jpg'),
       ])),
@@ -28,7 +28,7 @@ export const brandProjects = [
     origin: 'client',                 // 'client' | 'channel' | 'personal' | 'course'
     client: 'Prattquello',
     clientUrl: 'https://www.youtube.com/@Prattquello',         // facoltativo, il nome diventa un link
-    channels: ['youtube', 'instagram'],
+    channels: ['youtube', 'instagram', 'tiktok'],
     period: { from: '2025-03', to: '2026-04' },   // 'to' può essere 'present' o mancare
     cover: '/covers/brand/pratt-cover.jpg',
     hero: image('/heroes/nome-progetto.jpg'),     // oppure yt('ID_VIDEO')
@@ -63,7 +63,7 @@ export const brandProjects = [
     preview: '', // facoltativo
     link: { type: 'youtube', url: 'https://www.youtube.com/@AlessandroBenetton' },// facoltativo, bottone in fondo
     sections: [
-      section('film', row([
+      section('video', row([
         yt('Udy9oktka1o'),
         ig('https://www.instagram.com/reel/DLFd-PNtvNt/', '/ig-previews/brand/ale_benetton-preview.jpg'),
       ])),
@@ -74,9 +74,9 @@ export const brandProjects = [
     title: 'San Carlo Taste Hunter',           // mostrato così com'è, non tradotto
     category: ['social', 'food', 'storytelling'],               // 'social' | 'motion' | 'color' | 'short-film' | ...
     origin: 'client',                 // 'client' | 'channel' | 'personal' | 'course'
-    client: 'San Carlo',
-    clientUrl: 'https://www.instagram.com/piugusto_tastehunter/',         // facoltativo, il nome diventa un link
-    channels: ['instagram'],
+    client: 'Slim Dogs',
+    clientUrl: 'https://www.slimdogsproduction.com/',         // facoltativo, il nome diventa un link
+    channels: ['instagram', 'tiktok'],
     period: { from: '2025-07', to: '2026-03' },   // 'to' può essere 'present' o mancare
     cover: '/covers/brand/san-carlo-cover.jpg',
     hero: image('/heroes/nome-progetto.jpg'),     // oppure yt('ID_VIDEO')
@@ -102,9 +102,9 @@ export const brandProjects = [
     cover: '/covers/brand/slim-dogs-cover.jpg',
     hero: image('/heroes/nome-progetto.jpg'),     // oppure yt('ID_VIDEO')
     preview: '', // facoltativo
-    link: { type: 'website', url: 'https://www.slimdogsproduction.com/' },// facoltativo, bottone in fondo
+    link: { type: 'website', url: 'https://www.youtube.com/@Slimdogs' },// facoltativo, bottone in fondo
     sections: [
-      section('youtube', row([
+      section('video', row([
         yt('vh-y5n-3uJ8'),
         yt('1QhH5Zr5H74'),
       ])),
@@ -120,16 +120,16 @@ export const brandProjects = [
     title: 'Prime Video',           // mostrato così com'è, non tradotto
     category: 'social',               // 'social' | 'motion' | 'color' | 'short-film' | ...
     origin: 'client',                 // 'client' | 'channel' | 'personal' | 'course'
-    client: 'Prime Video',
-    clientUrl: 'https://www.youtube.com/@PrimeVideoIT',         // facoltativo, il nome diventa un link
-    channels: ['youtube', 'instagram'],
+    client: 'Slim Dogs',
+    clientUrl: 'https://www.slimdogsproduction.com/',         // facoltativo, il nome diventa un link
+    channels: ['youtube', 'instagram', 'tiktok'],
     period: { from: '2025-05', to: '2025-10' },   // 'to' può essere 'present' o mancare
     cover: '/covers/brand/prime-video-cover.jpg',
     hero: image('/heroes/nome-progetto.jpg'),     // oppure yt('ID_VIDEO')
     preview: '', // facoltativo
     link: { type: 'youtube', url: 'https://www.youtube.com/@PrimeVideoIT' },// facoltativo, bottone in fondo
     sections: [
-      section('film', row([
+      section('video', row([
         yt('HdjnuoTZAnc'),
         ig('https://www.instagram.com/reel/DQUv7RfjAA7/', '/ig-previews/brand/prime-preview.jpg'),
       ])),
@@ -140,8 +140,8 @@ export const brandProjects = [
     title: 'Nuvola Yoga',           // mostrato così com'è, non tradotto
     category: 'social',               // 'social' | 'motion' | 'color' | 'short-film' | ...
     origin: 'client',                 // 'client' | 'channel' | 'personal' | 'course'
-    client: 'Nuvola Yoga',
-    clientUrl: 'https://www.youtube.com/@nuvolayoga',         // facoltativo, il nome diventa un link
+    client: 'Slim Dogs',
+    clientUrl: 'https://www.slimdogsproduction.com/',         // facoltativo, il nome diventa un link
     channels: ['youtube'],
     period: { from: '2025-05', to: '2026-01' },   // 'to' può essere 'present' o mancare
     cover: '/covers/brand/nuvola-yoga-cover.jpg',
@@ -166,7 +166,7 @@ export const brandProjects = [
     preview: '', // facoltativo
     link: { type: 'instagram', url: 'https://www.instagram.com/lhiver_corto/' },// facoltativo, bottone in fondo
     sections: [
-      section('film', row([
+      section('video', row([
         drive('1pa2mvND_4ngHl3_XfLpSijDDoXv2EKl9', '/covers/brand/its-cover.jpg'),
       ])),
     ],
@@ -185,7 +185,7 @@ export const brandProjects = [
     preview: '/videos/preview/nome-progetto.mp4', // facoltativo
     link: { type: 'website', url: 'https://www.romacinemafest.it/it/festa-cinema-roma/' },// facoltativo, bottone in fondo
     sections: [
-      section('film', row([
+      section('video', row([
         drive('198fyQs6K2JBqrVcLXisAFerwjCELrL8c', '/covers/brand/its-cover.jpg'),
       ])),
     ],
@@ -209,93 +209,94 @@ export const brandProjects = [
     ],
   },
   {
-    slug: 'nome-progetto',            // URL + chiave dei testi nei locales
-    title: 'Nome Progetto',           // mostrato così com'è, non tradotto
-    category: 'social',               // 'social' | 'motion' | 'color' | 'short-film' | ...
-    origin: 'client',                 // 'client' | 'channel' | 'personal' | 'course'
-    client: 'Nome Cliente',
-    clientUrl: 'https://...',         // facoltativo, il nome diventa un link
-    channels: ['youtube', 'instagram'],
-    period: { from: '2025-03', to: '2025-09' },   // 'to' può essere 'present' o mancare
-    cover: '/covers/nome-progetto.jpg',
+    slug: 'motion-graphic',            // URL + chiave dei testi nei locales
+    title: 'Motion Graphics Animations: Graphics & Icons',           // mostrato così com'è, non tradotto
+    category: 'motion',               // 'social' | 'motion' | 'color' | 'short-film' | ...
+    origin: 'personal',                 // 'client' | 'channel' | 'personal' | 'course'
+    client: '',
+    clientUrl: '',         // facoltativo, il nome diventa un link
+    channels: [],
+    period: { from: '2024' },   // 'to' può essere 'present' o mancare
+    cover: '/covers/brand/motion-graphic-cover.jpg',
     hero: image('/heroes/nome-progetto.jpg'),     // oppure yt('ID_VIDEO')
-    preview: '/videos/preview/nome-progetto.mp4', // facoltativo
-    link: { type: 'website', url: 'https://...' },// facoltativo, bottone in fondo
+    preview: '', // facoltativo
+    link: null,// facoltativo, bottone in fondo
     sections: [
       section('video', row([yt('ID_YOUTUBE'), yt('ALTRO_ID')])),
       section('reels', row([ig('https://www.instagram.com/reel/...', '/ig-previews/x.jpg')], 'lg')),
     ],
   },
   {
-    slug: 'nome-progetto',            // URL + chiave dei testi nei locales
-    title: 'Nome Progetto',           // mostrato così com'è, non tradotto
-    category: 'social',               // 'social' | 'motion' | 'color' | 'short-film' | ...
-    origin: 'client',                 // 'client' | 'channel' | 'personal' | 'course'
-    client: 'Nome Cliente',
-    clientUrl: 'https://...',         // facoltativo, il nome diventa un link
-    channels: ['youtube', 'instagram'],
-    period: { from: '2025-03', to: '2025-09' },   // 'to' può essere 'present' o mancare
-    cover: '/covers/nome-progetto.jpg',
+    slug: 'motion-video',            // URL + chiave dei testi nei locales
+    title: 'Motion Graphics Animations: Videos & Commercials',           // mostrato così com'è, non tradotto
+    category: 'motion',               // 'social' | 'motion' | 'color' | 'short-film' | ...
+    origin: 'personal',                 // 'client' | 'channel' | 'personal' | 'course'
+    client: '',
+    clientUrl: '',         // facoltativo, il nome diventa un link
+    channels: [],
+    period: { from: '2024' },   // 'to' può essere 'present' o mancare
+    cover: '/covers/brand/motion-video-cover.jpg',
     hero: image('/heroes/nome-progetto.jpg'),     // oppure yt('ID_VIDEO')
-    preview: '/videos/preview/nome-progetto.mp4', // facoltativo
-    link: { type: 'website', url: 'https://...' },// facoltativo, bottone in fondo
+    preview: '', // facoltativo
+    link: null,// facoltativo, bottone in fondo
     sections: [
       section('video', row([yt('ID_YOUTUBE'), yt('ALTRO_ID')])),
       section('reels', row([ig('https://www.instagram.com/reel/...', '/ig-previews/x.jpg')], 'lg')),
     ],
   },
   {
-    slug: 'nome-progetto',            // URL + chiave dei testi nei locales
-    title: 'Nome Progetto',           // mostrato così com'è, non tradotto
+    slug: 'nimh24',            // URL + chiave dei testi nei locales
+    title: 'NIMH24 (Givova)',           // mostrato così com'è, non tradotto
     category: 'social',               // 'social' | 'motion' | 'color' | 'short-film' | ...
     origin: 'client',                 // 'client' | 'channel' | 'personal' | 'course'
-    client: 'Nome Cliente',
-    clientUrl: 'https://...',         // facoltativo, il nome diventa un link
-    channels: ['youtube', 'instagram'],
-    period: { from: '2025-03', to: '2025-09' },   // 'to' può essere 'present' o mancare
-    cover: '/covers/nome-progetto.jpg',
+    client: 'Givova',
+    clientUrl: 'https://www.givovashopping.it/',         // facoltativo, il nome diventa un link
+    channels: [],
+    period: { from: '2024-06' },   // 'to' può essere 'present' o mancare
+    cover: '/covers/brand/nimh24-cover.jpg',
     hero: image('/heroes/nome-progetto.jpg'),     // oppure yt('ID_VIDEO')
-    preview: '/videos/preview/nome-progetto.mp4', // facoltativo
-    link: { type: 'website', url: 'https://...' },// facoltativo, bottone in fondo
+    preview: '', // facoltativo
+    link: { type: 'website', url: 'https://notinmyhouse.it/' },// facoltativo, bottone in fondo
     sections: [
-      section('video', row([yt('ID_YOUTUBE'), yt('ALTRO_ID')])),
-      section('reels', row([ig('https://www.instagram.com/reel/...', '/ig-previews/x.jpg')], 'lg')),
+      section('video', row([
+        drive('1Q74uxeQxjXWIRm1mvr276NEPnTDHMJyo', '/covers/brand/nimh24-cover.jpg', 'v'),
+      ], 'xl')),
     ],
   },
   {
-    slug: 'nome-progetto',            // URL + chiave dei testi nei locales
-    title: 'Nome Progetto',           // mostrato così com'è, non tradotto
-    category: 'social',               // 'social' | 'motion' | 'color' | 'short-film' | ...
-    origin: 'client',                 // 'client' | 'channel' | 'personal' | 'course'
-    client: 'Nome Cliente',
-    clientUrl: 'https://...',         // facoltativo, il nome diventa un link
-    channels: ['youtube', 'instagram'],
-    period: { from: '2025-03', to: '2025-09' },   // 'to' può essere 'present' o mancare
-    cover: '/covers/nome-progetto.jpg',
+    slug: 'aspettando-il-779',            // URL + chiave dei testi nei locales
+    title: 'Aspettando il 779',           // mostrato così com'è, non tradotto
+    category: 'short-film',               // 'social' | 'motion' | 'color' | 'short-film' | ...
+    origin: 'course',                 // 'client' | 'channel' | 'personal' | 'course'
+    client: 'Accademia Informatica',
+    clientUrl: 'https://www.accademiainformatica.com/',         // facoltativo, il nome diventa un link
+    channels: [],
+    period: { from: '2022-08' },   // 'to' può essere 'present' o mancare
+    cover: '/covers/brand/aspettando-779-cover.jpg',
     hero: image('/heroes/nome-progetto.jpg'),     // oppure yt('ID_VIDEO')
-    preview: '/videos/preview/nome-progetto.mp4', // facoltativo
-    link: { type: 'website', url: 'https://...' },// facoltativo, bottone in fondo
+    preview: '', // facoltativo
+    link: null,// facoltativo, bottone in fondo
     sections: [
-      section('video', row([yt('ID_YOUTUBE'), yt('ALTRO_ID')])),
-      section('reels', row([ig('https://www.instagram.com/reel/...', '/ig-previews/x.jpg')], 'lg')),
+      section('film', row([
+        drive('1OdTg7NPlra3F6LjNRNcuBMx3UX-MgQDX', '/covers/brand/aspettando-779-cover.jpg'),
+      ])),
     ],
   },
   {
-    slug: 'nome-progetto',            // URL + chiave dei testi nei locales
-    title: 'Nome Progetto',           // mostrato così com'è, non tradotto
-    category: 'social',               // 'social' | 'motion' | 'color' | 'short-film' | ...
-    origin: 'client',                 // 'client' | 'channel' | 'personal' | 'course'
-    client: 'Nome Cliente',
-    clientUrl: 'https://...',         // facoltativo, il nome diventa un link
-    channels: ['youtube', 'instagram'],
-    period: { from: '2025-03', to: '2025-09' },   // 'to' può essere 'present' o mancare
-    cover: '/covers/nome-progetto.jpg',
+    slug: 'ops',            // URL + chiave dei testi nei locales
+    title: 'Oops!...',           // mostrato così com'è, non tradotto
+    category: 'short-film',               // 'social' | 'motion' | 'color' | 'short-film' | ...
+    origin: 'personal',                 // 'client' | 'channel' | 'personal' | 'course'
+    client: '',
+    clientUrl: '',         // facoltativo, il nome diventa un link
+    channels: [],
+    period: { from: '2024-02' },   // 'to' può essere 'present' o mancare
+    cover: '/covers/brand/ops-cover.jpg',
     hero: image('/heroes/nome-progetto.jpg'),     // oppure yt('ID_VIDEO')
-    preview: '/videos/preview/nome-progetto.mp4', // facoltativo
-    link: { type: 'website', url: 'https://...' },// facoltativo, bottone in fondo
+    preview: '', // facoltativo
+    link: null,// facoltativo, bottone in fondo
     sections: [
-      section('video', row([yt('ID_YOUTUBE'), yt('ALTRO_ID')])),
-      section('reels', row([ig('https://www.instagram.com/reel/...', '/ig-previews/x.jpg')], 'lg')),
+      section('video', row([yt('ekcCjWlMCqs')]))
     ],
   },
 ]
