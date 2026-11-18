@@ -156,18 +156,18 @@ export const brandProjects = [
     slug: 'backstage-hiver',            // URL + chiave dei testi nei locales
     title: 'Backstage Hiver',           // mostrato così com'è, non tradotto
     category: 'backstage',               // 'social' | 'motion' | 'color' | 'short-film' | ...
-    origin: 'course',                 // 'client' | 'channel' | 'personal' | 'course'
-    client: 'ITS Rossellini',
-    clientUrl: 'https://itsrossellini.it/',         // facoltativo, il nome diventa un link
+    origin: 'client',                 // 'client' | 'channel' | 'personal' | 'course'
+    client: 'L\'Hiver',
+    clientUrl: 'https://www.imdb.com/it/title/tt37356028/?ref_=mv_close',         // facoltativo, il nome diventa un link
     channels: [],
     period: { from: '2025-02', to: '2025-05' },   // 'to' può essere 'present' o mancare
-    cover: '/covers/brand/its-cover.jpg',
+    cover: '/covers/brand/hiver-cover.jpg',
     hero: image('/heroes/nome-progetto.jpg'),     // oppure yt('ID_VIDEO')
     preview: '', // facoltativo
     link: { type: 'instagram', url: 'https://www.instagram.com/lhiver_corto/' },// facoltativo, bottone in fondo
     sections: [
       section('video', row([
-        drive('1pa2mvND_4ngHl3_XfLpSijDDoXv2EKl9', '/covers/brand/its-cover.jpg'),
+        drive('1pa2mvND_4ngHl3_XfLpSijDDoXv2EKl9', '/covers/brand/hiver-cover.jpg'),
       ])),
     ],
   },
@@ -186,7 +186,7 @@ export const brandProjects = [
     link: { type: 'website', url: 'https://www.romacinemafest.it/it/festa-cinema-roma/' },// facoltativo, bottone in fondo
     sections: [
       section('video', row([
-        drive('198fyQs6K2JBqrVcLXisAFerwjCELrL8c', '/covers/brand/its-cover.jpg'),
+        drive('198fyQs6K2JBqrVcLXisAFerwjCELrL8c', '/covers/brand/festa-cinema-roma-cover.jpg'),
       ])),
     ],
   },
